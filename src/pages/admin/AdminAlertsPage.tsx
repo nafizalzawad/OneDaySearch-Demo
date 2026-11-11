@@ -17,10 +17,10 @@ export const AdminAlertsPage: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="pb-4 border-b border-[#E3E8F0]">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+        <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Real-Time Marketplace Alerts &amp; Incidents
         </h1>
-        <p className="text-xs text-[#4F5F78]">
+        <p className="text-xs text-[#5A6B7F]">
           Automated escalation feed monitoring 30-minute unaccepted dispatch timeouts, approaching SLA deadlines, and abstractor credential expirations.
         </p>
       </div>
@@ -42,7 +42,7 @@ export const AdminAlertsPage: React.FC = () => {
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 ${
                     alt.resolved
-                      ? 'bg-gray-100 text-[#4F5F78]'
+                      ? 'bg-gray-100 text-[#5A6B7F]'
                       : alt.severity === 'critical'
                       ? 'bg-red-100 text-red-700'
                       : 'bg-amber-100 text-amber-700'
@@ -62,22 +62,22 @@ export const AdminAlertsPage: React.FC = () => {
                     >
                       {alt.type.replace(/_/g, ' ')}
                     </span>
-                    <span className="text-[11px] text-[#4F5F78] font-mono">{alt.timestamp}</span>
+                    <span className="text-[11px] text-[#5A6B7F] font-mono">{alt.timestamp}</span>
                   </div>
 
-                  <p className="text-xs sm:text-sm font-semibold text-[#0B1B33]">
+                  <p className="text-xs sm:text-sm font-semibold text-[#1C2733]">
                     {alt.message}
                   </p>
 
-                  <div className="flex items-center gap-4 mt-2 text-[11px] text-[#4F5F78]">
+                  <div className="flex items-center gap-4 mt-2 text-[11px] text-[#5A6B7F]">
                     {alt.orderId && (
                       <span>
-                        Target Order: <strong className="font-mono text-[#0B1B33]">{alt.orderId}</strong>
+                        Target Order: <strong className="font-mono text-[#1C2733]">{alt.orderId}</strong>
                       </span>
                     )}
                     {alt.providerName && (
                       <span>
-                        Abstractor: <strong className="text-[#0B1B33]">{alt.providerName}</strong>
+                        Abstractor: <strong className="text-[#1C2733]">{alt.providerName}</strong>
                       </span>
                     )}
                   </div>
@@ -86,7 +86,7 @@ export const AdminAlertsPage: React.FC = () => {
 
               <div className="flex items-center gap-2 shrink-0">
                 {alt.resolved ? (
-                  <span className="text-xs font-bold text-[#17824F] flex items-center gap-1">
+                  <span className="text-xs font-bold text-[#00BC82] flex items-center gap-1">
                     <CheckCircle2 className="w-4 h-4" /> Resolved
                   </span>
                 ) : (

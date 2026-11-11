@@ -20,10 +20,10 @@ export const ProviderQuestionsPage: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="pb-4 border-b border-[#E3E8F0]">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+        <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Customer Clarification Inbox
         </h1>
-        <p className="text-xs text-[#4F5F78]">
+        <p className="text-xs text-[#5A6B7F]">
           Two-way anonymous clarification thread for active and delivered title searches.
         </p>
       </div>
@@ -40,18 +40,18 @@ export const ProviderQuestionsPage: React.FC = () => {
               }}
               className={`w-full p-4 rounded-xl border text-left transition-all ${
                 activeOrderId === ord.id
-                  ? 'border-[#0B1B33] bg-white shadow-soft ring-1 ring-[#0B1B33]'
+                  ? 'border-[#1C2733] bg-white shadow-soft ring-1 ring-[#1C2733]'
                   : 'border-[#E3E8F0] bg-white hover:bg-[#F8FAFC]'
               }`}
             >
               <div className="flex items-center justify-between text-xs mb-1">
-                <span className="font-mono font-bold text-[#0B1B33]">{ord.id}</span>
-                <span className="text-[10px] text-[#4F5F78]">{ord.tier.toUpperCase()}</span>
+                <span className="font-mono font-bold text-[#1C2733]">{ord.id}</span>
+                <span className="text-[10px] text-[#5A6B7F]">{ord.tier.toUpperCase()}</span>
               </div>
-              <div className="text-xs font-bold text-[#0B1B33] truncate">
+              <div className="text-xs font-bold text-[#1C2733] truncate">
                 {ord.property.address}
               </div>
-              <div className="text-[11px] text-[#4F5F78] mt-0.5">
+              <div className="text-[11px] text-[#5A6B7F] mt-0.5">
                 {ord.property.county}, {ord.property.state}
               </div>
             </button>
@@ -62,10 +62,10 @@ export const ProviderQuestionsPage: React.FC = () => {
         <div className="md:col-span-8 bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6 flex flex-col h-[520px]">
           <div className="flex items-center justify-between pb-3 border-b border-[#E3E8F0] mb-4">
             <div>
-              <div className="text-xs font-mono font-bold text-[#0B1B33]">Order {activeOrderId}</div>
-              <div className="text-[11px] text-[#4F5F78]">Anonymous Customer Communication Thread</div>
+              <div className="text-xs font-mono font-bold text-[#1C2733]">Order {activeOrderId}</div>
+              <div className="text-[11px] text-[#5A6B7F]">Anonymous Customer Communication Thread</div>
             </div>
-            <span className="text-[10px] font-mono text-[#17824F] bg-[#17824F]/10 px-2 py-0.5 rounded font-bold">
+            <span className="text-[10px] font-mono text-[#00BC82] bg-[#00BC82]/10 px-2 py-0.5 rounded font-bold">
               48h Window
             </span>
           </div>
@@ -78,7 +78,7 @@ export const ProviderQuestionsPage: React.FC = () => {
               if (isSys) {
                 return (
                   <div key={m.id} className="text-center my-2">
-                    <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#4F5F78] px-2 py-0.5 rounded border border-[#E3E8F0]">
+                    <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2 py-0.5 rounded border border-[#E3E8F0]">
                       {m.content}
                     </span>
                   </div>
@@ -87,14 +87,14 @@ export const ProviderQuestionsPage: React.FC = () => {
 
               return (
                 <div key={m.id} className={`flex flex-col ${isMe ? 'items-end' : 'items-start'}`}>
-                  <div className="text-[10px] font-bold text-[#4F5F78] mb-0.5 px-1">
+                  <div className="text-[10px] font-bold text-[#5A6B7F] mb-0.5 px-1">
                     {isMe ? 'You (Abstractor)' : 'Customer (Anonymous)'}
                   </div>
                   <div
                     className={`p-3 rounded-2xl max-w-[80%] text-xs leading-relaxed ${
                       isMe
-                        ? 'bg-[#0B1B33] text-white rounded-br-none'
-                        : 'bg-[#F4F6FA] text-[#0B1B33] border border-[#E3E8F0] rounded-bl-none'
+                        ? 'bg-[#1C2733] text-white rounded-br-none'
+                        : 'bg-[#F4F6FA] text-[#1C2733] border border-[#E3E8F0] rounded-bl-none'
                     }`}
                   >
                     {m.content}
@@ -110,7 +110,7 @@ export const ProviderQuestionsPage: React.FC = () => {
               value={replyText}
               onChange={(e) => setReplyText(e.target.value)}
               placeholder="Type your response to the customer..."
-              className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A]"
+              className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
             />
             <button type="submit" className="btn-primary w-9 h-9 rounded-full flex items-center justify-center shrink-0">
               <Send className="w-4 h-4" />

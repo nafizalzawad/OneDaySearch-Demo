@@ -19,21 +19,21 @@ export const ProviderLoginPage: React.FC = () => {
       <div className="w-full max-w-md bg-white rounded-card border border-[#E3E8F0] shadow-soft p-8 text-left">
         <div className="text-center mb-6">
           <Logo direction={logoDirection} variant="light" layout="stacked" size="md" />
-          <div className="mt-3 inline-block px-2.5 py-0.5 rounded bg-[#0B1B33] text-white text-[10px] font-bold uppercase tracking-wider">
+          <div className="mt-3 inline-block px-2.5 py-0.5 rounded bg-[#1C2733] text-white text-[10px] font-bold uppercase tracking-wider">
             Abstractor Partner Portal
           </div>
         </div>
 
-        <h1 className="text-xl font-extrabold text-[#0B1B33] mb-1">
+        <h1 className="text-xl font-extrabold text-[#1C2733] mb-1">
           Sign In to Dispatch Workbench
         </h1>
-        <p className="text-xs text-[#4F5F78] mb-6">
+        <p className="text-xs text-[#5A6B7F] mb-6">
           Authorized independent title abstractors only.
         </p>
 
         <form onSubmit={handleLogin} className="space-y-4">
           <div>
-            <label className="block text-xs font-bold text-[#0B1B33] mb-1">
+            <label className="block text-xs font-bold text-[#1C2733] mb-1">
               Registered Abstractor Email
             </label>
             <input
@@ -41,18 +41,18 @@ export const ProviderLoginPage: React.FC = () => {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A]"
+              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-[#0B1B33] mb-1">
+            <label className="block text-xs font-bold text-[#1C2733] mb-1">
               Access Code / Password
             </label>
             <input
               type="password"
               defaultValue="••••••••••••"
-              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A] font-mono"
+              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
             />
           </div>
 
@@ -67,8 +67,8 @@ export const ProviderLoginPage: React.FC = () => {
           </div>
         </form>
 
-        <div className="mt-6 pt-5 border-t border-[#E3E8F0] text-center text-xs text-[#4F5F78]">
-          <Link to="/" className="text-[#0B1B33] hover:underline font-semibold">
+        <div className="mt-6 pt-5 border-t border-[#E3E8F0] text-center text-xs text-[#5A6B7F]">
+          <Link to="/" className="text-[#1C2733] hover:underline font-semibold">
             ← Return to Customer Site
           </Link>
         </div>

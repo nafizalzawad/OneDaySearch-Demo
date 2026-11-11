@@ -47,10 +47,10 @@ export const DemoDock: React.FC = () => {
     return (
       <button
         onClick={() => setIsDemoDockVisible(true)}
-        className="fixed bottom-3 left-3 z-50 px-2.5 py-1 text-xs font-mono font-medium bg-[#0B1B33]/80 hover:bg-[#0B1B33] text-white rounded-pill shadow-lg backdrop-blur border border-white/20 transition-all opacity-40 hover:opacity-100 flex items-center gap-1.5"
+        className="fixed bottom-3 left-3 z-50 px-2.5 py-1 text-xs font-mono font-medium bg-[#1C2733]/80 hover:bg-[#1C2733] text-white rounded-pill shadow-lg backdrop-blur border border-white/20 transition-all opacity-40 hover:opacity-100 flex items-center gap-1.5"
         title="Demo dock hidden (Press 'D' or click to restore)"
       >
-        <Sliders className="w-3 h-3 text-[#F2A33A]" />
+        <Sliders className="w-3 h-3 text-[#6AE878]" />
         <span>Demo</span>
       </button>
     );
@@ -67,7 +67,6 @@ export const DemoDock: React.FC = () => {
 
   const handleStageSelect = (stage: OrderStatus) => {
     setCurrentStage(stage);
-    // If we're not currently on the order page, navigate there
     if (!location.pathname.startsWith('/order/')) {
       navigate(`/order/${activeOrderToken}`);
     }
@@ -90,15 +89,15 @@ export const DemoDock: React.FC = () => {
   return (
     <div className="fixed bottom-4 left-4 z-50 font-sans text-xs">
       {!isDemoDockOpen ? (
-        <div className="flex items-center gap-1 bg-[#0B1B33] text-white px-3 py-2 rounded-pill shadow-elevated border border-white/15">
+        <div className="flex items-center gap-1 bg-[#1C2733] text-white px-3 py-2 rounded-pill shadow-elevated border border-white/15">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsDemoDockOpen(true)}>
-            <span className="w-2 h-2 rounded-full bg-[#F2A33A] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#6AE878] animate-pulse" />
             <span className="font-semibold text-white">Demo Controls</span>
             <span className="text-[10px] text-gray-400 bg-white/10 px-1.5 py-0.5 rounded">Press D</span>
           </div>
           <button
             onClick={() => setIsDemoDockOpen(true)}
-            className="p-1 hover:text-[#F2A33A] transition-colors ml-1"
+            className="p-1 hover:text-[#6AE878] transition-colors ml-1"
             title="Expand Controls"
           >
             <ChevronUp className="w-4 h-4" />
@@ -112,11 +111,11 @@ export const DemoDock: React.FC = () => {
           </button>
         </div>
       ) : (
-        <div className="bg-[#0B1B33] text-white p-4 rounded-card shadow-elevated border border-white/15 w-[340px] max-w-[92vw] max-h-[82vh] overflow-y-auto">
+        <div className="bg-[#1C2733] text-white p-4 rounded-card shadow-elevated border border-white/15 w-[340px] max-w-[92vw] max-h-[82vh] overflow-y-auto">
           {/* Header */}
           <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#F2A33A]" />
+              <span className="w-2 h-2 rounded-full bg-[#6AE878]" />
               <span className="font-bold text-sm tracking-tight text-white">Demo Control Panel</span>
             </div>
             <div className="flex items-center gap-1">
@@ -141,13 +140,13 @@ export const DemoDock: React.FC = () => {
             {/* 1. Surface Switcher */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Compass className="w-3 h-3 text-[#F2A33A]" /> Surface Mode
+                <Compass className="w-3 h-3 text-[#6AE878]" /> Surface Mode
               </div>
               <div className="grid grid-cols-3 gap-1 bg-white/5 p-1 rounded-lg border border-white/10">
                 <button
                   onClick={() => handleSurfaceSwitch('customer')}
                   className={`py-1.5 px-2 rounded font-medium text-center transition-all ${
-                    isCustomer ? 'bg-[#F2A33A] text-[#0B1B33] font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
+                    isCustomer ? 'bg-[#00BC82] text-white font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
                   }`}
                 >
                   Customer
@@ -155,7 +154,7 @@ export const DemoDock: React.FC = () => {
                 <button
                   onClick={() => handleSurfaceSwitch('provider')}
                   className={`py-1.5 px-2 rounded font-medium text-center transition-all ${
-                    isProvider ? 'bg-[#F2A33A] text-[#0B1B33] font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
+                    isProvider ? 'bg-[#00BC82] text-white font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
                   }`}
                 >
                   Provider
@@ -163,7 +162,7 @@ export const DemoDock: React.FC = () => {
                 <button
                   onClick={() => handleSurfaceSwitch('admin')}
                   className={`py-1.5 px-2 rounded font-medium text-center transition-all ${
-                    isAdmin ? 'bg-[#F2A33A] text-[#0B1B33] font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
+                    isAdmin ? 'bg-[#00BC82] text-white font-bold shadow-sm' : 'text-gray-300 hover:bg-white/10'
                   }`}
                 >
                   Admin
@@ -175,11 +174,11 @@ export const DemoDock: React.FC = () => {
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
                 <span className="flex items-center gap-1.5">
-                  <Layers className="w-3 h-3 text-[#F2A33A]" /> Logo Direction
+                  <Layers className="w-3 h-3 text-[#6AE878]" /> Logo Direction
                 </span>
                 <button
                   onClick={() => navigate('/brand')}
-                  className="text-[10px] text-[#F2A33A] hover:underline flex items-center gap-0.5"
+                  className="text-[10px] text-[#6AE878] hover:underline flex items-center gap-0.5"
                 >
                   Brand Specs <ExternalLink className="w-2.5 h-2.5" />
                 </button>
@@ -195,7 +194,7 @@ export const DemoDock: React.FC = () => {
                     onClick={() => setLogoDirection(item.id)}
                     className={`p-2 rounded-lg border text-center transition-all ${
                       logoDirection === item.id
-                        ? 'border-[#F2A33A] bg-[#F2A33A]/20 text-white font-bold'
+                        ? 'border-[#6AE878] bg-[#6AE878]/20 text-white font-bold'
                         : 'border-white/10 hover:border-white/20 text-gray-300 bg-white/5'
                     }`}
                   >
@@ -208,28 +207,28 @@ export const DemoDock: React.FC = () => {
             {/* 3. Theme Switcher */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Palette className="w-3 h-3 text-[#F2A33A]" /> Theme Preset
+                <Palette className="w-3 h-3 text-[#6AE878]" /> Theme Preset
               </div>
               <div className="grid grid-cols-2 gap-1.5">
                 <button
                   onClick={() => setTheme('clean-light')}
                   className={`p-2 rounded-lg border text-center transition-all ${
                     theme === 'clean-light'
-                      ? 'border-[#F2A33A] bg-[#F2A33A]/20 text-white font-bold'
+                      ? 'border-[#00BC82] bg-[#00BC82]/20 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
-                  Clean Light (Default)
+                  Light (Default)
                 </button>
                 <button
-                  onClick={() => setTheme('navy-brand')}
+                  onClick={() => setTheme('green-brand')}
                   className={`p-2 rounded-lg border text-center transition-all ${
-                    theme === 'navy-brand'
-                      ? 'border-[#F2A33A] bg-[#F2A33A]/20 text-white font-bold'
+                    theme === 'green-brand'
+                      ? 'border-[#00BC82] bg-[#00BC82]/20 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
-                  Navy Brand Shell
+                  Brand Shell
                 </button>
               </div>
             </div>
@@ -237,7 +236,7 @@ export const DemoDock: React.FC = () => {
             {/* 4. Speed Availability Toggles */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Zap className="w-3 h-3 text-[#F2A33A]" /> Speed Availability
+                <Zap className="w-3 h-3 text-[#6AE878]" /> Speed Availability
               </div>
               <div className="space-y-1.5 bg-white/5 p-2 rounded-lg border border-white/10">
                 <label className="flex items-center justify-between cursor-pointer py-0.5">
@@ -246,7 +245,7 @@ export const DemoDock: React.FC = () => {
                     type="checkbox"
                     checked={allow12h}
                     onChange={(e) => setAllow12h(e.target.checked)}
-                    className="accent-[#F2A33A] w-4 h-4 cursor-pointer"
+                    className="accent-[#00BC82] w-4 h-4 cursor-pointer"
                   />
                 </label>
                 <label className="flex items-center justify-between cursor-pointer py-0.5">
@@ -255,18 +254,18 @@ export const DemoDock: React.FC = () => {
                     type="checkbox"
                     checked={allow6h}
                     onChange={(e) => setAllow6h(e.target.checked)}
-                    className="accent-[#F2A33A] w-4 h-4 cursor-pointer"
+                    className="accent-[#F97316] w-4 h-4 cursor-pointer"
                   />
                 </label>
                 <label className="flex items-center justify-between cursor-pointer py-0.5 border-t border-white/10 pt-1.5">
                   <span className="text-gray-200 flex items-center gap-1">
-                    <Moon className="w-3 h-3 text-amber-300" /> After-Hours (Starts 9am ET)
+                    <Moon className="w-3 h-3 text-[#6AE878]" /> After-Hours (Starts 9am ET)
                   </span>
                   <input
                     type="checkbox"
                     checked={isAfterHours}
                     onChange={(e) => setIsAfterHours(e.target.checked)}
-                    className="accent-[#F2A33A] w-4 h-4 cursor-pointer"
+                    className="accent-[#00BC82] w-4 h-4 cursor-pointer"
                   />
                 </label>
               </div>
@@ -275,7 +274,7 @@ export const DemoDock: React.FC = () => {
             {/* 5. Order Stage Quick-Jumper */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Clock className="w-3 h-3 text-[#F2A33A]" /> Order Stage Jumper (S6-S8)
+                <Clock className="w-3 h-3 text-[#6AE878]" /> Order Stage Jumper (S6-S8)
               </div>
               <div className="grid grid-cols-3 gap-1">
                 {stages.map((st) => (
@@ -284,7 +283,7 @@ export const DemoDock: React.FC = () => {
                     onClick={() => handleStageSelect(st.value)}
                     className={`py-1 px-1.5 rounded text-[11px] font-medium transition-all ${
                       currentStage === st.value
-                        ? 'bg-[#F2A33A] text-[#0B1B33] font-bold'
+                        ? 'bg-[#00BC82] text-white font-bold'
                         : 'bg-white/5 text-gray-300 hover:bg-white/15'
                     }`}
                   >
@@ -298,14 +297,14 @@ export const DemoDock: React.FC = () => {
             <div>
               <label className="flex items-center justify-between cursor-pointer bg-white/5 p-2 rounded-lg border border-white/10">
                 <span className="flex items-center gap-1.5 text-gray-200 font-medium">
-                  <MessageSquare className="w-3.5 h-3.5 text-[#F2A33A]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#6AE878]" />
                   Simulate SMS Notification
                 </span>
                 <input
                   type="checkbox"
                   checked={showSmsPreview}
                   onChange={(e) => setShowSmsPreview(e.target.checked)}
-                  className="accent-[#F2A33A] w-4 h-4 cursor-pointer"
+                  className="accent-[#00BC82] w-4 h-4 cursor-pointer"
                 />
               </label>
             </div>

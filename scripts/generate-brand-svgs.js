@@ -7,12 +7,12 @@ if (!fs.existsSync(outDir)) {
 }
 
 // Icon A: Clock under roofline
-// Amber circle with clock hands, gable roof shape above.
+// Bright green circle with clock hands, gable roof shape above.
 function getIconA(colorMode = 'color') {
-  // colorMode: 'color' | 'navy' | 'white'
-  const roofColor = colorMode === 'white' ? '#FFFFFF' : '#0B1B33';
-  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' ? '#0B1B33' : '#F2A33A');
-  const handColor = colorMode === 'white' ? '#0B1B33' : (colorMode === 'navy' ? '#FFFFFF' : '#0B1B33');
+  // colorMode: 'color' | 'charcoal' | 'navy' | 'white'
+  const roofColor = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
+  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
+  const handColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
 
   return `
     <g id="icon-a">
@@ -29,8 +29,8 @@ function getIconA(colorMode = 'color') {
 
 // Icon B: Magnifier with house inside
 function getIconB(colorMode = 'color') {
-  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' ? '#0B1B33' : '#F2A33A');
-  const secondary = colorMode === 'white' ? '#0B1B33' : (colorMode === 'navy' ? '#FFFFFF' : '#0B1B33');
+  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
+  const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
 
   return `
     <g id="icon-b">
@@ -41,19 +41,19 @@ function getIconB(colorMode = 'color') {
       <!-- House inside lens -->
       <path d="M13.5 7.5L8 12.5H19L13.5 7.5Z" fill="${secondary}"/>
       <path d="M9.5 12.5H17.5V17.5H9.5V12.5Z" fill="${secondary}"/>
-      <rect x="12" y="14.5" width="3" height="3" fill="${colorMode === 'white' ? '#FFFFFF' : '#FFFFFF'}"/>
+      <rect x="12" y="14.5" width="3" height="3" fill="#FFFFFF"/>
     </g>
   `.trim();
 }
 
-// Icon C: Bold "1" in amber rounded square with roof slope flag
+// Icon C: Bold "1" in green rounded square with roof slope flag
 function getIconC(colorMode = 'color') {
-  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' ? '#0B1B33' : '#F2A33A');
-  const fg = colorMode === 'white' ? '#0B1B33' : (colorMode === 'navy' ? '#FFFFFF' : '#0B1B33');
+  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
+  const fg = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
 
   return `
     <g id="icon-c">
-      <!-- Amber rounded square -->
+      <!-- Green rounded square -->
       <rect x="2.5" y="2.5" width="27" height="27" rx="6" fill="${bg}"/>
       <!-- Bold 1 with roof slope flag -->
       <path d="M9 13.5L16 7V22.5M12 22.5H20" stroke="${fg}" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
@@ -82,12 +82,11 @@ function generateSvgFiles() {
     fs.writeFileSync(path.join(outDir, `logo-${dir.key}-favicon.svg`), favicon);
 
     // 3. Horizontal Lockup (240x48) - Light background
-    // Rule: On white/light backgrounds, the whole wordmark is navy and only the icon is amber
     const horizontalLight = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" fill="none">
   <g transform="translate(6, 8)">
     ${dir.getIcon('color')}
   </g>
-  <text x="48" y="31" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.02em" fill="#0B1B33">OneDaySearch</text>
+  <text x="48" y="31" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.02em" fill="#1C2733">OneDaySearch</text>
 </svg>`;
     fs.writeFileSync(path.join(outDir, `logo-${dir.key}-horizontal.svg`), horizontalLight);
 
@@ -96,21 +95,20 @@ function generateSvgFiles() {
   <g transform="translate(56, 10) scale(1.5)">
     ${dir.getIcon('color')}
   </g>
-  <text x="80" y="82" text-anchor="middle" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="18" letter-spacing="-0.02em" fill="#0B1B33">OneDaySearch</text>
+  <text x="80" y="82" text-anchor="middle" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="18" letter-spacing="-0.02em" fill="#1C2733">OneDaySearch</text>
 </svg>`;
     fs.writeFileSync(path.join(outDir, `logo-${dir.key}-stacked.svg`), stackedLight);
 
-    // 5. One-Color Navy (Horizontal Lockup on light)
-    const oneColorNavy = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" fill="none">
+    // 5. One-Color Charcoal (Horizontal Lockup on light)
+    const oneColorCharcoal = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" fill="none">
   <g transform="translate(6, 8)">
-    ${dir.getIcon('navy')}
+    ${dir.getIcon('charcoal')}
   </g>
-  <text x="48" y="31" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.02em" fill="#0B1B33">OneDaySearch</text>
+  <text x="48" y="31" font-family="'Hanken Grotesk', system-ui, sans-serif" font-weight="800" font-size="22" letter-spacing="-0.02em" fill="#1C2733">OneDaySearch</text>
 </svg>`;
-    fs.writeFileSync(path.join(outDir, `logo-${dir.key}-navy.svg`), oneColorNavy);
+    fs.writeFileSync(path.join(outDir, `logo-${dir.key}-navy.svg`), oneColorCharcoal);
 
     // 6. One-Color White (Horizontal Lockup on dark)
-    // Rule: On navy backgrounds, "OneDay" is white and "Search" is amber, but in one-color white both are white.
     const oneColorWhite = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" width="240" height="48" fill="none">
   <g transform="translate(6, 8)">
     ${dir.getIcon('white')}

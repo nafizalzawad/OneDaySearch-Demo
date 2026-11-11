@@ -9,8 +9,6 @@ import {
   MessageSquare,
   DollarSign,
   ShieldCheck,
-  Power,
-  ChevronRight,
   ExternalLink,
 } from 'lucide-react';
 
@@ -28,16 +26,16 @@ export const ProviderLayout: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F4F6FA] text-[#0B1B33]">
+    <div className="min-h-screen flex flex-col bg-[#F4F6FA] text-[#1C2733]">
       <DemoDock />
 
       {/* Provider Header Bar */}
-      <header className="bg-[#0B1B33] text-white border-b border-white/10 sticky top-0 z-40">
+      <header className="bg-[#1C2733] text-white border-b border-white/10 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/provider" className="flex items-center gap-2">
               <Logo direction={logoDirection} variant="dark" size="sm" />
-              <span className="px-2 py-0.5 rounded bg-[#F2A33A] text-[#0B1B33] text-[10px] font-extrabold uppercase tracking-wider">
+              <span className="px-2 py-0.5 rounded bg-[#00BC82] text-white text-[10px] font-extrabold uppercase tracking-wider">
                 PROVIDER
               </span>
             </Link>
@@ -50,13 +48,13 @@ export const ProviderLayout: React.FC = () => {
               onClick={() => setIsOnline(!isOnline)}
               className={`px-3 py-1.5 rounded-pill text-xs font-bold flex items-center gap-2 border transition-all ${
                 isOnline
-                  ? 'bg-[#17824F]/20 border-[#17824F] text-[#48bb78]'
+                  ? 'bg-[#00BC82]/20 border-[#00BC82] text-[#6AE878]'
                   : 'bg-white/5 border-white/20 text-gray-400'
               }`}
             >
               <span
                 className={`w-2 h-2 rounded-full ${
-                  isOnline ? 'bg-[#17824F] animate-pulse' : 'bg-gray-400'
+                  isOnline ? 'bg-[#6AE878] animate-pulse' : 'bg-gray-400'
                 }`}
               />
               <span>{isOnline ? 'Online (Accepting)' : 'Offline (Paused)'}</span>
@@ -64,7 +62,7 @@ export const ProviderLayout: React.FC = () => {
 
             {/* Abstractor Avatar */}
             <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-white/15 text-left text-xs">
-              <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center font-bold text-[#F2A33A] text-xs">
+              <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center font-bold text-[#6AE878] text-xs">
                 MV
               </div>
               <div>
@@ -85,7 +83,7 @@ export const ProviderLayout: React.FC = () => {
         </div>
 
         {/* Secondary Subnav */}
-        <div className="bg-[#071324] border-t border-white/5">
+        <div className="bg-[#111D27] border-t border-white/5">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center gap-1 overflow-x-auto text-xs py-1">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -104,7 +102,7 @@ export const ProviderLayout: React.FC = () => {
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#F2A33A]' : 'text-gray-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6AE878]' : 'text-gray-400'}`} />
                   <span>{item.label}</span>
                 </Link>
               );
@@ -118,10 +116,10 @@ export const ProviderLayout: React.FC = () => {
         <Outlet />
       </main>
 
-      <footer className="border-t border-[#E3E8F0] bg-white py-4 text-xs text-[#4F5F78]">
+      <footer className="border-t border-[#E3E8F0] bg-white py-4 text-xs text-[#5A6B7F]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>OneDaySearch Abstractor Dispatch Network · Maryland &amp; Virginia Jurisdictions</span>
-          <span className="font-mono text-[11px]">E&amp;O Verified active through Aug 2027</span>
+          <span>OneDaySearch Provider Portal · Maryland, Virginia &amp; DC</span>
+          <span className="font-mono text-[11px]">E&amp;O Verified on file</span>
         </div>
       </footer>
     </div>

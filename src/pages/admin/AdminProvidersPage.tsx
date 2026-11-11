@@ -14,10 +14,10 @@ export const AdminProvidersPage: React.FC = () => {
   return (
     <div className="space-y-6">
       <div className="pb-4 border-b border-[#E3E8F0]">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+        <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Abstractor Network &amp; E&amp;O Compliance Roster
         </h1>
-        <p className="text-xs text-[#4F5F78]">
+        <p className="text-xs text-[#5A6B7F]">
           Registry of certified independent title abstractors across Maryland, DC, and Virginia jurisdictions.
         </p>
       </div>
@@ -25,7 +25,7 @@ export const AdminProvidersPage: React.FC = () => {
       <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#4F5F78] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="py-3 px-4">Abstractor Name</th>
                 <th className="py-3 px-4">Covered Counties</th>
@@ -42,8 +42,8 @@ export const AdminProvidersPage: React.FC = () => {
                 return (
                   <tr key={p.id} className="hover:bg-[#F4F6FA]/70 transition-colors">
                     <td className="py-3 px-4">
-                      <div className="font-bold text-[#0B1B33]">{p.name}</div>
-                      <div className="text-[10px] text-[#4F5F78]">{p.phone}</div>
+                      <div className="font-bold text-[#1C2733]">{p.name}</div>
+                      <div className="text-[10px] text-[#5A6B7F]">{p.phone}</div>
                     </td>
 
                     <td className="py-3 px-4">
@@ -51,7 +51,7 @@ export const AdminProvidersPage: React.FC = () => {
                         {p.countiesCovered.map((c, i) => (
                           <span
                             key={i}
-                            className="text-[10px] bg-[#F4F6FA] text-[#0B1B33] px-1.5 py-0.5 rounded border border-[#E3E8F0]"
+                            className="text-[10px] bg-[#F4F6FA] text-[#1C2733] px-1.5 py-0.5 rounded border border-[#E3E8F0]"
                           >
                             {c}
                           </span>
@@ -60,26 +60,26 @@ export const AdminProvidersPage: React.FC = () => {
                     </td>
 
                     <td className="py-3 px-4">
-                      <div className="font-mono text-[#0B1B33]">{p.eoPolicyNumber}</div>
+                      <div className="font-mono text-[#1C2733]">{p.eoPolicyNumber}</div>
                       <div
                         className={`text-[10px] font-bold ${
-                          expiring ? 'text-red-700 bg-red-50 px-1.5 py-0.2 rounded inline-block' : 'text-[#4F5F78]'
+                          expiring ? 'text-red-700 bg-red-50 px-1.5 py-0.2 rounded inline-block' : 'text-[#5A6B7F]'
                         }`}
                       >
                         Exp: {p.eoExpiryDate} {expiring && '(Expires in 12 days!)'}
                       </div>
                     </td>
 
-                    <td className="py-3 px-4 font-mono font-bold text-[#0B1B33]">
+                    <td className="py-3 px-4 font-mono font-bold text-[#1C2733]">
                       ${(p.eoCoverageAmount / 1000000).toFixed(1)}M
                     </td>
 
                     <td className="py-3 px-4 font-mono">
-                      <span className="font-bold text-[#0B1B33]">{p.activeOrdersCount}</span>
-                      <span className="text-[#4F5F78]"> / {p.dailyCapacity} orders</span>
+                      <span className="font-bold text-[#1C2733]">{p.activeOrdersCount}</span>
+                      <span className="text-[#5A6B7F]"> / {p.dailyCapacity} orders</span>
                     </td>
 
-                    <td className="py-3 px-4 font-mono font-bold text-[#0B1B33]">
+                    <td className="py-3 px-4 font-mono font-bold text-[#1C2733]">
                       {p.completedSearchesCount}
                     </td>
 
@@ -87,8 +87,8 @@ export const AdminProvidersPage: React.FC = () => {
                       <span
                         className={`px-2 py-0.5 rounded text-[10px] font-bold ${
                           p.isOnline
-                            ? 'bg-[#17824F]/10 text-[#17824F]'
-                            : 'bg-gray-100 text-[#4F5F78]'
+                            ? 'bg-[#00BC82]/10 text-[#00BC82]'
+                            : 'bg-gray-100 text-[#5A6B7F]'
                         }`}
                       >
                         {p.isOnline ? 'ONLINE' : 'OFFLINE'}

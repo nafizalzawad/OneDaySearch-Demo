@@ -14,10 +14,10 @@ export const ProviderEarningsPage: React.FC = () => {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#E3E8F0]">
         <div>
-          <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
             Abstractor Earnings &amp; Payouts
           </h1>
-          <p className="text-xs text-[#4F5F78]">
+          <p className="text-xs text-[#5A6B7F]">
             Direct ACH bank transfer settlements initiated within 24 hours of report delivery.
           </p>
         </div>
@@ -33,37 +33,37 @@ export const ProviderEarningsPage: React.FC = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <span className="text-xs font-bold text-[#4F5F78] uppercase tracking-wider block mb-1">
+          <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Pending / In-Transit Payouts
           </span>
-          <div className="text-2xl font-extrabold font-mono text-[#0B1B33]">$340.00</div>
-          <span className="text-[11px] text-[#4F5F78]">ACH batch releases tonight at 11:59 PM ET</span>
+          <div className="text-2xl font-extrabold font-mono text-[#1C2733]">$340.00</div>
+          <span className="text-[11px] text-[#5A6B7F]">ACH batch releases tonight at 11:59 PM ET</span>
         </div>
 
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <span className="text-xs font-bold text-[#4F5F78] uppercase tracking-wider block mb-1">
+          <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Month-to-Date (November)
           </span>
-          <div className="text-2xl font-extrabold font-mono text-[#0B1B33]">$1,420.00</div>
-          <span className="text-[11px] text-[#17824F] font-semibold">9 completed title searches</span>
+          <div className="text-2xl font-extrabold font-mono text-[#1C2733]">$1,420.00</div>
+          <span className="text-[11px] text-[#00BC82] font-semibold">9 completed title searches</span>
         </div>
 
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <span className="text-xs font-bold text-[#4F5F78] uppercase tracking-wider block mb-1">
+          <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Lifetime Abstract Payouts
           </span>
-          <div className="text-2xl font-extrabold font-mono text-[#0B1B33]">$42,800.00</div>
-          <span className="text-[11px] text-[#4F5F78]">284 verified searches delivered</span>
+          <div className="text-2xl font-extrabold font-mono text-[#1C2733]">$42,800.00</div>
+          <span className="text-[11px] text-[#5A6B7F]">284 verified searches delivered</span>
         </div>
       </div>
 
       <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
-        <div className="p-4 bg-[#F8FAFC] border-b border-[#E3E8F0] text-xs font-bold text-[#0B1B33]">
+        <div className="p-4 bg-[#F8FAFC] border-b border-[#E3E8F0] text-xs font-bold text-[#1C2733]">
           Recent Search Settlements
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="border-b border-[#E3E8F0] text-[#4F5F78] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="p-3.5">Settlement Date</th>
                 <th className="p-3.5">Order ID</th>
@@ -76,14 +76,14 @@ export const ProviderEarningsPage: React.FC = () => {
             <tbody className="divide-y divide-[#E3E8F0]">
               {payouts.map((p, idx) => (
                 <tr key={idx} className="hover:bg-[#F4F6FA]/60">
-                  <td className="p-3.5 text-[#4F5F78] font-mono">{p.date}</td>
-                  <td className="p-3.5 font-mono font-bold text-[#0B1B33]">{p.orderId}</td>
-                  <td className="p-3.5 font-bold text-[#0B1B33]">{p.property}</td>
+                  <td className="p-3.5 text-[#5A6B7F] font-mono">{p.date}</td>
+                  <td className="p-3.5 font-mono font-bold text-[#1C2733]">{p.orderId}</td>
+                  <td className="p-3.5 font-bold text-[#1C2733]">{p.property}</td>
                   <td className="p-3.5">{p.tier}</td>
-                  <td className="p-3.5 font-mono font-bold text-[#0B1B33]">${p.amount.toFixed(2)}</td>
+                  <td className="p-3.5 font-mono font-bold text-[#1C2733]">${p.amount.toFixed(2)}</td>
                   <td className="p-3.5 text-right">
                     <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                      p.status === 'PAID' ? 'bg-[#17824F]/10 text-[#17824F]' : 'bg-[#FDEBD0] text-[#0B1B33]'
+                      p.status === 'PAID' ? 'bg-[#00BC82]/10 text-[#00BC82]' : 'bg-[#DBFCC5] text-[#1C2733]'
                     }`}>
                       {p.status}
                     </span>

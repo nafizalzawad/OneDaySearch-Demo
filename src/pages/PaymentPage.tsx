@@ -10,12 +10,8 @@ import {
   ArrowLeft,
   CreditCard,
   Lock,
-  ShieldCheck,
-  Check,
   MapPin,
   Clock,
-  FileCheck,
-  Sparkles,
 } from 'lucide-react';
 
 export const PaymentPage: React.FC = () => {
@@ -89,47 +85,47 @@ export const PaymentPage: React.FC = () => {
           {/* Left Column: Order Summary */}
           <div className="md:col-span-5 order-2 md:order-1">
             <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-5 sm:p-6 sticky top-20">
-              <h2 className="text-sm font-bold uppercase tracking-wider text-[#0B1B33] mb-4 pb-3 border-b border-[#E3E8F0] flex items-center justify-between">
+              <h2 className="text-sm font-bold uppercase tracking-wider text-[#1C2733] mb-4 pb-3 border-b border-[#E3E8F0] flex items-center justify-between">
                 <span>Order Summary</span>
-                <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#4F5F78] px-2 py-0.5 rounded border border-[#E3E8F0]">
-                  GUEST CHECKOUT
+                <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2 py-0.5 rounded border border-[#E3E8F0]">
+                  Guest order
                 </span>
               </h2>
 
               <div className="space-y-4 text-xs">
                 <div>
-                  <span className="text-[#4F5F78] block text-[11px]">Subject Property</span>
-                  <div className="font-bold text-[#0B1B33] mt-0.5 flex items-start gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#F2A33A] shrink-0 mt-0.5" />
+                  <span className="text-[#5A6B7F] block text-[11px]">Subject Property</span>
+                  <div className="font-bold text-[#1C2733] mt-0.5 flex items-start gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-[#00BC82] shrink-0 mt-0.5" />
                     <span>{prevData.property.address}</span>
                   </div>
-                  <div className="text-[#4F5F78] pl-5 mt-0.5">
+                  <div className="text-[#5A6B7F] pl-5 mt-0.5">
                     {prevData.property.county}, {prevData.property.state}
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#E3E8F0]/70">
                   <div>
-                    <span className="text-[#4F5F78] block text-[11px]">Property Type</span>
-                    <span className="font-semibold text-[#0B1B33] capitalize">
+                    <span className="text-[#5A6B7F] block text-[11px]">Property Type</span>
+                    <span className="font-semibold text-[#1C2733] capitalize">
                       {prevData.property.propertyType.replace('_', ' ')}
                     </span>
                   </div>
                   <div>
-                    <span className="text-[#4F5F78] block text-[11px]">Ordering As</span>
-                    <span className="font-semibold text-[#0B1B33] capitalize">
+                    <span className="text-[#5A6B7F] block text-[11px]">Ordering As</span>
+                    <span className="font-semibold text-[#1C2733] capitalize">
                       {prevData.customer.role.replace('_', ' ')}
                     </span>
                   </div>
                 </div>
 
                 <div className="pt-2 border-t border-[#E3E8F0]/70">
-                  <span className="text-[#4F5F78] block text-[11px]">Turnaround SLA</span>
+                  <span className="text-[#5A6B7F] block text-[11px]">Turnaround Window</span>
                   <div className="flex items-center justify-between mt-0.5">
-                    <span className="font-bold text-[#0B1B33]">{tierInfo.name}</span>
-                    <span className="font-mono text-[#0B1B33] font-bold">${tierInfo.price}.00</span>
+                    <span className="font-bold text-[#1C2733]">{tierInfo.name}</span>
+                    <span className="font-mono text-[#1C2733] font-bold">${tierInfo.price}.00</span>
                   </div>
-                  <div className="mt-1 flex items-center gap-1.5 text-[11px] text-[#17824F] font-medium">
+                  <div className="mt-1 flex items-center gap-1.5 text-[11px] text-[#00BC82] font-semibold">
                     <Clock className="w-3 h-3" />
                     <span>Guaranteed due: {dueResult.formatted}</span>
                   </div>
@@ -137,20 +133,20 @@ export const PaymentPage: React.FC = () => {
 
                 {/* Price Breakdown */}
                 <div className="pt-3 border-t border-[#E3E8F0] space-y-1.5">
-                  <div className="flex justify-between text-[#4F5F78]">
+                  <div className="flex justify-between text-[#5A6B7F]">
                     <span>Title Search Fee</span>
-                    <span className="font-mono text-[#0B1B33]">${tierInfo.price}.00</span>
+                    <span className="font-mono text-[#1C2733]">${tierInfo.price}.00</span>
                   </div>
-                  <div className="flex justify-between text-[#4F5F78]">
-                    <span>Courthouse Land Records Access</span>
-                    <span className="font-mono text-[#17824F]">Included ($0)</span>
+                  <div className="flex justify-between text-[#5A6B7F]">
+                    <span>Land Records Access</span>
+                    <span className="font-mono text-[#00BC82] font-medium">Included ($0)</span>
                   </div>
-                  <div className="flex justify-between text-[#4F5F78]">
-                    <span>Platform Dispatch & Delivery</span>
-                    <span className="font-mono text-[#17824F]">Included ($0)</span>
+                  <div className="flex justify-between text-[#5A6B7F]">
+                    <span>Electronic Delivery</span>
+                    <span className="font-mono text-[#00BC82] font-medium">Included ($0)</span>
                   </div>
 
-                  <div className="pt-2 border-t border-[#E3E8F0] flex justify-between items-baseline font-mono text-[#0B1B33]">
+                  <div className="pt-2 border-t border-[#E3E8F0] flex justify-between items-baseline font-mono text-[#1C2733]">
                     <span className="text-sm font-bold font-sans">Total Due Today</span>
                     <span className="text-xl font-extrabold">${tierInfo.price}.00</span>
                   </div>
@@ -158,8 +154,8 @@ export const PaymentPage: React.FC = () => {
               </div>
 
               {/* Demo Badge */}
-              <div className="mt-5 p-2.5 bg-[#FDEBD0]/60 rounded-lg border border-[#F2A33A]/40 text-center">
-                <span className="text-[11px] font-bold text-[#0B1B33] tracking-wide uppercase">
+              <div className="mt-5 p-2.5 bg-[#DBFCC5]/60 rounded-xl border border-[#00BC82]/30 text-center">
+                <span className="text-[11px] font-bold text-[#1C2733] tracking-wide uppercase">
                   ⚡ Demo Mode — No real payment required
                 </span>
               </div>
@@ -172,19 +168,19 @@ export const PaymentPage: React.FC = () => {
               <Link
                 to="/speed"
                 state={prevData}
-                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4F5F78] hover:text-[#0B1B33] mb-4 transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5A6B7F] hover:text-[#1C2733] mb-4 transition-colors"
               >
                 <ArrowLeft className="w-3.5 h-3.5" /> Back to speed selection
               </Link>
 
-              <h1 className="text-2xl font-extrabold tracking-tight text-[#0B1B33] mb-1">
-                Payment & Authorization
+              <h1 className="text-2xl font-extrabold tracking-tight text-[#1C2733] mb-1">
+                Payment &amp; Authorization
               </h1>
-              <p className="text-xs text-[#4F5F78] mb-6">
-                Instant authorization. Your order will be immediately dispatched to an on-call certified abstractor.
+              <p className="text-xs text-[#5A6B7F] mb-6">
+                Instant authorization. Your order will be matched with an available certified abstractor immediately.
               </p>
 
-              {/* Visual Apple Pay Button */}
+              {/* Apple Pay Button */}
               <div className="mb-6">
                 <button
                   type="button"
@@ -198,7 +194,7 @@ export const PaymentPage: React.FC = () => {
                 </button>
                 <div className="flex items-center gap-3 my-4">
                   <div className="h-px bg-[#E3E8F0] flex-1" />
-                  <span className="text-[11px] font-semibold text-[#4F5F78] uppercase">
+                  <span className="text-[11px] font-semibold text-[#5A6B7F] uppercase">
                     Or pay with card
                   </span>
                   <div className="h-px bg-[#E3E8F0] flex-1" />
@@ -206,9 +202,9 @@ export const PaymentPage: React.FC = () => {
               </div>
 
               <form onSubmit={handlePay} className="space-y-4">
-                {/* Visual Card Inputs */}
+                {/* Card Inputs */}
                 <div>
-                  <label className="block text-xs font-bold text-[#0B1B33] mb-1">
+                  <label className="block text-xs font-bold text-[#1C2733] mb-1">
                     Card Number
                   </label>
                   <div className="relative">
@@ -216,38 +212,38 @@ export const PaymentPage: React.FC = () => {
                       type="text"
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
-                      className="w-full text-xs sm:text-sm pl-9 pr-3.5 py-2.5 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A] font-mono"
+                      className="w-full text-xs sm:text-sm pl-9 pr-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
                     />
-                    <CreditCard className="w-4 h-4 text-[#4F5F78] absolute left-3 top-1/2 -translate-y-1/2" />
+                    <CreditCard className="w-4 h-4 text-[#5A6B7F] absolute left-3 top-1/2 -translate-y-1/2" />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-xs font-bold text-[#0B1B33] mb-1">
+                    <label className="block text-xs font-bold text-[#1C2733] mb-1">
                       Expires (MM/YY)
                     </label>
                     <input
                       type="text"
                       value={expiry}
                       onChange={(e) => setExpiry(e.target.value)}
-                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A] font-mono"
+                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-[#0B1B33] mb-1">
+                    <label className="block text-xs font-bold text-[#1C2733] mb-1">
                       CVC
                     </label>
                     <input
                       type="text"
                       value={cvc}
                       onChange={(e) => setCvc(e.target.value)}
-                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#F2A33A] font-mono"
+                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
                     />
                   </div>
                 </div>
 
-                {/* Statutory Terms Checkbox (EXACT TEXT REQUIRED BY PROMPT) */}
+                {/* Statutory Terms Checkbox (EXACT REQUIRED CONTRACT LANGUAGE) */}
                 <div className="pt-3 border-t border-[#E3E8F0]/70">
                   <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-[#F4F6FA] border border-[#E3E8F0] hover:bg-[#EDF2F7] transition-colors">
                     <input
@@ -255,25 +251,25 @@ export const PaymentPage: React.FC = () => {
                       required
                       checked={termsAgreed}
                       onChange={(e) => setTermsAgreed(e.target.checked)}
-                      className="accent-[#F2A33A] w-4 h-4 mt-0.5 rounded cursor-pointer shrink-0"
+                      className="accent-[#00BC82] w-4 h-4 mt-0.5 rounded cursor-pointer shrink-0"
                     />
-                    <span className="text-[11px] sm:text-xs text-[#0B1B33] leading-relaxed">
+                    <span className="text-[11px] sm:text-xs text-[#1C2733] leading-relaxed">
                       I agree to the Terms. I understand an independent abstractor prepares my report, that it is not title insurance or legal advice, and that the abstractor&apos;s E&amp;O policy stands behind its contents.
                     </span>
                   </label>
                 </div>
 
-                {/* Pay Action Button */}
+                {/* Pay Action Button in ORANGE #F97316 (Primary CTA) */}
                 <div className="pt-3">
                   <button
                     type="submit"
                     disabled={!termsAgreed || isSubmitting}
-                    className="btn-primary w-full py-3.5 text-sm sm:text-base font-extrabold shadow-card disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="btn-cta w-full py-3.5 text-sm sm:text-base font-extrabold shadow-card disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
-                        <span className="w-4 h-4 border-2 border-[#0B1B33] border-t-transparent rounded-full animate-spin" />
-                        Authorizing & Dispatching Search...
+                        <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Authorizing &amp; Starting Search...
                       </span>
                     ) : (
                       `Pay $${tierInfo.price}.00 and start my search`
@@ -281,8 +277,8 @@ export const PaymentPage: React.FC = () => {
                   </button>
                 </div>
 
-                <div className="flex items-center justify-center gap-2 text-[11px] text-[#4F5F78] pt-2">
-                  <Lock className="w-3.5 h-3.5 text-[#17824F]" />
+                <div className="flex items-center justify-center gap-2 text-[11px] text-[#5A6B7F] pt-2">
+                  <Lock className="w-3.5 h-3.5 text-[#00BC82]" />
                   <span>256-bit Encrypted Session · Guest Order Protected</span>
                 </div>
               </form>

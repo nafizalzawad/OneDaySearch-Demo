@@ -36,30 +36,30 @@ export const AdminOrdersPage: React.FC = () => {
       {/* Top Controls */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#E3E8F0]">
         <div>
-          <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+          <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
             Live Marketplace Order Board
           </h1>
-          <p className="text-xs text-[#4F5F78]">
+          <p className="text-xs text-[#5A6B7F]">
             Complete internal visibility across guest customers, dispatched abstractors, and Eastern Time delivery windows.
           </p>
         </div>
 
         <div className="flex items-center gap-3">
           <div className="relative">
-            <Search className="w-3.5 h-3.5 text-[#4F5F78] absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-3.5 h-3.5 text-[#5A6B7F] absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Filter by OD#, address, abstractor..."
-              className="text-xs pl-8 pr-3 py-2 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-1 focus:ring-[#F2A33A] w-64"
+              className="text-xs pl-8 pr-3 py-2 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-1 focus:ring-[#00BC82] w-64"
             />
           </div>
 
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="text-xs py-2 px-3 rounded-lg border border-[#E3E8F0] bg-white text-[#0B1B33]"
+            className="text-xs py-2 px-3 rounded-lg border border-[#E3E8F0] bg-white text-[#1C2733]"
           >
             <option value="ALL">All Statuses</option>
             <option value="MATCHING">Matching</option>
@@ -74,7 +74,7 @@ export const AdminOrdersPage: React.FC = () => {
       <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#4F5F78] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="py-3 px-4">Order ID &amp; Placed</th>
                 <th className="py-3 px-4">Property &amp; County</th>
@@ -92,34 +92,34 @@ export const AdminOrdersPage: React.FC = () => {
                 return (
                   <tr key={ord.id} className="hover:bg-[#F4F6FA]/70 transition-colors">
                     <td className="py-3 px-4">
-                      <div className="font-mono font-bold text-[#0B1B33]">{ord.id}</div>
-                      <div className="text-[10px] text-[#4F5F78] font-mono">
+                      <div className="font-mono font-bold text-[#1C2733]">{ord.id}</div>
+                      <div className="text-[10px] text-[#5A6B7F] font-mono">
                         {new Date(ord.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} ET
                       </div>
                     </td>
 
                     <td className="py-3 px-4">
-                      <div className="font-bold text-[#0B1B33] max-w-[180px] truncate">
+                      <div className="font-bold text-[#1C2733] max-w-[180px] truncate">
                         {ord.property.address}
                       </div>
-                      <div className="text-[10px] text-[#4F5F78]">
+                      <div className="text-[10px] text-[#5A6B7F]">
                         {ord.property.county}, {ord.property.state}
                       </div>
                     </td>
 
                     <td className="py-3 px-4">
-                      <div className="font-bold text-[#0B1B33]">{ord.customer.fullName}</div>
-                      <div className="text-[10px] text-[#4F5F78]">{ord.customer.email}</div>
+                      <div className="font-bold text-[#1C2733]">{ord.customer.fullName}</div>
+                      <div className="text-[10px] text-[#5A6B7F]">{ord.customer.email}</div>
                     </td>
 
                     <td className="py-3 px-4">
                       {ord.assignedProviderName ? (
                         <div>
-                          <span className="font-bold text-[#0B1B33] flex items-center gap-1">
-                            <UserCheck className="w-3 h-3 text-[#17824F]" />
+                          <span className="font-bold text-[#1C2733] flex items-center gap-1">
+                            <UserCheck className="w-3 h-3 text-[#00BC82]" />
                             {ord.assignedProviderName}
                           </span>
-                          <span className="text-[10px] text-[#4F5F78] font-mono">
+                          <span className="text-[10px] text-[#5A6B7F] font-mono">
                             Payout: ${ord.providerPayout}
                           </span>
                         </div>
@@ -131,12 +131,12 @@ export const AdminOrdersPage: React.FC = () => {
                     </td>
 
                     <td className="py-3 px-4">
-                      <div className="font-bold font-mono text-[#0B1B33]">${ord.price}</div>
-                      <div className="text-[10px] text-[#4F5F78]">{ord.tier.toUpperCase()} SLA</div>
+                      <div className="font-bold font-mono text-[#1C2733]">${ord.price}</div>
+                      <div className="text-[10px] text-[#5A6B7F]">{ord.tier.toUpperCase()} SLA</div>
                     </td>
 
                     <td className="py-3 px-4">
-                      <div className="font-mono font-bold text-[#0B1B33]">
+                      <div className="font-mono font-bold text-[#1C2733]">
                         {new Intl.DateTimeFormat('en-US', {
                           weekday: 'short',
                           hour: 'numeric',
@@ -150,10 +150,10 @@ export const AdminOrdersPage: React.FC = () => {
                       <span
                         className={`px-2 py-0.5 rounded-pill text-[10px] font-bold ${
                           ord.status === 'READY'
-                            ? 'bg-[#17824F]/10 text-[#17824F]'
+                            ? 'bg-[#00BC82]/10 text-[#00BC82]'
                             : ord.status === 'IN_PROGRESS'
-                            ? 'bg-[#0B1B33] text-white'
-                            : 'bg-[#FDEBD0] text-[#0B1B33]'
+                            ? 'bg-[#1C2733] text-white'
+                            : 'bg-[#DBFCC5] text-[#1C2733]'
                         }`}
                       >
                         {ord.status}
@@ -179,7 +179,7 @@ export const AdminOrdersPage: React.FC = () => {
                       <Link
                         to={`/order/${ord.token}`}
                         target="_blank"
-                        className="text-xs font-bold text-[#0B1B33] hover:text-[#F2A33A] inline-flex items-center gap-1 underline"
+                        className="text-xs font-bold text-[#1C2733] hover:text-[#00BC82] inline-flex items-center gap-1 underline"
                         title="Inspect customer view"
                       >
                         <span>Customer URL</span>

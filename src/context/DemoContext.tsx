@@ -3,7 +3,7 @@ import { OrderStatus } from '../mock/types';
 import { mockMarketplace } from '../mock/service';
 
 export type LogoDirection = 'a' | 'b' | 'c';
-export type ThemeMode = 'clean-light' | 'navy-brand';
+export type ThemeMode = 'clean-light' | 'green-brand';
 export type SurfaceMode = 'customer' | 'provider' | 'admin';
 
 interface DemoContextType {

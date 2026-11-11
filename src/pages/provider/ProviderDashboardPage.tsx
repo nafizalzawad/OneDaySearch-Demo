@@ -57,23 +57,23 @@ export const ProviderDashboardPage: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Capacity Meter */}
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <div className="flex items-center justify-between text-xs text-[#4F5F78] mb-2">
-            <span className="font-bold uppercase tracking-wider text-[#0B1B33]">Daily Capacity</span>
-            <span className="font-mono font-bold text-[#0B1B33]">
+          <div className="flex items-center justify-between text-xs text-[#5A6B7F] mb-2">
+            <span className="font-bold uppercase tracking-wider text-[#1C2733]">Daily Capacity</span>
+            <span className="font-mono font-bold text-[#1C2733]">
               {capacityUsed} of {capacityMax} Orders
             </span>
           </div>
           <div className="w-full bg-[#F4F6FA] h-2.5 rounded-pill overflow-hidden border border-[#E3E8F0] mb-3">
             <div
-              className="bg-[#0B1B33] h-full rounded-pill transition-all"
+              className="bg-[#1C2733] h-full rounded-pill transition-all"
               style={{ width: `${(capacityUsed / capacityMax) * 100}%` }}
             />
           </div>
-          <div className="flex items-center justify-between text-[11px] text-[#4F5F78]">
+          <div className="flex items-center justify-between text-[11px] text-[#5A6B7F]">
             <span>Active Slots: {capacityMax - capacityUsed} Open</span>
             <button
               onClick={() => setCapacityMax((m) => Math.min(12, m + 1))}
-              className="font-bold text-[#0B1B33] hover:text-[#F2A33A] underline"
+              className="font-bold text-[#1C2733] hover:text-[#00BC82] underline"
             >
               Adjust Limit
             </button>
@@ -82,59 +82,59 @@ export const ProviderDashboardPage: React.FC = () => {
 
         {/* Rush Slot Steppers */}
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <div className="flex items-center justify-between text-xs text-[#4F5F78] mb-2">
-            <span className="font-bold uppercase tracking-wider text-[#0B1B33]">Same-Day Rush Slots</span>
-            <span className="text-[10px] bg-[#FDEBD0] text-[#0B1B33] px-2 py-0.5 rounded font-mono font-bold">
+          <div className="flex items-center justify-between text-xs text-[#5A6B7F] mb-2">
+            <span className="font-bold uppercase tracking-wider text-[#1C2733]">Same-Day Rush Slots</span>
+            <span className="text-[10px] bg-[#DBFCC5] text-[#1C2733] px-2 py-0.5 rounded font-mono font-bold">
               +$50 Payout
             </span>
           </div>
           <div className="flex items-center justify-between py-1">
-            <span className="text-2xl font-extrabold font-mono text-[#0B1B33]">
+            <span className="text-2xl font-extrabold font-mono text-[#1C2733]">
               {rushSlots} Available
             </span>
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => setRushSlots((r) => Math.max(0, r - 1))}
-                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#0B1B33]"
+                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
                 title="Decrease rush slots"
               >
                 <Minus className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => setRushSlots((r) => r + 1)}
-                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#0B1B33]"
+                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
                 title="Increase rush slots"
               >
                 <Plus className="w-3.5 h-3.5" />
               </button>
             </div>
           </div>
-          <p className="text-[11px] text-[#4F5F78] mt-1">
+          <p className="text-[11px] text-[#5A6B7F] mt-1">
             Accepting 6h rush dispatch in Montgomery &amp; DC
           </p>
         </div>
 
         {/* Today's Earnings */}
         <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#4F5F78] block mb-1">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#5A6B7F] block mb-1">
             Today&apos;s Payouts
           </span>
-          <div className="text-2xl font-extrabold font-mono text-[#0B1B33] mb-1">
+          <div className="text-2xl font-extrabold font-mono text-[#1C2733] mb-1">
             $310.00
           </div>
-          <div className="text-[11px] text-[#17824F] font-semibold flex items-center gap-1">
+          <div className="text-[11px] text-[#00BC82] font-semibold flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>2 completed, 1 in review</span>
           </div>
         </div>
 
         {/* Dispatch Trigger Test */}
-        <div className="bg-white p-5 rounded-card border border-[#F2A33A]/60 shadow-soft flex flex-col justify-between">
+        <div className="bg-white p-5 rounded-card border border-[#00BC82]/60 shadow-soft flex flex-col justify-between">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#0B1B33] block mb-1">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#1C2733] block mb-1">
               Dispatch Simulator
             </span>
-            <p className="text-[11px] text-[#4F5F78]">
+            <p className="text-[11px] text-[#5A6B7F]">
               Test incoming offer dispatch overlay with countdown ring.
             </p>
           </div>
@@ -154,15 +154,15 @@ export const ProviderDashboardPage: React.FC = () => {
       <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
         <div className="p-5 border-b border-[#E3E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <h2 className="text-base font-extrabold text-[#0B1B33]">
+            <h2 className="text-base font-extrabold text-[#1C2733]">
               Active Abstractor Work Queue
             </h2>
-            <p className="text-xs text-[#4F5F78]">
+            <p className="text-xs text-[#5A6B7F]">
               All internal deadlines reflect marketplace safety buffers prior to customer SLA.
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-[#4F5F78] bg-[#F4F6FA] px-2.5 py-1 rounded border border-[#E3E8F0]">
+            <span className="text-xs font-mono text-[#5A6B7F] bg-[#F4F6FA] px-2.5 py-1 rounded border border-[#E3E8F0]">
               {activeOrders.length} In-Progress Searches
             </span>
           </div>
@@ -170,7 +170,7 @@ export const ProviderDashboardPage: React.FC = () => {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#4F5F78] uppercase font-bold text-[10px] tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] uppercase font-bold text-[10px] tracking-wider">
               <tr>
                 <th className="py-3 px-4">Order ID</th>
                 <th className="py-3 px-4">Property &amp; County</th>
@@ -184,21 +184,21 @@ export const ProviderDashboardPage: React.FC = () => {
             <tbody className="divide-y divide-[#E3E8F0]">
               {activeOrders.map((ord) => (
                 <tr key={ord.id} className="hover:bg-[#F4F6FA]/70 transition-colors">
-                  <td className="py-3.5 px-4 font-mono font-bold text-[#0B1B33]">
+                  <td className="py-3.5 px-4 font-mono font-bold text-[#1C2733]">
                     {ord.id}
                   </td>
                   <td className="py-3.5 px-4">
-                    <div className="font-bold text-[#0B1B33]">{ord.property.address}</div>
-                    <div className="text-[11px] text-[#4F5F78]">
+                    <div className="font-bold text-[#1C2733]">{ord.property.address}</div>
+                    <div className="text-[11px] text-[#5A6B7F]">
                       {ord.property.county}, {ord.property.state} · {ord.property.propertyType}
                     </div>
                   </td>
                   <td className="py-3.5 px-4">
-                    <span className="font-semibold text-[#0B1B33]">{ord.tier.toUpperCase()}</span>
-                    <span className="text-[10px] text-[#4F5F78] block">40-Yr Deed Chain</span>
+                    <span className="font-semibold text-[#1C2733]">{ord.tier.toUpperCase()}</span>
+                    <span className="text-[10px] text-[#5A6B7F] block">40-Yr Deed Chain</span>
                   </td>
                   <td className="py-3.5 px-4">
-                    <div className="font-mono font-bold text-[#0B1B33]">
+                    <div className="font-mono font-bold text-[#1C2733]">
                       {new Intl.DateTimeFormat('en-US', {
                         weekday: 'short',
                         hour: 'numeric',
@@ -206,21 +206,21 @@ export const ProviderDashboardPage: React.FC = () => {
                         timeZone: 'America/New_York',
                       }).format(new Date(ord.internalDueTime))} ET
                     </div>
-                    <span className="text-[10px] text-[#17824F] font-semibold">
+                    <span className="text-[10px] text-[#00BC82] font-semibold">
                       Buffer protected
                     </span>
                   </td>
-                  <td className="py-3.5 px-4 font-mono font-bold text-[#0B1B33]">
+                  <td className="py-3.5 px-4 font-mono font-bold text-[#1C2733]">
                     ${ord.providerPayout}.00
                   </td>
                   <td className="py-3.5 px-4">
                     <span
                       className={`px-2.5 py-1 rounded-pill text-[10px] font-bold ${
                         ord.status === 'IN_PROGRESS'
-                          ? 'bg-[#FDEBD0] text-[#0B1B33]'
+                          ? 'bg-[#DBFCC5] text-[#1C2733]'
                           : ord.status === 'READY'
-                          ? 'bg-[#17824F]/10 text-[#17824F]'
-                          : 'bg-[#0B1B33] text-white'
+                          ? 'bg-[#00BC82]/10 text-[#00BC82]'
+                          : 'bg-[#1C2733] text-white'
                       }`}
                     >
                       {ord.status.replace('_', ' ')}
@@ -244,25 +244,25 @@ export const ProviderDashboardPage: React.FC = () => {
 
       {/* DISPATCH OFFER MODAL OVERLAY */}
       {showOfferModal && (
-        <div className="fixed inset-0 z-50 bg-[#0B1B33]/70 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-card border-2 border-[#F2A33A] shadow-elevated max-w-lg w-full p-6 text-left animate-in zoom-in-95 duration-150">
+        <div className="fixed inset-0 z-50 bg-[#1C2733]/70 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="bg-white rounded-card border-2 border-[#00BC82] shadow-elevated max-w-lg w-full p-6 text-left animate-in zoom-in-95 duration-150">
             {/* Modal Header */}
             <div className="flex items-center justify-between pb-4 border-b border-[#E3E8F0] mb-4">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-[#F2A33A] animate-ping" />
-                <h3 className="text-base font-extrabold text-[#0B1B33]">
+                <span className="w-3 h-3 rounded-full bg-[#00BC82] animate-ping" />
+                <h3 className="text-base font-extrabold text-[#1C2733]">
                   New Order Offer Dispatched
                 </h3>
               </div>
               <div className="flex items-center gap-2">
                 {/* Countdown Ring Badge */}
-                <div className="px-2.5 py-1 rounded-pill bg-[#0B1B33] text-[#F2A33A] font-mono text-xs font-bold flex items-center gap-1.5">
+                <div className="px-2.5 py-1 rounded-pill bg-[#1C2733] text-[#00BC82] font-mono text-xs font-bold flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   <span>00:{offerCountdown.toString().padStart(2, '0')}</span>
                 </div>
                 <button
                   onClick={() => setShowOfferModal(false)}
-                  className="p-1 text-[#4F5F78] hover:text-[#0B1B33]"
+                  className="p-1 text-[#5A6B7F] hover:text-[#1C2733]"
                   title="Close modal"
                 >
                   <X className="w-4 h-4" />
@@ -273,38 +273,38 @@ export const ProviderDashboardPage: React.FC = () => {
             {/* Offer Metadata (HARD SEPARATION: NO CUSTOMER IDENTITY) */}
             <div className="space-y-3 text-xs mb-6">
               <div className="p-3 bg-[#F4F6FA] rounded-lg border border-[#E3E8F0]">
-                <span className="text-[10px] text-[#4F5F78] font-bold uppercase tracking-wider block">
+                <span className="text-[10px] text-[#5A6B7F] font-bold uppercase tracking-wider block">
                   Property Location
                 </span>
-                <div className="text-sm font-bold text-[#0B1B33] mt-0.5">
+                <div className="text-sm font-bold text-[#1C2733] mt-0.5">
                   4500 East West Hwy, Bethesda, MD 20814
                 </div>
-                <div className="text-[11px] text-[#4F5F78]">
+                <div className="text-[11px] text-[#5A6B7F]">
                   Montgomery County Jurisdiction · Commercial Office / Mixed Use
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div className="p-3 bg-white rounded-lg border border-[#E3E8F0]">
-                  <span className="text-[10px] text-[#4F5F78] font-bold uppercase tracking-wider block">
+                  <span className="text-[10px] text-[#5A6B7F] font-bold uppercase tracking-wider block">
                     Turnaround Tier
                   </span>
-                  <div className="text-xs font-bold text-[#0B1B33] mt-0.5">
+                  <div className="text-xs font-bold text-[#1C2733] mt-0.5">
                     12-Hour Express
                   </div>
-                  <div className="text-[10px] text-[#4F5F78]">
+                  <div className="text-[10px] text-[#5A6B7F]">
                     Internal SLA: Today by 6:00 PM ET
                   </div>
                 </div>
 
-                <div className="p-3 bg-[#FDEBD0]/60 rounded-lg border border-[#F2A33A]/40">
-                  <span className="text-[10px] text-[#0B1B33] font-bold uppercase tracking-wider block">
+                <div className="p-3 bg-[#DBFCC5]/60 rounded-lg border border-[#00BC82]/40">
+                  <span className="text-[10px] text-[#1C2733] font-bold uppercase tracking-wider block">
                     Abstractor Payout
                   </span>
-                  <div className="text-lg font-mono font-extrabold text-[#0B1B33] mt-0.5">
+                  <div className="text-lg font-mono font-extrabold text-[#1C2733] mt-0.5">
                     $165.00
                   </div>
-                  <div className="text-[10px] text-[#0B1B33]">
+                  <div className="text-[10px] text-[#1C2733]">
                     Instant ACH transfer on delivery
                   </div>
                 </div>

@@ -9,7 +9,6 @@ import {
   Users,
   Settings,
   History,
-  Shield,
   ExternalLink,
 } from 'lucide-react';
 import { INITIAL_ALERTS, INITIAL_ORDERS, MOCK_PROVIDERS } from '../../mock/data';
@@ -30,17 +29,17 @@ export const AdminLayout: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F4F6FA] text-[#0B1B33]">
+    <div className="min-h-screen flex flex-col bg-[#F4F6FA] text-[#1C2733]">
       <DemoDock />
 
       {/* Admin Dark Header */}
-      <header className="bg-[#0B1B33] text-white border-b border-white/10 sticky top-0 z-40">
+      <header className="bg-[#1C2733] text-white border-b border-white/10 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/admin" className="flex items-center gap-2">
               <Logo direction={logoDirection} variant="dark" size="sm" />
               <span className="px-2 py-0.5 rounded bg-red-500 text-white text-[10px] font-extrabold uppercase tracking-wider">
-                ADMIN CONSOLE
+                ADMIN
               </span>
             </Link>
           </div>
@@ -52,7 +51,7 @@ export const AdminLayout: React.FC = () => {
                 Active: <span className="text-white font-bold">{INITIAL_ORDERS.length}</span>
               </div>
               <div>
-                Rush (6h): <span className="text-white font-bold">1</span>
+                Rush (6h): <span className="text-[#F97316] font-bold">1</span>
               </div>
               <div>
                 At-Risk: <span className="text-amber-400 font-bold">{highRiskOrdersCount}</span>
@@ -74,7 +73,7 @@ export const AdminLayout: React.FC = () => {
         </div>
 
         {/* Tab Subnavigation */}
-        <div className="bg-[#071324] border-t border-white/5">
+        <div className="bg-[#111D27] border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center gap-1 overflow-x-auto text-xs py-1">
             {navItems.map((item) => {
               const Icon = item.icon;
@@ -93,7 +92,7 @@ export const AdminLayout: React.FC = () => {
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#F2A33A]' : 'text-gray-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6AE878]' : 'text-gray-400'}`} />
                   <span>{item.label}</span>
                   {item.hasAlert && (
                     <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />
@@ -110,10 +109,10 @@ export const AdminLayout: React.FC = () => {
         <Outlet />
       </main>
 
-      <footer className="border-t border-[#E3E8F0] bg-white py-4 text-xs text-[#4F5F78]">
+      <footer className="border-t border-[#E3E8F0] bg-white py-4 text-xs text-[#5A6B7F]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <span>OneDaySearch Internal Operations &amp; Marketplace Dispatch Center</span>
-          <span className="font-mono text-[11px]">System Environment: Production-Ready Static Demo</span>
+          <span>OneDaySearch Admin Console</span>
+          <span className="font-mono text-[11px]">Demo Environment</span>
         </div>
       </footer>
     </div>

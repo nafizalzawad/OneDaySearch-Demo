@@ -4,10 +4,10 @@ import { Logo } from '../components/brand/Logo';
 import { useDemo } from '../context/DemoContext';
 import { SAMPLE_ADDRESSES } from '../mock/data';
 import { mockMarketplace } from '../mock/service';
-import { Search, MapPin, CheckCircle2, AlertCircle, ArrowRight, Mail } from 'lucide-react';
+import { Search, MapPin, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
-  const { logoDirection, theme } = useDemo();
+  const { logoDirection } = useDemo();
   const navigate = useNavigate();
 
   const [addressInput, setAddressInput] = useState<string>('');
@@ -66,7 +66,6 @@ export const HomePage: React.FC = () => {
   };
 
   const proceedToDetails = () => {
-    // Store property address in session or pass via state
     const addressToPass = addressInput.trim() || '10400 Fernwood Rd, Bethesda, MD 20817';
     navigate('/details', {
       state: {
@@ -81,10 +80,16 @@ export const HomePage: React.FC = () => {
   };
 
   return (
-    <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-12 min-h-[calc(100vh-140px)]">
+    <div className="relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-16 min-h-[calc(100vh-140px)] overflow-hidden">
+      {/* Subtle brand glow in background — Vibrant Freedom signature */}
+      <div 
+        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[580px] h-[340px] bg-gradient-to-b from-[#6AE878]/15 via-[#DBFCC5]/20 to-transparent rounded-full blur-3xl -z-10"
+        aria-hidden="true"
+      />
+
       <div className="w-full max-w-2xl flex flex-col items-center text-center">
-        {/* Centered Logo ("The Google screen") */}
-        <div className="mb-8">
+        {/* Brand Logo */}
+        <div className="mb-6 sm:mb-8">
           <Logo
             direction={logoDirection}
             variant="light"
@@ -97,14 +102,24 @@ export const HomePage: React.FC = () => {
           />
         </div>
 
+        {/* Client-Requested Tagline: Google Senior UI/UX Treatment */}
+        <div className="mb-7 max-w-xl px-2">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1C2733] tracking-tight leading-tight sm:leading-snug">
+            Accuracy no human can match, in one-tenth the time.
+          </h1>
+          <p className="text-sm sm:text-base text-[#5A6B7F] font-normal mt-2.5 leading-relaxed">
+            An assistant searches. A real person approves every report.
+          </p>
+        </div>
+
         {/* Address Search Form */}
         <div ref={containerRef} className="w-full relative mb-4">
           <form
             onSubmit={handleSearchSubmit}
-            className="w-full flex items-center bg-white rounded-pill border border-[#E3E8F0] shadow-card hover:shadow-elevated transition-shadow p-1.5 focus-within:ring-2 focus-within:ring-[#F2A33A] focus-within:border-transparent"
+            className="w-full flex items-center bg-white rounded-pill border border-[#E3E8F0] shadow-card hover:shadow-elevated transition-all p-1.5 focus-within:ring-2 focus-within:ring-[#00BC82] focus-within:border-transparent"
           >
-            <div className="pl-3.5 pr-2 text-[#4F5F78]">
-              <Search className="w-5 h-5 text-[#4F5F78]" />
+            <div className="pl-3.5 pr-2 text-[#5A6B7F]">
+              <Search className="w-5 h-5 text-[#5A6B7F]" />
             </div>
 
             <input
@@ -117,13 +132,14 @@ export const HomePage: React.FC = () => {
               }}
               onFocus={() => setIsOpenDropdown(true)}
               placeholder="Enter property address in MD, VA, or DC..."
-              className="w-full py-2.5 px-1 text-sm sm:text-base text-[#0B1B33] bg-transparent focus:outline-none placeholder:text-[#4F5F78]"
+              className="w-full py-2.5 px-1 text-sm sm:text-base text-[#1C2733] bg-transparent focus:outline-none placeholder:text-[#5A6B7F]"
               autoComplete="off"
             />
 
+            {/* Primary Search Button in Orange #F97316 (The client rule: one job only) */}
             <button
               type="submit"
-              className="btn-primary px-6 sm:px-8 py-2.5 text-sm sm:text-base shrink-0"
+              className="btn-cta px-6 sm:px-8 py-2.5 text-sm sm:text-base shrink-0"
             >
               Search
             </button>
@@ -132,9 +148,9 @@ export const HomePage: React.FC = () => {
           {/* Autocomplete Sample Dropdown */}
           {isOpenDropdown && (
             <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-card border border-[#E3E8F0] shadow-elevated overflow-hidden z-30 text-left animate-in fade-in-50 duration-150">
-              <div className="p-2.5 bg-[#F4F6FA] border-b border-[#E3E8F0] text-[11px] font-semibold text-[#4F5F78] uppercase tracking-wider flex items-center justify-between">
-                <span>Sample Properties (MD, VA & DC)</span>
-                <span className="text-[10px] text-[#4F5F78]">Click to test</span>
+              <div className="p-2.5 bg-[#F4F6FA] border-b border-[#E3E8F0] text-[11px] font-semibold text-[#5A6B7F] uppercase tracking-wider flex items-center justify-between">
+                <span>Sample Properties (MD · VA · DC)</span>
+                <span className="text-[10px] text-[#5A6B7F]">Click to preview</span>
               </div>
               <div className="divide-y divide-[#E3E8F0]/60 max-h-64 overflow-y-auto">
                 {SAMPLE_ADDRESSES.map((sample, idx) => (
@@ -145,23 +161,23 @@ export const HomePage: React.FC = () => {
                     className="w-full px-4 py-3 text-left hover:bg-[#F4F6FA] flex items-center justify-between transition-colors group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#4F5F78] group-hover:text-[#F2A33A] mt-0.5 shrink-0" />
+                      <MapPin className="w-4 h-4 text-[#5A6B7F] group-hover:text-[#00BC82] mt-0.5 shrink-0 transition-colors" />
                       <div>
-                        <div className="text-sm font-semibold text-[#0B1B33]">
+                        <div className="text-sm font-semibold text-[#1C2733]">
                           {sample.address}
                         </div>
-                        <div className="text-xs text-[#4F5F78]">
+                        <div className="text-xs text-[#5A6B7F]">
                           {sample.city}, {sample.county}, {sample.state} {sample.zip}
                         </div>
                       </div>
                     </div>
                     <div>
                       {sample.inCoverage ? (
-                        <span className="text-[11px] font-medium text-[#17824F] bg-[#17824F]/10 px-2 py-0.5 rounded-pill shrink-0">
+                        <span className="text-[11px] font-semibold text-[#00BC82] bg-[#DBFCC5] px-2.5 py-0.5 rounded-pill shrink-0">
                           Covered
                         </span>
                       ) : (
-                        <span className="text-[11px] font-medium text-amber-800 bg-[#FDEBD0] px-2 py-0.5 rounded-pill shrink-0">
+                        <span className="text-[11px] font-medium text-[#5A6B7F] bg-[#F4F6FA] border border-[#E3E8F0] px-2 py-0.5 rounded-pill shrink-0">
                           Waitlist
                         </span>
                       )}
@@ -173,36 +189,41 @@ export const HomePage: React.FC = () => {
           )}
         </div>
 
-        {/* Muted Subline: "From $229 · Report in 24 hours" */}
-        <p className="text-xs text-[#4F5F78] font-medium mb-6">
-          From <span className="font-mono text-[#0B1B33] font-semibold">$229</span> · Search report in 24 hours
-        </p>
+        {/* Clean, calm subline — no fake marketing badges */}
+        <div className="flex items-center justify-center gap-2 text-xs text-[#5A6B7F] mb-6 font-medium">
+          <span>From <strong className="font-mono text-[#1C2733] font-semibold">$229</strong></span>
+          <span>·</span>
+          <span>24-hour turnaround</span>
+          <span>·</span>
+          <span>MD, VA &amp; DC</span>
+        </div>
 
         {/* S2 Address Check Transition / Results Box */}
         {coverageState === 'CHECKING' && (
-          <div className="w-full max-w-lg p-4 bg-white rounded-card border border-[#E3E8F0] text-xs text-[#4F5F78] flex items-center justify-center gap-2 animate-pulse shadow-soft">
-            <span className="w-2 h-2 rounded-full bg-[#F2A33A] animate-ping" />
-            Verifying county land records coverage...
+          <div className="w-full max-w-lg p-4 bg-white rounded-card border border-[#E3E8F0] text-xs text-[#5A6B7F] flex items-center justify-center gap-2.5 shadow-soft">
+            <span className="w-2 h-2 rounded-full bg-[#00BC82]" />
+            <span>Checking county records coverage...</span>
           </div>
         )}
 
         {coverageState === 'COVERED' && (
-          <div className="w-full max-w-lg p-4 sm:p-5 bg-white rounded-card border border-[#17824F]/30 shadow-soft text-left animate-in slide-in-from-bottom-2 duration-150">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-[#00BC82]/40 shadow-soft text-left animate-in slide-in-from-bottom-2 duration-150">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 text-[#17824F] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#00BC82] shrink-0 mt-0.5" />
               <div className="flex-1">
-                <h4 className="text-sm font-bold text-[#0B1B33]">
-                  {selectedAddress ? `${selectedAddress.city}, ${selectedAddress.county}, ${selectedAddress.state}` : 'Montgomery County, MD'} — we cover this area
+                <h4 className="text-sm font-bold text-[#1C2733]">
+                  {selectedAddress ? `${selectedAddress.city}, ${selectedAddress.county}, ${selectedAddress.state}` : 'Montgomery County, MD'} — covered area
                 </h4>
-                <p className="text-xs text-[#4F5F78] mt-1">
-                  Independent abstractors are active in this jurisdiction. Standard 24-hour turnaround available.
+                <p className="text-xs text-[#5A6B7F] mt-1 leading-relaxed">
+                  Active abstractors available in this jurisdiction. Standard 24-hour delivery window.
                 </p>
                 <div className="mt-4 flex items-center justify-end">
                   <button
                     onClick={proceedToDetails}
-                    className="btn-primary px-5 py-2 text-xs font-bold inline-flex items-center gap-1.5"
+                    className="btn-cta px-5 py-2 text-xs font-bold inline-flex items-center gap-1.5"
                   >
-                    Continue to property details <ArrowRight className="w-3.5 h-3.5" />
+                    <span>Continue to property details</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>
@@ -213,13 +234,13 @@ export const HomePage: React.FC = () => {
         {coverageState === 'OUT_OF_COVERAGE' && (
           <div className="w-full max-w-lg p-5 bg-white rounded-card border border-[#E3E8F0] shadow-soft text-left animate-in slide-in-from-bottom-2 duration-150">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-[#e09228] shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-[#F97316] shrink-0 mt-0.5" />
               <div className="flex-1">
-                <h4 className="text-sm font-bold text-[#0B1B33]">
+                <h4 className="text-sm font-bold text-[#1C2733]">
                   Richmond City, VA — outside active 24-hour footprint
                 </h4>
-                <p className="text-xs text-[#4F5F78] mt-1.5 leading-relaxed">
-                  We currently guarantee 24-hour coverage across all 24 Maryland counties, Washington DC, and Northern/Central Virginia. Richmond coverage is coming soon.
+                <p className="text-xs text-[#5A6B7F] mt-1.5 leading-relaxed">
+                  We guarantee 24-hour coverage across all 24 Maryland counties, Washington DC, and Northern/Central Virginia. Richmond coverage is coming soon.
                 </p>
 
                 {!waitlistSubmitted ? (
@@ -236,7 +257,7 @@ export const HomePage: React.FC = () => {
                       onChange={(e) => setWaitlistEmail(e.target.value)}
                       placeholder="Enter email for Richmond launch"
                       required
-                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-1 focus:ring-[#F2A33A]"
+                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-1 focus:ring-[#00BC82]"
                     />
                     <button
                       type="submit"
@@ -246,8 +267,8 @@ export const HomePage: React.FC = () => {
                     </button>
                   </form>
                 ) : (
-                  <div className="mt-3 p-2 bg-[#FDEBD0]/60 rounded-lg text-xs font-medium text-[#0B1B33] flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#17824F]" />
+                  <div className="mt-3 p-2 bg-[#DBFCC5]/60 rounded-lg text-xs font-medium text-[#1C2733] flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#00BC82]" />
                     <span>Thanks! We will notify you when Richmond is online.</span>
                   </div>
                 )}

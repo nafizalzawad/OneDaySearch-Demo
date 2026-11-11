@@ -20,10 +20,10 @@ export const ProviderOnboardingPage: React.FC = () => {
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       <div className="pb-4 border-b border-[#E3E8F0]">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+        <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Abstractor Verification &amp; E&amp;O Credentials
         </h1>
-        <p className="text-xs text-[#4F5F78]">
+        <p className="text-xs text-[#5A6B7F]">
           All active title abstractors must maintain verified Errors and Omissions insurance and specify county courthouse footprints.
         </p>
       </div>
@@ -31,13 +31,13 @@ export const ProviderOnboardingPage: React.FC = () => {
       <div className="bg-white p-6 sm:p-8 rounded-card border border-[#E3E8F0] shadow-soft space-y-6">
         {/* E&O Insurance Section */}
         <div>
-          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#0B1B33] mb-3 flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#17824F]" />
+          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] mb-3 flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-[#00BC82]" />
             1. Professional Liability (E&amp;O) Insurance
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs mb-4">
             <div>
-              <label className="block text-[#4F5F78] font-bold mb-1">Policy / Certificate #</label>
+              <label className="block text-[#5A6B7F] font-bold mb-1">Policy / Certificate #</label>
               <input
                 type="text"
                 value={eoPolicy}
@@ -46,7 +46,7 @@ export const ProviderOnboardingPage: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-[#4F5F78] font-bold mb-1">Expiration Date</label>
+              <label className="block text-[#5A6B7F] font-bold mb-1">Expiration Date</label>
               <input
                 type="date"
                 value={eoExpiry}
@@ -55,7 +55,7 @@ export const ProviderOnboardingPage: React.FC = () => {
               />
             </div>
             <div>
-              <label className="block text-[#4F5F78] font-bold mb-1">Per Claim Coverage</label>
+              <label className="block text-[#5A6B7F] font-bold mb-1">Per Claim Coverage</label>
               <input
                 type="text"
                 value={coverageAmt}
@@ -66,16 +66,16 @@ export const ProviderOnboardingPage: React.FC = () => {
           </div>
 
           <div className="p-4 bg-[#F4F6FA] border border-[#E3E8F0] rounded-xl flex items-center justify-between">
-            <div className="flex items-center gap-2.5 text-xs text-[#0B1B33]">
-              <FileText className="w-5 h-5 text-[#17824F]" />
+            <div className="flex items-center gap-2.5 text-xs text-[#1C2733]">
+              <FileText className="w-5 h-5 text-[#00BC82]" />
               <div>
                 <span className="font-bold block">Travelers_Casualty_EO_2026_2027.pdf</span>
-                <span className="text-[10px] text-[#4F5F78]">Verified Active · 1.4 MB · Exp: Aug 15, 2027</span>
+                <span className="text-[10px] text-[#5A6B7F]">Verified Active · 1.4 MB · Exp: Aug 15, 2027</span>
               </div>
             </div>
             <button
               type="button"
-              className="text-xs font-bold text-[#0B1B33] hover:text-[#F2A33A] underline"
+              className="text-xs font-bold text-[#1C2733] hover:text-[#00BC82] underline"
             >
               Replace Certificate
             </button>
@@ -84,14 +84,14 @@ export const ProviderOnboardingPage: React.FC = () => {
 
         {/* Coverage Footprint */}
         <div className="pt-4 border-t border-[#E3E8F0]">
-          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#0B1B33] mb-3">
+          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] mb-3">
             2. Covered Counties &amp; Municipal Jurisdictions
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
             {counties.map((c, i) => (
               <label key={i} className="flex items-center gap-2 p-2 rounded-lg border border-[#E3E8F0] hover:bg-[#F8FAFC] cursor-pointer">
-                <input type="checkbox" defaultChecked={c.checked} className="accent-[#0B1B33] w-4 h-4 rounded" />
-                <span className="font-semibold text-[#0B1B33]">{c.name}</span>
+                <input type="checkbox" defaultChecked={c.checked} className="accent-[#1C2733] w-4 h-4 rounded" />
+                <span className="font-semibold text-[#1C2733]">{c.name}</span>
               </label>
             ))}
           </div>
@@ -99,8 +99,8 @@ export const ProviderOnboardingPage: React.FC = () => {
 
         {/* Terms Agreement */}
         <div className="pt-4 border-t border-[#E3E8F0]">
-          <label className="flex items-start gap-2.5 cursor-pointer text-xs text-[#4F5F78]">
-            <input type="checkbox" defaultChecked className="accent-[#0B1B33] w-4 h-4 mt-0.5 rounded" />
+          <label className="flex items-start gap-2.5 cursor-pointer text-xs text-[#5A6B7F]">
+            <input type="checkbox" defaultChecked className="accent-[#1C2733] w-4 h-4 mt-0.5 rounded" />
             <span>
               I certify that I am a licensed or qualified independent title abstractor in good standing, that my E&amp;O policy remains in full force, and that all reports conform to 30/40-year statutory title search standards.
             </span>
@@ -109,7 +109,7 @@ export const ProviderOnboardingPage: React.FC = () => {
 
         <div className="pt-2 flex items-center justify-between">
           {saved ? (
-            <span className="text-xs font-bold text-[#17824F] flex items-center gap-1">
+            <span className="text-xs font-bold text-[#00BC82] flex items-center gap-1">
               <CheckCircle2 className="w-4 h-4" /> Credentials saved successfully
             </span>
           ) : <div />}

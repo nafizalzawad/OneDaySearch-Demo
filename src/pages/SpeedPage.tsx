@@ -4,8 +4,7 @@ import { StepIndicator } from '../components/common/StepIndicator';
 import { useDemo } from '../context/DemoContext';
 import { TierId } from '../mock/types';
 import { computeDueTime } from '../mock/clock';
-import { mockMarketplace } from '../mock/service';
-import { ArrowLeft, ArrowRight, Clock, Zap, Shield, CheckCircle2, Moon } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Clock, Zap, Moon } from 'lucide-react';
 
 export const SpeedPage: React.FC = () => {
   const navigate = useNavigate();
@@ -46,7 +45,7 @@ export const SpeedPage: React.FC = () => {
 
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 450);
+    }, 400);
     return () => clearTimeout(timer);
   }, [allow12h, allow6h]);
 
@@ -72,36 +71,36 @@ export const SpeedPage: React.FC = () => {
           <Link
             to="/details"
             state={prevData}
-            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#4F5F78] hover:text-[#0B1B33] mb-3 transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#5A6B7F] hover:text-[#1C2733] mb-3 transition-colors"
           >
             <ArrowLeft className="w-3.5 h-3.5" /> Back to details
           </Link>
 
           <div className="mb-6">
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#0B1B33]">
+            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-[#1C2733]">
               Need it sooner?
             </h1>
-            <p className="text-xs sm:text-sm text-[#4F5F78] mt-1">
-              Guaranteed turnaround delivered strictly by Eastern Time SLA. Choose your required delivery window.
+            <p className="text-xs sm:text-sm text-[#5A6B7F] mt-1">
+              Pick your delivery speed. All turnaround times are calculated in Eastern Time.
             </p>
           </div>
 
           {/* After Hours Notice Banner if active */}
           {isAfterHours && (
-            <div className="mb-6 p-3.5 bg-[#FDEBD0]/70 rounded-xl border border-[#F2A33A]/50 flex items-start gap-2.5">
-              <Moon className="w-4 h-4 text-amber-900 mt-0.5 shrink-0" />
-              <div className="text-xs text-[#0B1B33]">
-                <strong className="font-bold">After-Hours Notice: </strong>
-                Courthouse land record search officially opens at 9:00 AM ET tomorrow. All delivery targets are calculated from the 9:00 AM dispatch bell.
+            <div className="mb-6 p-3.5 bg-[#DBFCC5]/70 rounded-xl border border-[#00BC82]/40 flex items-start gap-2.5">
+              <Moon className="w-4 h-4 text-[#00BC82] mt-0.5 shrink-0" />
+              <div className="text-xs text-[#1C2733]">
+                <strong className="font-bold">After-hours notice: </strong>
+                County land records offices open at 9:00 AM ET tomorrow. Due times are calculated from the 9:00 AM opening.
               </div>
             </div>
           )}
 
           {loading ? (
             <div className="py-16 text-center">
-              <div className="w-8 h-8 border-3 border-[#E3E8F0] border-t-[#F2A33A] rounded-full animate-spin mx-auto mb-3" />
-              <p className="text-xs font-medium text-[#4F5F78]">
-                Checking abstractor dispatch capacity in {prevData.property.county}...
+              <div className="w-8 h-8 border-3 border-[#E3E8F0] border-t-[#00BC82] rounded-full animate-spin mx-auto mb-3" />
+              <p className="text-xs font-medium text-[#5A6B7F]">
+                Checking availability in {prevData.property.county}...
               </p>
             </div>
           ) : (
@@ -111,7 +110,7 @@ export const SpeedPage: React.FC = () => {
                 onClick={() => setSelectedTier('24h')}
                 className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all ${
                   selectedTier === '24h'
-                    ? 'border-[#0B1B33] bg-[#F4F6FA]/60 shadow-sm'
+                    ? 'border-[#00BC82] bg-[#DBFCC5]/15 shadow-sm'
                     : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
                 }`}
               >
@@ -122,33 +121,33 @@ export const SpeedPage: React.FC = () => {
                       name="tier"
                       checked={selectedTier === '24h'}
                       onChange={() => setSelectedTier('24h')}
-                      className="accent-[#0B1B33] w-4 h-4 mt-1 cursor-pointer"
+                      className="accent-[#00BC82] w-4 h-4 mt-1 cursor-pointer"
                     />
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-base font-bold text-[#0B1B33]">
+                        <span className="text-base font-bold text-[#1C2733]">
                           Standard 24 Hours
                         </span>
-                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white border border-[#E3E8F0] text-[#4F5F78] px-2 py-0.5 rounded-pill">
+                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white border border-[#E3E8F0] text-[#5A6B7F] px-2 py-0.5 rounded-pill">
                           Included
                         </span>
                       </div>
-                      <p className="text-xs text-[#4F5F78] mt-1">
-                        Our benchmark title abstract. Ideal for standard purchase contingencies and routine closings.
+                      <p className="text-xs text-[#5A6B7F] mt-1">
+                        Standard turnaround for most purchase contingencies and routine title searches.
                       </p>
                     </div>
                   </div>
                   <div className="text-right shrink-0 font-mono">
-                    <div className="text-lg font-bold text-[#0B1B33]">$229</div>
-                    <div className="text-[11px] text-[#4F5F78]">Flat fee</div>
+                    <div className="text-lg font-bold text-[#1C2733]">$229</div>
+                    <div className="text-[11px] text-[#5A6B7F]">Flat fee</div>
                   </div>
                 </div>
 
                 <div className="mt-3.5 pt-3 border-t border-[#E3E8F0]/70 flex items-center justify-between text-xs">
-                  <span className="text-[#4F5F78] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-[#0B1B33]" /> Guaranteed delivery:
+                  <span className="text-[#5A6B7F] flex items-center gap-1.5">
+                    <Clock className="w-3.5 h-3.5 text-[#00BC82]" /> Guaranteed delivery:
                   </span>
-                  <span className="font-mono font-bold text-[#0B1B33]">
+                  <span className="font-mono font-bold text-[#1C2733]">
                     {due24.formattedLong}
                   </span>
                 </div>
@@ -160,7 +159,7 @@ export const SpeedPage: React.FC = () => {
                   onClick={() => setSelectedTier('12h')}
                   className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all animate-in fade-in-50 duration-200 ${
                     selectedTier === '12h'
-                      ? 'border-[#0B1B33] bg-[#F4F6FA]/60 shadow-sm'
+                      ? 'border-[#00BC82] bg-[#DBFCC5]/15 shadow-sm'
                       : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
                   }`}
                 >
@@ -171,46 +170,46 @@ export const SpeedPage: React.FC = () => {
                         name="tier"
                         checked={selectedTier === '12h'}
                         onChange={() => setSelectedTier('12h')}
-                        className="accent-[#0B1B33] w-4 h-4 mt-1 cursor-pointer"
+                        className="accent-[#00BC82] w-4 h-4 mt-1 cursor-pointer"
                       />
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="text-base font-bold text-[#0B1B33]">
+                          <span className="text-base font-bold text-[#1C2733]">
                             Express 12 Hours
                           </span>
-                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#FDEBD0] text-[#0B1B33] px-2 py-0.5 rounded-pill">
-                            Express Priority
+                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#DBFCC5] text-[#00BC82] px-2 py-0.5 rounded-pill font-mono">
+                            Priority
                           </span>
                         </div>
-                        <p className="text-xs text-[#4F5F78] mt-1">
-                          Expedited search queue routed to dedicated priority abstractors.
+                        <p className="text-xs text-[#5A6B7F] mt-1">
+                          Faster delivery with prioritized abstractor queue.
                         </p>
                       </div>
                     </div>
                     <div className="text-right shrink-0 font-mono">
-                      <div className="text-lg font-bold text-[#0B1B33]">$249</div>
-                      <div className="text-[11px] text-[#4F5F78]">+$20 rush</div>
+                      <div className="text-lg font-bold text-[#1C2733]">$249</div>
+                      <div className="text-[11px] text-[#5A6B7F]">+$20 rush</div>
                     </div>
                   </div>
 
                   <div className="mt-3.5 pt-3 border-t border-[#E3E8F0]/70 flex items-center justify-between text-xs">
-                    <span className="text-[#4F5F78] flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-[#F2A33A]" /> Guaranteed delivery:
+                    <span className="text-[#5A6B7F] flex items-center gap-1.5">
+                      <Zap className="w-3.5 h-3.5 text-[#00BC82]" /> Guaranteed delivery:
                     </span>
-                    <span className="font-mono font-bold text-[#0B1B33]">
+                    <span className="font-mono font-bold text-[#1C2733]">
                       {due12.formattedLong}
                     </span>
                   </div>
                 </label>
               )}
 
-              {/* Tier 3: 6h Same-Day Rush (conditional on allow6h) */}
+              {/* Tier 3: 6h Same-Day Rush (Uses Orange for rush elements) */}
               {allow6h && (
                 <label
                   onClick={() => setSelectedTier('6h')}
                   className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all animate-in fade-in-50 duration-200 ${
                     selectedTier === '6h'
-                      ? 'border-[#0B1B33] bg-[#F4F6FA]/60 shadow-sm'
+                      ? 'border-[#F97316] bg-orange-50/40 shadow-sm'
                       : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
                   }`}
                 >
@@ -221,33 +220,33 @@ export const SpeedPage: React.FC = () => {
                         name="tier"
                         checked={selectedTier === '6h'}
                         onChange={() => setSelectedTier('6h')}
-                        className="accent-[#0B1B33] w-4 h-4 mt-1 cursor-pointer"
+                        className="accent-[#F97316] w-4 h-4 mt-1 cursor-pointer"
                       />
                       <div>
                         <div className="flex items-center gap-2">
-                          <span className="text-base font-bold text-[#0B1B33]">
+                          <span className="text-base font-bold text-[#1C2733]">
                             Same-Day 6 Hours
                           </span>
-                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#F2A33A]/20 text-[#0B1B33] px-2 py-0.5 rounded-pill font-mono">
-                            ⚡ Urgent
+                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#F97316]/15 text-[#F97316] px-2 py-0.5 rounded-pill font-mono">
+                            ⚡ Rush
                           </span>
                         </div>
-                        <p className="text-xs text-[#4F5F78] mt-1">
-                          Direct instant dispatch to active on-call abstractors in this county.
+                        <p className="text-xs text-[#5A6B7F] mt-1">
+                          Direct immediate dispatch to available abstractors in this county.
                         </p>
                       </div>
                     </div>
                     <div className="text-right shrink-0 font-mono">
-                      <div className="text-lg font-bold text-[#0B1B33]">$299</div>
-                      <div className="text-[11px] text-[#4F5F78]">+$70 rush</div>
+                      <div className="text-lg font-bold text-[#1C2733]">$299</div>
+                      <div className="text-[11px] text-[#F97316] font-semibold">+$70 rush</div>
                     </div>
                   </div>
 
                   <div className="mt-3.5 pt-3 border-t border-[#E3E8F0]/70 flex items-center justify-between text-xs">
-                    <span className="text-[#4F5F78] flex items-center gap-1.5">
-                      <Clock className="w-3.5 h-3.5 text-[#17824F]" /> Guaranteed delivery:
+                    <span className="text-[#5A6B7F] flex items-center gap-1.5">
+                      <Clock className="w-3.5 h-3.5 text-[#F97316]" /> Guaranteed delivery:
                     </span>
-                    <span className="font-mono font-bold text-[#0B1B33]">
+                    <span className="font-mono font-bold text-[#1C2733]">
                       {due6.formattedLong}
                     </span>
                   </div>
@@ -272,7 +271,7 @@ export const SpeedPage: React.FC = () => {
             <button
               type="button"
               onClick={handleContinue}
-              className="btn-primary w-full sm:w-auto px-8 py-3 text-sm font-bold shadow-soft flex items-center justify-center gap-2"
+              className="btn-cta w-full sm:w-auto px-8 py-3 text-sm font-bold shadow-soft flex items-center justify-center gap-2"
             >
               <span>Continue to Payment</span>
               <ArrowRight className="w-4 h-4" />

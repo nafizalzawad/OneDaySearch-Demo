@@ -23,10 +23,10 @@ export const AdminConfigPage: React.FC = () => {
   return (
     <div className="max-w-4xl space-y-6">
       <div className="pb-4 border-b border-[#E3E8F0]">
-        <h1 className="text-xl sm:text-2xl font-extrabold text-[#0B1B33]">
+        <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Marketplace Operational Configuration
         </h1>
-        <p className="text-xs text-[#4F5F78]">
+        <p className="text-xs text-[#5A6B7F]">
           Configure turnaround tier flat fees, abstractor payout splits, offer timeout thresholds, and courthouse operating windows.
         </p>
       </div>
@@ -34,31 +34,31 @@ export const AdminConfigPage: React.FC = () => {
       <form onSubmit={handleSave} className="space-y-6">
         {/* Tier Pricing & Payout Config */}
         <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft space-y-4">
-          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#0B1B33] pb-2 border-b border-[#E3E8F0]">
+          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-2 border-b border-[#E3E8F0]">
             1. Tier Pricing &amp; Abstractor Revenue Share
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
             {/* Standard 24h */}
             <div className="p-3 bg-[#F8FAFC] rounded-lg border border-[#E3E8F0]">
-              <span className="font-bold text-[#0B1B33] block mb-2">Standard 24-Hour Tier</span>
+              <span className="font-bold text-[#1C2733] block mb-2">Standard 24-Hour Tier</span>
               <div className="space-y-2">
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Customer Price ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Customer Price ($)</label>
                   <input
                     type="number"
                     value={standardPrice}
                     onChange={(e) => setStandardPrice(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#0B1B33] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#1C2733] font-bold"
                   />
                 </div>
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Abstractor Payout ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Abstractor Payout ($)</label>
                   <input
                     type="number"
                     value={standardPayout}
                     onChange={(e) => setStandardPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#17824F] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#00BC82] font-bold"
                   />
                 </div>
               </div>
@@ -66,24 +66,24 @@ export const AdminConfigPage: React.FC = () => {
 
             {/* Express 12h */}
             <div className="p-3 bg-[#F8FAFC] rounded-lg border border-[#E3E8F0]">
-              <span className="font-bold text-[#0B1B33] block mb-2">Express 12-Hour Tier</span>
+              <span className="font-bold text-[#1C2733] block mb-2">Express 12-Hour Tier</span>
               <div className="space-y-2">
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Customer Price ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Customer Price ($)</label>
                   <input
                     type="number"
                     value={expressPrice}
                     onChange={(e) => setExpressPrice(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#0B1B33] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#1C2733] font-bold"
                   />
                 </div>
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Abstractor Payout ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Abstractor Payout ($)</label>
                   <input
                     type="number"
                     value={expressPayout}
                     onChange={(e) => setExpressPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#17824F] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#00BC82] font-bold"
                   />
                 </div>
               </div>
@@ -91,24 +91,24 @@ export const AdminConfigPage: React.FC = () => {
 
             {/* Rush 6h */}
             <div className="p-3 bg-[#F8FAFC] rounded-lg border border-[#E3E8F0]">
-              <span className="font-bold text-[#0B1B33] block mb-2">Same-Day 6-Hour Rush</span>
+              <span className="font-bold text-[#1C2733] block mb-2">Same-Day 6-Hour Rush</span>
               <div className="space-y-2">
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Customer Price ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Customer Price ($)</label>
                   <input
                     type="number"
                     value={rushPrice}
                     onChange={(e) => setRushPrice(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#0B1B33] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#1C2733] font-bold"
                   />
                 </div>
                 <div>
-                  <label className="text-[#4F5F78] block text-[10px]">Abstractor Payout ($)</label>
+                  <label className="text-[#5A6B7F] block text-[10px]">Abstractor Payout ($)</label>
                   <input
                     type="number"
                     value={rushPayout}
                     onChange={(e) => setRushPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#17824F] font-bold"
+                    className="w-full p-2 rounded border border-[#E3E8F0] font-mono text-[#00BC82] font-bold"
                   />
                 </div>
               </div>
@@ -118,13 +118,13 @@ export const AdminConfigPage: React.FC = () => {
 
         {/* Dispatch Rules & Business Hours */}
         <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft space-y-4">
-          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#0B1B33] pb-2 border-b border-[#E3E8F0]">
+          <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-2 border-b border-[#E3E8F0]">
             2. Routing Thresholds &amp; Eastern Time Operating Hours
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
             <div>
-              <label className="font-bold text-[#0B1B33] block mb-1">
+              <label className="font-bold text-[#1C2733] block mb-1">
                 Dispatch Offer Auto-Timeout (Seconds)
               </label>
               <input
@@ -133,11 +133,11 @@ export const AdminConfigPage: React.FC = () => {
                 onChange={(e) => setOfferTimeout(Number(e.target.value))}
                 className="w-full p-2.5 rounded-lg border border-[#E3E8F0] font-mono"
               />
-              <span className="text-[10px] text-[#4F5F78]">Re-routes to next available abstractor when timer hits 0.</span>
+              <span className="text-[10px] text-[#5A6B7F]">Re-routes to next available abstractor when timer hits 0.</span>
             </div>
 
             <div>
-              <label className="font-bold text-[#0B1B33] block mb-1">
+              <label className="font-bold text-[#1C2733] block mb-1">
                 Minimum Active Abstractors Required Per County
               </label>
               <input
@@ -146,11 +146,11 @@ export const AdminConfigPage: React.FC = () => {
                 onChange={(e) => setMinProviders(Number(e.target.value))}
                 className="w-full p-2.5 rounded-lg border border-[#E3E8F0] font-mono"
               />
-              <span className="text-[10px] text-[#4F5F78]">If below this threshold, 6h rush tier is automatically throttled.</span>
+              <span className="text-[10px] text-[#5A6B7F]">If below this threshold, 6h rush tier is automatically throttled.</span>
             </div>
 
             <div>
-              <label className="font-bold text-[#0B1B33] block mb-1">
+              <label className="font-bold text-[#1C2733] block mb-1">
                 Land Records Opening Hour (ET)
               </label>
               <input
@@ -162,7 +162,7 @@ export const AdminConfigPage: React.FC = () => {
             </div>
 
             <div>
-              <label className="font-bold text-[#0B1B33] block mb-1">
+              <label className="font-bold text-[#1C2733] block mb-1">
                 Land Records Cutoff / Closing Hour (ET)
               </label>
               <input
@@ -177,7 +177,7 @@ export const AdminConfigPage: React.FC = () => {
 
         <div className="flex items-center justify-between pt-2">
           {saved ? (
-            <span className="text-xs font-bold text-[#17824F] flex items-center gap-1.5">
+            <span className="text-xs font-bold text-[#00BC82] flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4" /> Parameters saved successfully!
             </span>
           ) : <div />}
