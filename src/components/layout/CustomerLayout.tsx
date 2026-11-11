@@ -16,14 +16,14 @@ export const CustomerLayout: React.FC = () => {
     <div
       className={`min-h-screen flex flex-col transition-colors duration-200 ${
         isGreenTheme
-          ? 'bg-[#6AE878] text-[#1C2733]'
+          ? 'bg-[#4A8B99] text-[#1C2733]'
           : isDarkTheme
-          ? 'bg-[#111D27] text-white'
-          : 'bg-[#F4F6FA] text-[#1C2733]'
+          ? 'bg-[#0D2429] text-white'
+          : 'bg-[#F4F8F9] text-[#1C2733]'
       }`}
     >
-      {/* Signature Brand Spectrum Ribbon */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#DBFCC5] via-[#6AE878] to-[#00BC82] shrink-0" />
+      {/* Signature Architectural Colonnade Ribbon */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#E2EFF1] via-[#68AAB7] to-[#1E535E] shrink-0" />
 
       {/* SMS Simulator Notification */}
       <SmsBubble />
@@ -35,10 +35,10 @@ export const CustomerLayout: React.FC = () => {
       <header
         className={`w-full transition-colors duration-150 sticky top-0 z-40 backdrop-blur-md ${
           isGreenTheme
-            ? 'bg-[#6AE878]/90 text-[#1C2733] border-b border-[#1C2733]/15'
+            ? 'bg-[#4A8B99]/95 text-[#1C2733] border-b border-[#1E535E]/20 shadow-sm'
             : isDarkTheme
-            ? 'bg-[#1C2733]/90 text-white border-b border-white/10'
-            : 'bg-white/90 text-[#1C2733] border-b border-[#E3E8F0]'
+            ? 'bg-[#14343B]/95 text-white border-b border-white/10'
+            : 'bg-white/95 text-[#1C2733] border-b border-[#D1E2E5]'
         }`}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -57,7 +57,7 @@ export const CustomerLayout: React.FC = () => {
                 isGreenTheme
                   ? 'text-[#1C2733] hover:text-black hover:underline'
                   : isDarkTheme
-                  ? 'text-gray-200 hover:text-[#6AE878]'
+                  ? 'text-gray-200 hover:text-[#68AAB7]'
                   : 'text-[#5A6B7F] hover:text-[#1C2733]'
               }`}
             >
@@ -103,7 +103,7 @@ export const CustomerLayout: React.FC = () => {
               <Link to="/support" className="hover:text-white transition-colors">
                 Support
               </Link>
-              <Link to="/brand" className="text-[#6AE878] hover:underline font-bold transition-colors">
+              <Link to="/brand" className="text-[#68AAB7] hover:underline font-bold transition-colors">
                 Brand specs
               </Link>
             </div>

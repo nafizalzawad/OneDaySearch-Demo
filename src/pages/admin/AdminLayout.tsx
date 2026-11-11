@@ -92,7 +92,7 @@ export const AdminLayout: React.FC = () => {
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6AE878]' : 'text-gray-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#68AAB7]' : 'text-gray-400'}`} />
                   <span>{item.label}</span>
                   {item.hasAlert && (
                     <span className="w-2 h-2 rounded-full bg-red-400 animate-pulse" />

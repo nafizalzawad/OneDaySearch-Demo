@@ -7,12 +7,12 @@ if (!fs.existsSync(outDir)) {
 }
 
 // Icon A: Clock under roofline
-// Bright green circle with clock hands, gable roof shape above.
+// Architectural blueish-green circle with clock hands, gable roof shape above.
 function getIconA(colorMode = 'color') {
   // colorMode: 'color' | 'charcoal' | 'navy' | 'white'
   const roofColor = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
-  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
-  const handColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
+  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const handColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#FFFFFF');
 
   return `
     <g id="icon-a">
@@ -29,8 +29,8 @@ function getIconA(colorMode = 'color') {
 
 // Icon B: Magnifier with house inside
 function getIconB(colorMode = 'color') {
-  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
-  const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
+  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1E535E');
 
   return `
     <g id="icon-b">
@@ -46,10 +46,10 @@ function getIconB(colorMode = 'color') {
   `.trim();
 }
 
-// Icon C: Bold "1" in green rounded square with roof slope flag
+// Icon C: Bold "1" in architectural blue-green rounded square with roof slope flag
 function getIconC(colorMode = 'color') {
-  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
-  const fg = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
+  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const fg = colorMode === 'white' ? '#1C2733' : '#FFFFFF';
 
   return `
     <g id="icon-c">

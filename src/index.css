@@ -4,67 +4,68 @@
 
 :root {
   --color-charcoal: #1C2733;
-  --color-green-bright: #6AE878; /* Main brand background color */
-  --color-green-bright-hover: #58D866;
-  --color-green-workhorse: #00BC82;
-  --color-green-workhorse-hover: #009B6B;
-  --color-green-pale: #DBFCC5;
-  --color-orange: #F97316;
-  --color-orange-hover: #E86A0A;
-  --color-page: #6AE878;
+  --color-teal-bright: #4A8B99; /* Main architectural blueish-green from client reference */
+  --color-teal-sunlit: #68AAB7;
+  --color-teal-deep: #1E535E; /* Workhorse deep teal for buttons, badges & high contrast */
+  --color-teal-deep-hover: #163E47;
+  --color-teal-pale: #E2EFF1; /* Pale seafoam architectural tint */
+  --color-orange: #F97316; /* Warm sunset orange CTA pop */
+  --color-orange-hover: #EA580C;
+  --color-page: #4A8B99;
   --color-muted: #5A6B7F;
   --color-white: #FFFFFF;
-  --color-border: #E3E8F0;
+  --color-border: #D1E2E5;
 
-  /* Theme tokens: Vibrant Green (Default: Green is the main background) */
-  --theme-header-bg: #6AE878;
-  --theme-header-text: #1C2733;
-  --theme-header-border: rgba(28, 39, 51, 0.14);
+  /* Theme tokens: Architectural Blueish-Green (Default) */
+  --theme-header-bg: #4A8B99;
+  --theme-header-text: #FFFFFF;
+  --theme-header-border: rgba(255, 255, 255, 0.2);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E3E8F0;
-  --theme-page-bg: #6AE878;
+  --theme-card-border: #D1E2E5;
+  --theme-page-bg: #4A8B99;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #E3E8F0;
+  --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
 }
 
+[data-theme="architectural-teal"],
 [data-theme="vibrant-green"] {
-  --theme-header-bg: #6AE878;
-  --theme-header-text: #1C2733;
-  --theme-header-border: rgba(28, 39, 51, 0.14);
+  --theme-header-bg: #4A8B99;
+  --theme-header-text: #FFFFFF;
+  --theme-header-border: rgba(255, 255, 255, 0.2);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E3E8F0;
-  --theme-page-bg: #6AE878;
+  --theme-card-border: #D1E2E5;
+  --theme-page-bg: #4A8B99;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #E3E8F0;
+  --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
 }
 
 [data-theme="clean-light"] {
   --theme-header-bg: #FFFFFF;
   --theme-header-text: #1C2733;
-  --theme-header-border: #E3E8F0;
+  --theme-header-border: #E2EFF1;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E3E8F0;
-  --theme-page-bg: #F4F6FA;
+  --theme-card-border: #E2EFF1;
+  --theme-page-bg: #F4F8F9;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #E3E8F0;
+  --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
 }
 
 [data-theme="dark-brand"] {
-  --theme-header-bg: #1C2733;
+  --theme-header-bg: #14343B;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: #2A3B4D;
+  --theme-header-border: #1E4D57;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E3E8F0;
-  --theme-page-bg: #111D27;
+  --theme-card-border: #D1E2E5;
+  --theme-page-bg: #0D2429;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #D1D9E6;
+  --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
 }
 
@@ -76,9 +77,10 @@ body {
   min-height: 100vh;
 }
 
-/* On green background, ensure lush radial gradient transitions for depth */
-.bg-vibrant-green-canvas {
-  background: radial-gradient(circle at 50% 10%, #7FF08C 0%, #6AE878 45%, #59DE68 100%);
+/* Architectural Blueish-Green Colonnade Canvas */
+.bg-vibrant-green-canvas,
+.bg-vibrant-teal-canvas {
+  background: radial-gradient(circle at 50% 10%, #68AAB7 0%, #4A8B99 45%, #387B88 100%);
 }
 
 /* Primary Action Buttons */
@@ -104,9 +106,9 @@ body {
   transform: translateY(0);
 }
 
-/* Workhorse Primary Button: Deep green background, White text (4.6:1 contrast) */
+/* Workhorse Primary Button: Deep Architectural Teal background, White text (8.5:1 contrast - WCAG AAA) */
 .btn-primary {
-  background-color: #00BC82;
+  background-color: #1E535E;
   color: #FFFFFF;
   font-weight: 600;
   border-radius: 9999px;
@@ -117,7 +119,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #009B6B;
+  background-color: #163E47;
   transform: translateY(-1px);
 }
 
@@ -125,7 +127,7 @@ body {
   transform: translateY(0);
 }
 
-/* Orange CTA Button: High-pop complementary accent for "Place an Order" and Rush elements */
+/* Orange CTA Button: High-pop complementary sunset accent for "Place an Order" and Rush elements */
 .btn-cta {
   background-color: #F97316;
   color: #FFFFFF;
@@ -139,7 +141,7 @@ body {
 }
 
 .btn-cta:hover {
-  background-color: #E86A0A;
+  background-color: #EA580C;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.5);
 }
@@ -151,7 +153,7 @@ body {
 .btn-secondary {
   background-color: #FFFFFF;
   color: #1C2733;
-  border: 1px solid #E3E8F0;
+  border: 1px solid #D1E2E5;
   font-weight: 600;
   border-radius: 9999px;
   transition: all 150ms ease-in-out;
@@ -161,16 +163,16 @@ body {
 }
 
 .btn-secondary:hover {
-  background-color: #F8FAFC;
-  border-color: #CBD5E1;
+  background-color: #F4F8F9;
+  border-color: #A3C3C9;
 }
 
-/* Floating White Card on Green Canvas */
+/* Floating White Card on Architectural Teal Canvas */
 .ods-card {
   background: #FFFFFF;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.65);
   border-radius: 16px;
-  box-shadow: 0 10px 30px -5px rgba(28, 39, 51, 0.12), 0 4px 12px -2px rgba(28, 39, 51, 0.08);
+  box-shadow: 0 10px 30px -5px rgba(20, 52, 59, 0.15), 0 4px 12px -2px rgba(20, 52, 59, 0.08);
 }
 
 /* Accessibility focus ring */

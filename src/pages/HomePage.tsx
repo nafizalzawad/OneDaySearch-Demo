@@ -84,7 +84,7 @@ export const HomePage: React.FC = () => {
   return (
     <div
       className={`relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-12 sm:py-20 min-h-[calc(100vh-140px)] overflow-hidden ${
-        isGreen ? 'bg-vibrant-green-canvas' : ''
+        isGreen ? 'bg-vibrant-teal-canvas' : ''
       }`}
     >
       <div className="w-full max-w-2xl flex flex-col items-center text-center">
@@ -104,7 +104,7 @@ export const HomePage: React.FC = () => {
 
         {/* High-Contrast Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 text-[#1C2733] text-xs font-bold mb-4 shadow-sm border border-white/80 backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-[#00BC82]" />
+          <span className="w-2 h-2 rounded-full bg-[#1E535E]" />
           <span>Title Search Marketplace · Maryland, Virginia &amp; DC</span>
         </div>
 
@@ -164,10 +164,10 @@ export const HomePage: React.FC = () => {
                     key={idx}
                     type="button"
                     onClick={() => handleSelectSample(sample)}
-                    className="w-full px-4 py-3 text-left hover:bg-[#F4F6FA] flex items-center justify-between transition-colors group"
+                    className="w-full px-4 py-3 text-left hover:bg-[#F4F8F9] flex items-center justify-between transition-colors group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#5A6B7F] group-hover:text-[#00BC82] mt-0.5 shrink-0 transition-colors" />
+                      <MapPin className="w-4 h-4 text-[#5A6B7F] group-hover:text-[#1E535E] mt-0.5 shrink-0 transition-colors" />
                       <div>
                         <div className="text-sm font-semibold text-[#1C2733]">
                           {sample.address}
@@ -179,11 +179,11 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div>
                       {sample.inCoverage ? (
-                        <span className="text-[11px] font-bold text-[#1C2733] bg-[#DBFCC5] px-2.5 py-0.5 rounded-pill shrink-0">
+                        <span className="text-[11px] font-bold text-[#1E535E] bg-[#E2EFF1] px-2.5 py-0.5 rounded-pill shrink-0">
                           Covered
                         </span>
                       ) : (
-                        <span className="text-[11px] font-medium text-[#5A6B7F] bg-[#F4F6FA] border border-[#E3E8F0] px-2 py-0.5 rounded-pill shrink-0">
+                        <span className="text-[11px] font-medium text-[#5A6B7F] bg-[#F4F8F9] border border-[#D1E2E5] px-2 py-0.5 rounded-pill shrink-0">
                           Waitlist
                         </span>
                       )}
@@ -207,15 +207,15 @@ export const HomePage: React.FC = () => {
         {/* S2 Address Check Transition / Results Box */}
         {coverageState === 'CHECKING' && (
           <div className="w-full max-w-lg p-4 bg-white rounded-card border border-white/80 text-xs text-[#1C2733] font-semibold flex items-center justify-center gap-2.5 shadow-elevated">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00BC82]" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#1E535E]" />
             <span>Checking county land records coverage...</span>
           </div>
         )}
 
         {coverageState === 'COVERED' && (
-          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.22)] text-left animate-in slide-in-from-bottom-2 duration-150">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 text-[#00BC82] shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-[#1E535E] shrink-0 mt-0.5" />
               <div className="flex-1">
                 <h4 className="text-sm font-bold text-[#1C2733]">
                   {selectedAddress ? `${selectedAddress.city}, ${selectedAddress.county}, ${selectedAddress.state}` : 'Montgomery County, MD'} — covered area
@@ -238,7 +238,7 @@ export const HomePage: React.FC = () => {
         )}
 
         {coverageState === 'OUT_OF_COVERAGE' && (
-          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.22)] text-left animate-in slide-in-from-bottom-2 duration-150">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150">
             <div className="flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-[#F97316] shrink-0 mt-0.5" />
               <div className="flex-1">
@@ -263,7 +263,7 @@ export const HomePage: React.FC = () => {
                       onChange={(e) => setWaitlistEmail(e.target.value)}
                       placeholder="Enter email for Richmond launch"
                       required
-                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1C2733]"
+                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
                     />
                     <button
                       type="submit"
@@ -273,8 +273,8 @@ export const HomePage: React.FC = () => {
                     </button>
                   </form>
                 ) : (
-                  <div className="mt-3 p-2 bg-[#DBFCC5]/80 rounded-lg text-xs font-medium text-[#1C2733] flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#00BC82]" />
+                  <div className="mt-3 p-2 bg-[#E2EFF1] rounded-lg text-xs font-medium text-[#1E535E] flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#1E535E]" />
                     <span>Thanks! We will notify you when Richmond is online.</span>
                   </div>
                 )}
@@ -283,11 +283,11 @@ export const HomePage: React.FC = () => {
           </div>
         )}
 
-        {/* 3 Real Product Pillars: Floating White Cards on Green Canvas */}
+        {/* 3 Real Product Pillars: Floating White Cards on Architectural Teal Canvas */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl mt-12 pt-8 border-t border-[#1C2733]/15 text-left">
-          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(28,39,51,0.12)] border border-white/80 hover:shadow-xl transition-all">
-            <div className="w-8 h-8 rounded-lg bg-[#DBFCC5] flex items-center justify-center mb-2.5">
-              <Clock className="w-4 h-4 text-[#00BC82]" />
+          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2.5">
+              <Clock className="w-4 h-4 text-[#1E535E]" />
             </div>
             <h3 className="text-xs font-bold text-[#1C2733]">24-Hour SLA Delivery</h3>
             <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
@@ -295,9 +295,9 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(28,39,51,0.12)] border border-white/80 hover:shadow-xl transition-all">
-            <div className="w-8 h-8 rounded-lg bg-[#DBFCC5] flex items-center justify-center mb-2.5">
-              <ShieldCheck className="w-4 h-4 text-[#00BC82]" />
+          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2.5">
+              <ShieldCheck className="w-4 h-4 text-[#1E535E]" />
             </div>
             <h3 className="text-xs font-bold text-[#1C2733]">Human Verified Abstract</h3>
             <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
@@ -305,9 +305,9 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(28,39,51,0.12)] border border-white/80 hover:shadow-xl transition-all">
-            <div className="w-8 h-8 rounded-lg bg-[#DBFCC5] flex items-center justify-center mb-2.5">
-              <MapPin className="w-4 h-4 text-[#00BC82]" />
+          <div className="p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2.5">
+              <MapPin className="w-4 h-4 text-[#1E535E]" />
             </div>
             <h3 className="text-xs font-bold text-[#1C2733]">Regional Courthouse Access</h3>
             <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">

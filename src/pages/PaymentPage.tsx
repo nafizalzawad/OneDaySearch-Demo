@@ -96,7 +96,7 @@ export const PaymentPage: React.FC = () => {
                 <div>
                   <span className="text-[#5A6B7F] block text-[11px]">Subject Property</span>
                   <div className="font-bold text-[#1C2733] mt-0.5 flex items-start gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-[#00BC82] shrink-0 mt-0.5" />
+                    <MapPin className="w-3.5 h-3.5 text-[#1E535E] shrink-0 mt-0.5" />
                     <span>{prevData.property.address}</span>
                   </div>
                   <div className="text-[#5A6B7F] pl-5 mt-0.5">
@@ -104,7 +104,7 @@ export const PaymentPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#E3E8F0]/70">
+                <div className="grid grid-cols-2 gap-2 pt-2 border-t border-[#D1E2E5]/70">
                   <div>
                     <span className="text-[#5A6B7F] block text-[11px]">Property Type</span>
                     <span className="font-semibold text-[#1C2733] capitalize">
@@ -119,34 +119,34 @@ export const PaymentPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-2 border-t border-[#E3E8F0]/70">
+                <div className="pt-2 border-t border-[#D1E2E5]/70">
                   <span className="text-[#5A6B7F] block text-[11px]">Turnaround Window</span>
                   <div className="flex items-center justify-between mt-0.5">
                     <span className="font-bold text-[#1C2733]">{tierInfo.name}</span>
                     <span className="font-mono text-[#1C2733] font-bold">${tierInfo.price}.00</span>
                   </div>
-                  <div className="mt-1 flex items-center gap-1.5 text-[11px] text-[#00BC82] font-semibold">
+                  <div className="mt-1 flex items-center gap-1.5 text-[11px] text-[#1E535E] font-semibold">
                     <Clock className="w-3 h-3" />
                     <span>Guaranteed due: {dueResult.formatted}</span>
                   </div>
                 </div>
 
                 {/* Price Breakdown */}
-                <div className="pt-3 border-t border-[#E3E8F0] space-y-1.5">
+                <div className="pt-3 border-t border-[#D1E2E5] space-y-1.5">
                   <div className="flex justify-between text-[#5A6B7F]">
                     <span>Title Search Fee</span>
                     <span className="font-mono text-[#1C2733]">${tierInfo.price}.00</span>
                   </div>
                   <div className="flex justify-between text-[#5A6B7F]">
                     <span>Land Records Access</span>
-                    <span className="font-mono text-[#00BC82] font-medium">Included ($0)</span>
+                    <span className="font-mono text-[#1E535E] font-medium">Included ($0)</span>
                   </div>
                   <div className="flex justify-between text-[#5A6B7F]">
                     <span>Electronic Delivery</span>
-                    <span className="font-mono text-[#00BC82] font-medium">Included ($0)</span>
+                    <span className="font-mono text-[#1E535E] font-medium">Included ($0)</span>
                   </div>
 
-                  <div className="pt-2 border-t border-[#E3E8F0] flex justify-between items-baseline font-mono text-[#1C2733]">
+                  <div className="pt-2 border-t border-[#D1E2E5] flex justify-between items-baseline font-mono text-[#1C2733]">
                     <span className="text-sm font-bold font-sans">Total Due Today</span>
                     <span className="text-xl font-extrabold">${tierInfo.price}.00</span>
                   </div>
@@ -154,7 +154,7 @@ export const PaymentPage: React.FC = () => {
               </div>
 
               {/* Demo Badge */}
-              <div className="mt-5 p-2.5 bg-[#DBFCC5]/60 rounded-xl border border-[#00BC82]/30 text-center">
+              <div className="mt-5 p-2.5 bg-[#E2EFF1] rounded-xl border border-[#1E535E]/30 text-center">
                 <span className="text-[11px] font-bold text-[#1C2733] tracking-wide uppercase">
                   ⚡ Demo Mode — No real payment required
                 </span>
@@ -212,7 +212,7 @@ export const PaymentPage: React.FC = () => {
                       type="text"
                       value={cardNumber}
                       onChange={(e) => setCardNumber(e.target.value)}
-                      className="w-full text-xs sm:text-sm pl-9 pr-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
+                      className="w-full text-xs sm:text-sm pl-9 pr-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
                     />
                     <CreditCard className="w-4 h-4 text-[#5A6B7F] absolute left-3 top-1/2 -translate-y-1/2" />
                   </div>
@@ -227,7 +227,7 @@ export const PaymentPage: React.FC = () => {
                       type="text"
                       value={expiry}
                       onChange={(e) => setExpiry(e.target.value)}
-                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
+                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
                     />
                   </div>
                   <div>
@@ -238,20 +238,20 @@ export const PaymentPage: React.FC = () => {
                       type="text"
                       value={cvc}
                       onChange={(e) => setCvc(e.target.value)}
-                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
+                      className="w-full text-xs sm:text-sm px-3 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
                     />
                   </div>
                 </div>
 
                 {/* Statutory Terms Checkbox (EXACT REQUIRED CONTRACT LANGUAGE) */}
-                <div className="pt-3 border-t border-[#E3E8F0]/70">
-                  <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-[#F4F6FA] border border-[#E3E8F0] hover:bg-[#EDF2F7] transition-colors">
+                <div className="pt-3 border-t border-[#D1E2E5]/70">
+                  <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-[#E2EFF1]/40 border border-[#D1E2E5] hover:bg-[#E2EFF1]/70 transition-colors">
                     <input
                       type="checkbox"
                       required
                       checked={termsAgreed}
                       onChange={(e) => setTermsAgreed(e.target.checked)}
-                      className="accent-[#00BC82] w-4 h-4 mt-0.5 rounded cursor-pointer shrink-0"
+                      className="accent-[#1E535E] w-4 h-4 mt-0.5 rounded cursor-pointer shrink-0"
                     />
                     <span className="text-[11px] sm:text-xs text-[#1C2733] leading-relaxed">
                       I agree to the Terms. I understand an independent abstractor prepares my report, that it is not title insurance or legal advice, and that the abstractor&apos;s E&amp;O policy stands behind its contents.
@@ -278,7 +278,7 @@ export const PaymentPage: React.FC = () => {
                 </div>
 
                 <div className="flex items-center justify-center gap-2 text-[11px] text-[#5A6B7F] pt-2">
-                  <Lock className="w-3.5 h-3.5 text-[#00BC82]" />
+                  <Lock className="w-3.5 h-3.5 text-[#1E535E]" />
                   <span>256-bit Encrypted Session · Guest Order Protected</span>
                 </div>
               </form>

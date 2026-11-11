@@ -87,9 +87,9 @@ export const DetailsPage: React.FC = () => {
           </div>
 
           {/* Selected Address Box */}
-          <div className="mb-6 p-3 bg-[#F4F6FA] rounded-xl border border-[#E3E8F0] flex items-center justify-between">
+          <div className="mb-6 p-3 bg-[#E2EFF1]/60 rounded-xl border border-[#D1E2E5] flex items-center justify-between">
             <div className="flex items-start gap-2.5">
-              <MapPin className="w-4 h-4 text-[#00BC82] shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-[#1E535E] shrink-0 mt-0.5" />
               <div>
                 <span className="text-xs font-bold text-[#1C2733] block">
                   {addressState.address}
@@ -101,7 +101,7 @@ export const DetailsPage: React.FC = () => {
             </div>
             <Link
               to="/"
-              className="text-xs font-semibold text-[#00BC82] hover:underline shrink-0 ml-2"
+              className="text-xs font-semibold text-[#1E535E] hover:underline shrink-0 ml-2"
             >
               Edit
             </Link>
@@ -117,7 +117,7 @@ export const DetailsPage: React.FC = () => {
                 <select
                   value={propertyType}
                   onChange={(e) => setPropertyType(e.target.value as PropertyType)}
-                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] bg-white text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] appearance-none cursor-pointer"
+                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] bg-white text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] appearance-none cursor-pointer"
                 >
                   <option value="single_family">Single Family Home</option>
                   <option value="townhouse">Townhouse</option>
@@ -152,7 +152,7 @@ export const DetailsPage: React.FC = () => {
                     className={`py-2 px-2.5 rounded-lg border text-xs font-semibold transition-all ${
                       role === item.id
                         ? 'border-[#1C2733] bg-[#1C2733] text-white shadow-sm'
-                        : 'border-[#E3E8F0] bg-white text-[#5A6B7F] hover:border-[#CBD5E1]'
+                        : 'border-[#D1E2E5] bg-white text-[#5A6B7F] hover:border-[#1E535E]'
                     }`}
                   >
                     {item.label}
@@ -162,7 +162,7 @@ export const DetailsPage: React.FC = () => {
             </div>
 
             {/* Contact Information */}
-            <div className="pt-2 border-t border-[#E3E8F0]/70 space-y-4">
+            <div className="pt-2 border-t border-[#D1E2E5]/70 space-y-4">
               <div>
                 <label className="block text-xs font-bold text-[#1C2733] mb-1">
                   Full Name
@@ -173,7 +173,7 @@ export const DetailsPage: React.FC = () => {
                   value={fullName}
                   onChange={(e) => setFullName(e.target.value)}
                   placeholder="e.g. Jane Doe"
-                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
                 />
               </div>
 
@@ -187,7 +187,7 @@ export const DetailsPage: React.FC = () => {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="jane.doe@example.com"
-                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
                 />
               </div>
 
@@ -201,7 +201,7 @@ export const DetailsPage: React.FC = () => {
                   value={mobile}
                   onChange={(e) => setMobile(e.target.value)}
                   placeholder="(301) 555-0192"
-                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                  className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
                 />
               </div>
 
@@ -211,7 +211,7 @@ export const DetailsPage: React.FC = () => {
                   type="checkbox"
                   checked={smsConsent}
                   onChange={(e) => setSmsConsent(e.target.checked)}
-                  className="accent-[#00BC82] w-4 h-4 mt-0.5 rounded cursor-pointer"
+                  className="accent-[#1E535E] w-4 h-4 mt-0.5 rounded cursor-pointer"
                 />
                 <span className="text-[11px] text-[#5A6B7F] leading-tight">
                   Send real-time order status and download link via SMS. (No promotional texts. Msg rates may apply.)

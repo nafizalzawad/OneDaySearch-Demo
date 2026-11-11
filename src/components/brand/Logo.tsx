@@ -17,13 +17,13 @@ export const LogoIcon: React.FC<{
   className?: string;
 }> = ({ direction, colorMode = 'color', size = 32, className = '' }) => {
   const roofCharcoal = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
-  const brandGreen = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6AE878');
-  const clockHands = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
-  const houseColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1C2733');
+  const brandTeal = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const clockHands = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#FFFFFF');
+  const houseColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1E535E');
 
   if (direction === 'a') {
     // Direction A: Clock under a roofline
-    // Signature bright green circle with clock hands, gable roof shape above.
+    // Architectural blueish-green circle with clock hands, gable roof shape above.
     return (
       <svg
         width={size}
@@ -41,8 +41,8 @@ export const LogoIcon: React.FC<{
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        {/* Bright green circle clock */}
-        <circle cx="16" cy="19.5" r="8" fill={brandGreen} />
+        {/* Architectural blueish-green circle clock */}
+        <circle cx="16" cy="19.5" r="8" fill={brandTeal} />
         {/* Clock hands showing 3 o'clock / 24h cycle */}
         <path
           d="M16 19.5V14.5M16 19.5H19.5"
@@ -68,9 +68,9 @@ export const LogoIcon: React.FC<{
         className={className}
       >
         {/* Magnifier lens ring */}
-        <circle cx="13.5" cy="13.5" r="9" stroke={brandGreen} strokeWidth="2.75" />
+        <circle cx="13.5" cy="13.5" r="9" stroke={brandTeal} strokeWidth="2.75" />
         {/* Handle */}
-        <path d="M20 20L28.5 28.5" stroke={brandGreen} strokeWidth="3.25" strokeLinecap="round" />
+        <path d="M20 20L28.5 28.5" stroke={brandTeal} strokeWidth="3.25" strokeLinecap="round" />
         {/* House inside lens */}
         <path d="M13.5 7.5L8 12.5H19L13.5 7.5Z" fill={houseColor} />
         <path d="M9.5 12.5H17.5V17.5H9.5V12.5Z" fill={houseColor} />
@@ -79,7 +79,7 @@ export const LogoIcon: React.FC<{
     );
   }
 
-  // Direction C: Bold "1" in a green rounded square with roof slope flag
+  // Direction C: Bold "1" in an architectural blue-green rounded square with roof slope flag
   return (
     <svg
       width={size}
@@ -89,7 +89,7 @@ export const LogoIcon: React.FC<{
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <rect x="2.5" y="2.5" width="27" height="27" rx="6" fill={brandGreen} />
+      <rect x="2.5" y="2.5" width="27" height="27" rx="6" fill={brandTeal} />
       <path
         d="M9 13.5L16 7V22.5M12 22.5H20"
         stroke={houseColor}
@@ -170,7 +170,7 @@ export const Logo: React.FC<LogoProps> = ({
       {variant === 'dark' ? (
         <>
           <span className="text-white">OneDay</span>
-          <span className="text-[#6AE878]">Search</span>
+          <span className="text-[#68AAB7]">Search</span>
         </>
       ) : variant === 'monochrome-white' ? (
         <span className="text-white">OneDaySearch</span>

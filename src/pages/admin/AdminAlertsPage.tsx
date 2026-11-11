@@ -16,7 +16,7 @@ export const AdminAlertsPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="pb-4 border-b border-[#E3E8F0]">
+      <div className="pb-4 border-b border-[#D1E2E5]">
         <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Real-Time Marketplace Alerts &amp; Incidents
         </h1>
@@ -31,7 +31,7 @@ export const AdminAlertsPage: React.FC = () => {
             key={alt.id}
             className={`p-5 rounded-card border shadow-soft transition-all ${
               alt.resolved
-                ? 'bg-white opacity-60 border-[#E3E8F0]'
+                ? 'bg-white opacity-60 border-[#D1E2E5]'
                 : alt.severity === 'critical'
                 ? 'bg-red-50/50 border-red-200'
                 : 'bg-amber-50/50 border-amber-200'
@@ -86,7 +86,7 @@ export const AdminAlertsPage: React.FC = () => {
 
               <div className="flex items-center gap-2 shrink-0">
                 {alt.resolved ? (
-                  <span className="text-xs font-bold text-[#00BC82] flex items-center gap-1">
+                  <span className="text-xs font-bold text-[#1E535E] flex items-center gap-1">
                     <CheckCircle2 className="w-4 h-4" /> Resolved
                   </span>
                 ) : (

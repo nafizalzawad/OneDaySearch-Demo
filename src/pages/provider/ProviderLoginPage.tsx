@@ -16,7 +16,7 @@ export const ProviderLoginPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#F4F6FA] flex flex-col justify-center items-center px-4">
-      <div className="w-full max-w-md bg-white rounded-card border border-[#E3E8F0] shadow-soft p-8 text-left">
+      <div className="w-full max-w-md bg-white rounded-card border border-[#D1E2E5] shadow-soft p-8 text-left">
         <div className="text-center mb-6">
           <Logo direction={logoDirection} variant="light" layout="stacked" size="md" />
           <div className="mt-3 inline-block px-2.5 py-0.5 rounded bg-[#1C2733] text-white text-[10px] font-bold uppercase tracking-wider">
@@ -41,7 +41,7 @@ export const ProviderLoginPage: React.FC = () => {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#D1E2E5] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
             />
           </div>
 
@@ -52,7 +52,7 @@ export const ProviderLoginPage: React.FC = () => {
             <input
               type="password"
               defaultValue="••••••••••••"
-              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
+              className="w-full text-xs sm:text-sm p-3 rounded-lg border border-[#D1E2E5] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
             />
           </div>
 
@@ -67,7 +67,7 @@ export const ProviderLoginPage: React.FC = () => {
           </div>
         </form>
 
-        <div className="mt-6 pt-5 border-t border-[#E3E8F0] text-center text-xs text-[#5A6B7F]">
+        <div className="mt-6 pt-5 border-t border-[#D1E2E5] text-center text-xs text-[#5A6B7F]">
           <Link to="/" className="text-[#1C2733] hover:underline font-semibold">
             ← Return to Customer Site
           </Link>

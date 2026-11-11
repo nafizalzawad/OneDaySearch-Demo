@@ -13,7 +13,7 @@ export const AdminProvidersPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="pb-4 border-b border-[#E3E8F0]">
+      <div className="pb-4 border-b border-[#D1E2E5]">
         <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Abstractor Network &amp; E&amp;O Compliance Roster
         </h1>
@@ -22,10 +22,10 @@ export const AdminProvidersPage: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
+      <div className="bg-white rounded-card border border-[#D1E2E5] shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#D1E2E5] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="py-3 px-4">Abstractor Name</th>
                 <th className="py-3 px-4">Covered Counties</th>
@@ -36,7 +36,7 @@ export const AdminProvidersPage: React.FC = () => {
                 <th className="py-3 px-4 text-right">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E3E8F0]">
+            <tbody className="divide-y divide-[#D1E2E5]">
               {providers.map((p) => {
                 const expiring = isExpiringSoon(p.eoExpiryDate);
                 return (
@@ -51,7 +51,7 @@ export const AdminProvidersPage: React.FC = () => {
                         {p.countiesCovered.map((c, i) => (
                           <span
                             key={i}
-                            className="text-[10px] bg-[#F4F6FA] text-[#1C2733] px-1.5 py-0.5 rounded border border-[#E3E8F0]"
+                            className="text-[10px] bg-[#F4F6FA] text-[#1C2733] px-1.5 py-0.5 rounded border border-[#D1E2E5]"
                           >
                             {c}
                           </span>
@@ -87,7 +87,7 @@ export const AdminProvidersPage: React.FC = () => {
                       <span
                         className={`px-2 py-0.5 rounded text-[10px] font-bold ${
                           p.isOnline
-                            ? 'bg-[#00BC82]/10 text-[#00BC82]'
+                            ? 'bg-[#1E535E]/10 text-[#1E535E]'
                             : 'bg-gray-100 text-[#5A6B7F]'
                         }`}
                       >

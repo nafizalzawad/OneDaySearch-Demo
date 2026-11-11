@@ -2,12 +2,12 @@
   <g transform="translate(56, 10) scale(1.5)">
     <g id="icon-b">
       <!-- Magnifier lens ring -->
-      <circle cx="13.5" cy="13.5" r="9" stroke="#6AE878" stroke-width="2.75" fill="none"/>
+      <circle cx="13.5" cy="13.5" r="9" stroke="#4A8B99" stroke-width="2.75" fill="none"/>
       <!-- Magnifier handle -->
-      <path d="M20 20L28.5 28.5" stroke="#6AE878" stroke-width="3.25" stroke-linecap="round"/>
+      <path d="M20 20L28.5 28.5" stroke="#4A8B99" stroke-width="3.25" stroke-linecap="round"/>
       <!-- House inside lens -->
-      <path d="M13.5 7.5L8 12.5H19L13.5 7.5Z" fill="#1C2733"/>
-      <path d="M9.5 12.5H17.5V17.5H9.5V12.5Z" fill="#1C2733"/>
+      <path d="M13.5 7.5L8 12.5H19L13.5 7.5Z" fill="#1E535E"/>
+      <path d="M9.5 12.5H17.5V17.5H9.5V12.5Z" fill="#1E535E"/>
       <rect x="12" y="14.5" width="3" height="3" fill="#FFFFFF"/>
     </g>
   </g>

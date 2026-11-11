@@ -31,17 +31,17 @@ export const CoveragePage: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
         {/* Maryland */}
-        <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft">
-          <div className="flex items-center justify-between pb-3 border-b border-[#E3E8F0] mb-4">
+        <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft">
+          <div className="flex items-center justify-between pb-3 border-b border-[#D1E2E5] mb-4">
             <h3 className="text-base font-extrabold text-[#1C2733]">Maryland (24/24)</h3>
-            <span className="text-[10px] font-bold text-[#00BC82] bg-[#DBFCC5] px-2 py-0.5 rounded-pill">
+            <span className="text-[10px] font-bold text-[#1E535E] bg-[#E2EFF1] px-2 py-0.5 rounded-pill">
               100% Covered
             </span>
           </div>
           <div className="grid grid-cols-1 gap-1 text-xs text-[#5A6B7F]">
             {mdCounties.map((c) => (
               <div key={c} className="flex items-center gap-1.5 py-0.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82] shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E] shrink-0" />
                 <span>{c}</span>
               </div>
             ))}
@@ -49,10 +49,10 @@ export const CoveragePage: React.FC = () => {
         </div>
 
         {/* Washington DC */}
-        <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft">
-          <div className="flex items-center justify-between pb-3 border-b border-[#E3E8F0] mb-4">
+        <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft">
+          <div className="flex items-center justify-between pb-3 border-b border-[#D1E2E5] mb-4">
             <h3 className="text-base font-extrabold text-[#1C2733]">District of Columbia</h3>
-            <span className="text-[10px] font-bold text-[#00BC82] bg-[#DBFCC5] px-2 py-0.5 rounded-pill">
+            <span className="text-[10px] font-bold text-[#1E535E] bg-[#E2EFF1] px-2 py-0.5 rounded-pill">
               All 8 Wards
             </span>
           </div>
@@ -61,32 +61,32 @@ export const CoveragePage: React.FC = () => {
           </p>
           <div className="space-y-1.5 text-xs text-[#1C2733]">
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E]" />
               <span>DC Recorder of Deeds</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E]" />
               <span>DC Superior Court Judgments</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82]" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E]" />
               <span>OTR Real Property Tax Rolls</span>
             </div>
           </div>
         </div>
 
         {/* Virginia */}
-        <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft">
-          <div className="flex items-center justify-between pb-3 border-b border-[#E3E8F0] mb-4">
+        <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft">
+          <div className="flex items-center justify-between pb-3 border-b border-[#D1E2E5] mb-4">
             <h3 className="text-base font-extrabold text-[#1C2733]">Northern &amp; Central VA</h3>
-            <span className="text-[10px] font-bold text-[#00BC82] bg-[#DBFCC5] px-2 py-0.5 rounded-pill">
+            <span className="text-[10px] font-bold text-[#1E535E] bg-[#E2EFF1] px-2 py-0.5 rounded-pill">
               High Density
             </span>
           </div>
           <div className="grid grid-cols-1 gap-1 text-xs text-[#5A6B7F]">
             {vaCounties.map((c) => (
               <div key={c} className="flex items-center gap-1.5 py-0.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82] shrink-0" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E] shrink-0" />
                 <span>{c}</span>
               </div>
             ))}

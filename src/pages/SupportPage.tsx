@@ -24,10 +24,10 @@ export const SupportPage: React.FC = () => {
         </p>
       </div>
 
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6 sm:p-8">
+      <div className="bg-white rounded-card border border-[#D1E2E5] shadow-soft p-6 sm:p-8">
         {ticketSent ? (
-          <div className="p-4 bg-[#DBFCC5]/60 border border-[#00BC82]/40 rounded-xl space-y-3">
-            <div className="flex items-center gap-2 text-sm font-bold text-[#00BC82]">
+          <div className="p-4 bg-[#E2EFF1]/80 border border-[#1E535E]/30 rounded-xl space-y-3">
+            <div className="flex items-center gap-2 text-sm font-bold text-[#1E535E]">
               <CheckCircle2 className="w-5 h-5" />
               <span>Inquiry Received</span>
             </div>
@@ -51,7 +51,7 @@ export const SupportPage: React.FC = () => {
                 value={orderId}
                 onChange={(e) => setOrderId(e.target.value)}
                 placeholder="e.g. OD-48213"
-                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82] font-mono"
+                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
               />
             </div>
 
@@ -65,7 +65,7 @@ export const SupportPage: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="you@example.com"
-                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
               />
             </div>
 
@@ -79,7 +79,7 @@ export const SupportPage: React.FC = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="How can we assist you with this search report?"
-                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
               />
             </div>
 

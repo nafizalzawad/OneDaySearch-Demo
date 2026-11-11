@@ -12,7 +12,7 @@ export const ProviderEarningsPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#E3E8F0]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#D1E2E5]">
         <div>
           <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
             Abstractor Earnings &amp; Payouts
@@ -32,7 +32,7 @@ export const ProviderEarningsPage: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Pending / In-Transit Payouts
           </span>
@@ -40,15 +40,15 @@ export const ProviderEarningsPage: React.FC = () => {
           <span className="text-[11px] text-[#5A6B7F]">ACH batch releases tonight at 11:59 PM ET</span>
         </div>
 
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Month-to-Date (November)
           </span>
           <div className="text-2xl font-extrabold font-mono text-[#1C2733]">$1,420.00</div>
-          <span className="text-[11px] text-[#00BC82] font-semibold">9 completed title searches</span>
+          <span className="text-[11px] text-[#1E535E] font-semibold">9 completed title searches</span>
         </div>
 
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider block mb-1">
             Lifetime Abstract Payouts
           </span>
@@ -57,13 +57,13 @@ export const ProviderEarningsPage: React.FC = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
-        <div className="p-4 bg-[#F8FAFC] border-b border-[#E3E8F0] text-xs font-bold text-[#1C2733]">
+      <div className="bg-white rounded-card border border-[#D1E2E5] shadow-soft overflow-hidden">
+        <div className="p-4 bg-[#F8FAFC] border-b border-[#D1E2E5] text-xs font-bold text-[#1C2733]">
           Recent Search Settlements
         </div>
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="border-b border-[#D1E2E5] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="p-3.5">Settlement Date</th>
                 <th className="p-3.5">Order ID</th>
@@ -73,7 +73,7 @@ export const ProviderEarningsPage: React.FC = () => {
                 <th className="p-3.5 text-right">ACH Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E3E8F0]">
+            <tbody className="divide-y divide-[#D1E2E5]">
               {payouts.map((p, idx) => (
                 <tr key={idx} className="hover:bg-[#F4F6FA]/60">
                   <td className="p-3.5 text-[#5A6B7F] font-mono">{p.date}</td>
@@ -83,7 +83,7 @@ export const ProviderEarningsPage: React.FC = () => {
                   <td className="p-3.5 font-mono font-bold text-[#1C2733]">${p.amount.toFixed(2)}</td>
                   <td className="p-3.5 text-right">
                     <span className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                      p.status === 'PAID' ? 'bg-[#00BC82]/10 text-[#00BC82]' : 'bg-[#DBFCC5] text-[#1C2733]'
+                      p.status === 'PAID' ? 'bg-[#1E535E]/10 text-[#1E535E]' : 'bg-[#E2EFF1] text-[#1C2733]'
                     }`}>
                       {p.status}
                     </span>

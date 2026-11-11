@@ -34,7 +34,7 @@ export const AdminOrdersPage: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#E3E8F0]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[#D1E2E5]">
         <div>
           <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
             Live Marketplace Order Board
@@ -52,14 +52,14 @@ export const AdminOrdersPage: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Filter by OD#, address, abstractor..."
-              className="text-xs pl-8 pr-3 py-2 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-1 focus:ring-[#00BC82] w-64"
+              className="text-xs pl-8 pr-3 py-2 rounded-lg border border-[#D1E2E5] focus:outline-none focus:ring-1 focus:ring-[#1E535E] w-64"
             />
           </div>
 
           <select
             value={filterStatus}
             onChange={(e) => setFilterStatus(e.target.value)}
-            className="text-xs py-2 px-3 rounded-lg border border-[#E3E8F0] bg-white text-[#1C2733]"
+            className="text-xs py-2 px-3 rounded-lg border border-[#D1E2E5] bg-white text-[#1C2733]"
           >
             <option value="ALL">All Statuses</option>
             <option value="MATCHING">Matching</option>
@@ -71,10 +71,10 @@ export const AdminOrdersPage: React.FC = () => {
       </div>
 
       {/* Orders Matrix Table */}
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
+      <div className="bg-white rounded-card border border-[#D1E2E5] shadow-soft overflow-hidden">
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#D1E2E5] text-[#5A6B7F] text-[10px] uppercase font-bold tracking-wider">
               <tr>
                 <th className="py-3 px-4">Order ID &amp; Placed</th>
                 <th className="py-3 px-4">Property &amp; County</th>
@@ -87,7 +87,7 @@ export const AdminOrdersPage: React.FC = () => {
                 <th className="py-3 px-4 text-right">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E3E8F0]">
+            <tbody className="divide-y divide-[#D1E2E5]">
               {filteredOrders.map((ord) => {
                 return (
                   <tr key={ord.id} className="hover:bg-[#F4F6FA]/70 transition-colors">
@@ -116,7 +116,7 @@ export const AdminOrdersPage: React.FC = () => {
                       {ord.assignedProviderName ? (
                         <div>
                           <span className="font-bold text-[#1C2733] flex items-center gap-1">
-                            <UserCheck className="w-3 h-3 text-[#00BC82]" />
+                            <UserCheck className="w-3 h-3 text-[#1E535E]" />
                             {ord.assignedProviderName}
                           </span>
                           <span className="text-[10px] text-[#5A6B7F] font-mono">
@@ -150,10 +150,10 @@ export const AdminOrdersPage: React.FC = () => {
                       <span
                         className={`px-2 py-0.5 rounded-pill text-[10px] font-bold ${
                           ord.status === 'READY'
-                            ? 'bg-[#00BC82]/10 text-[#00BC82]'
+                            ? 'bg-[#1E535E]/10 text-[#1E535E]'
                             : ord.status === 'IN_PROGRESS'
                             ? 'bg-[#1C2733] text-white'
-                            : 'bg-[#DBFCC5] text-[#1C2733]'
+                            : 'bg-[#E2EFF1] text-[#1C2733]'
                         }`}
                       >
                         {ord.status}
@@ -179,7 +179,7 @@ export const AdminOrdersPage: React.FC = () => {
                       <Link
                         to={`/order/${ord.token}`}
                         target="_blank"
-                        className="text-xs font-bold text-[#1C2733] hover:text-[#00BC82] inline-flex items-center gap-1 underline"
+                        className="text-xs font-bold text-[#1C2733] hover:text-[#1E535E] inline-flex items-center gap-1 underline"
                         title="Inspect customer view"
                       >
                         <span>Customer URL</span>

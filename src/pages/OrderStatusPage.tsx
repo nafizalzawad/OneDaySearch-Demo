@@ -114,7 +114,7 @@ export const OrderStatusPage: React.FC = () => {
     return (
       <div className="flex-1 flex items-center justify-center py-20">
         <div className="text-center">
-          <div className="w-8 h-8 border-3 border-[#E3E8F0] border-t-[#00BC82] rounded-full animate-spin mx-auto mb-3" />
+          <div className="w-8 h-8 border-3 border-[#D1E2E5] border-t-[#1E535E] rounded-full animate-spin mx-auto mb-3" />
           <p className="text-xs text-[#5A6B7F]">Loading order status...</p>
         </div>
       </div>
@@ -143,14 +143,14 @@ export const OrderStatusPage: React.FC = () => {
   return (
     <div className="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 text-left">
       {/* Top Banner: Order ID & Support */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#E3E8F0] mb-8">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#D1E2E5] mb-8">
         <div>
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-[#5A6B7F] uppercase tracking-wider">Title Search Order</span>
             <span className="text-xs font-mono font-bold bg-[#1C2733] text-white px-2 py-0.5 rounded">
               {order.id}
             </span>
-            <span className="text-[11px] text-[#00BC82] font-semibold bg-[#DBFCC5] px-2.5 py-0.5 rounded-pill">
+            <span className="text-[11px] text-[#1E535E] font-semibold bg-[#E2EFF1] px-2.5 py-0.5 rounded-pill">
               Guaranteed SLA
             </span>
           </div>
@@ -168,7 +168,7 @@ export const OrderStatusPage: React.FC = () => {
             className="btn-secondary px-3.5 py-1.5 text-xs font-semibold flex items-center gap-1.5"
             title="Bookmark or copy persistent tracking link"
           >
-            {copiedLink ? <CheckCircle2 className="w-3.5 h-3.5 text-[#00BC82]" /> : <Bookmark className="w-3.5 h-3.5" />}
+            {copiedLink ? <CheckCircle2 className="w-3.5 h-3.5 text-[#1E535E]" /> : <Bookmark className="w-3.5 h-3.5" />}
             <span>{copiedLink ? 'Link Copied!' : 'Save This Order'}</span>
           </button>
           <Link
@@ -215,26 +215,26 @@ export const OrderStatusPage: React.FC = () => {
                 key={st.key}
                 className={`p-3 rounded-xl border text-left transition-all ${
                   isCurrent
-                    ? 'border-[#00BC82] bg-[#1C2733] text-white shadow-sm ring-2 ring-[#00BC82]'
+                    ? 'border-[#1E535E] bg-[#1C2733] text-white shadow-sm ring-2 ring-[#1E535E]'
                     : isDone
-                    ? 'border-[#00BC82]/30 bg-[#DBFCC5]/20 text-[#1C2733]'
-                    : 'border-[#E3E8F0] bg-white text-[#5A6B7F] opacity-75'
+                    ? 'border-[#1E535E]/30 bg-[#E2EFF1]/40 text-[#1C2733]'
+                    : 'border-[#D1E2E5] bg-white text-[#5A6B7F] opacity-75'
                 }`}
               >
                 <div className="flex items-center justify-between mb-1.5">
                   <span
                     className={`w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold ${
                       isCurrent
-                        ? 'bg-[#00BC82] text-white'
+                        ? 'bg-[#1E535E] text-white'
                         : isDone
-                        ? 'bg-[#00BC82] text-white'
-                        : 'bg-[#E3E8F0] text-[#5A6B7F]'
+                        ? 'bg-[#1E535E] text-white'
+                        : 'bg-[#D1E2E5] text-[#5A6B7F]'
                     }`}
                   >
                     {isDone ? '✓' : idx + 1}
                   </span>
                   {isCurrent && (
-                    <span className="w-2 h-2 rounded-full bg-[#6AE878]" />
+                    <span className="w-2 h-2 rounded-full bg-[#68AAB7]" />
                   )}
                 </div>
                 <div className={`text-xs font-bold leading-tight ${isCurrent ? 'text-white' : 'text-[#1C2733]'}`}>
@@ -258,10 +258,10 @@ export const OrderStatusPage: React.FC = () => {
         {/* Left Column: S7 Mock Report Card & Preview */}
         <div className="lg:col-span-7 space-y-6">
           <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-6">
-            <div className="flex items-center justify-between pb-4 border-b border-[#E3E8F0] mb-4">
+            <div className="flex items-center justify-between pb-4 border-b border-[#D1E2E5] mb-4">
               <div>
                 <h3 className="text-base font-extrabold text-[#1C2733] flex items-center gap-2">
-                  <FileText className="w-4 h-4 text-[#00BC82]" />
+                  <FileText className="w-4 h-4 text-[#1E535E]" />
                   Title Search Report
                 </h3>
                 <span className="text-xs text-[#5A6B7F]">
@@ -270,11 +270,11 @@ export const OrderStatusPage: React.FC = () => {
               </div>
               <div>
                 {isReportAvailable ? (
-                  <span className="px-2.5 py-1 rounded-pill bg-[#DBFCC5] text-[#00BC82] text-xs font-bold">
+                  <span className="px-2.5 py-1 rounded-pill bg-[#E2EFF1] text-[#1E535E] text-xs font-bold">
                     Complete
                   </span>
                 ) : (
-                  <span className="px-2.5 py-1 rounded-pill bg-[#F4F6FA] text-[#5A6B7F] border border-[#E3E8F0] text-xs font-bold">
+                  <span className="px-2.5 py-1 rounded-pill bg-[#F4F8F9] text-[#5A6B7F] border border-[#D1E2E5] text-xs font-bold">
                     In Progress
                   </span>
                 )}
@@ -282,11 +282,11 @@ export const OrderStatusPage: React.FC = () => {
             </div>
 
             {/* Superseded example toggle */}
-            <div className="mb-4 flex items-center justify-between text-xs bg-[#F4F6FA] p-2.5 rounded-lg border border-[#E3E8F0]">
+            <div className="mb-4 flex items-center justify-between text-xs bg-[#F4F8F9] p-2.5 rounded-lg border border-[#D1E2E5]">
               <span className="text-[#5A6B7F]">Report Version Status:</span>
               <button
                 onClick={() => setShowSupersededExample(!showSupersededExample)}
-                className="font-bold text-[#00BC82] hover:underline"
+                className="font-bold text-[#1E535E] hover:underline"
               >
                 {showSupersededExample ? 'View Final v1.0' : 'Simulate Superseded Notice'}
               </button>
@@ -431,11 +431,11 @@ export const OrderStatusPage: React.FC = () => {
           <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] overflow-hidden">
             <button
               onClick={() => setShowReceipt(!showReceipt)}
-              className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#F4F6FA] transition-colors"
+              className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#F4F8F9] transition-colors"
             >
               <div className="flex items-center gap-2">
                 <span className="text-xs font-bold text-[#1C2733]">Payment Receipt &amp; Transaction Details</span>
-                <span className="text-[10px] font-mono bg-[#DBFCC5] text-[#00BC82] px-2 py-0.5 rounded font-semibold">
+                <span className="text-[10px] font-mono bg-[#E2EFF1] text-[#1E535E] px-2 py-0.5 rounded font-semibold">
                   Paid
                 </span>
               </div>
@@ -443,7 +443,7 @@ export const OrderStatusPage: React.FC = () => {
             </button>
 
             {showReceipt && (
-              <div className="px-6 pb-5 pt-2 border-t border-[#E3E8F0] text-xs space-y-2 text-[#5A6B7F]">
+              <div className="px-6 pb-5 pt-2 border-t border-[#D1E2E5] text-xs space-y-2 text-[#5A6B7F]">
                 <div className="flex justify-between">
                   <span>Order Reference</span>
                   <span className="font-mono text-[#1C2733] font-bold">{order.id}</span>
@@ -472,17 +472,17 @@ export const OrderStatusPage: React.FC = () => {
         {/* Right Column: S8 Questions Thread (48 Hours) */}
         <div className="lg:col-span-5">
           <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-5 sm:p-6 flex flex-col h-full min-h-[500px]">
-            <div className="pb-4 border-b border-[#E3E8F0] mb-4">
+            <div className="pb-4 border-b border-[#D1E2E5] mb-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-extrabold text-[#1C2733]">
                   Order Questions &amp; Clarifications
                 </h3>
-                <span className="text-[10px] font-bold font-mono text-[#00BC82] bg-[#DBFCC5] px-2 py-0.5 rounded">
+                <span className="text-[10px] font-bold font-mono text-[#1E535E] bg-[#E2EFF1] px-2 py-0.5 rounded">
                   48h Window Open
                 </span>
               </div>
               {/* HARD SEPARATION RULE: NO CONTACT DETAILS */}
-              <div className="text-[11px] text-[#5A6B7F] mt-2 bg-[#DBFCC5]/40 p-2.5 rounded-lg border border-[#00BC82]/20">
+              <div className="text-[11px] text-[#5A6B7F] mt-2 bg-[#E2EFF1]/60 p-2.5 rounded-lg border border-[#1E535E]/20">
                 <strong className="text-[#1C2733]">Privacy Protocol: </strong>
                 Messages stay on OneDaySearch. Personal phone numbers and emails are never shared with the abstractor.
               </div>
@@ -502,7 +502,7 @@ export const OrderStatusPage: React.FC = () => {
                   if (isSystem) {
                     return (
                       <div key={msg.id} className="text-center my-2">
-                        <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2.5 py-1 rounded-pill border border-[#E3E8F0]">
+                        <span className="text-[10px] font-mono bg-[#F4F8F9] text-[#5A6B7F] px-2.5 py-1 rounded-pill border border-[#D1E2E5]">
                           {msg.content}
                         </span>
                       </div>
@@ -522,7 +522,7 @@ export const OrderStatusPage: React.FC = () => {
                         className={`p-3 rounded-2xl max-w-[85%] text-xs leading-relaxed ${
                           isCustomer
                             ? 'bg-[#1C2733] text-white rounded-br-none'
-                            : 'bg-[#F4F6FA] text-[#1C2733] border border-[#E3E8F0] rounded-bl-none'
+                            : 'bg-[#F4F8F9] text-[#1C2733] border border-[#D1E2E5] rounded-bl-none'
                         }`}
                       >
                         {msg.content}
@@ -534,14 +534,14 @@ export const OrderStatusPage: React.FC = () => {
             </div>
 
             {/* Message Input Box */}
-            <form onSubmit={handleSendMessage} className="pt-3 border-t border-[#E3E8F0] mt-auto">
+            <form onSubmit={handleSendMessage} className="pt-3 border-t border-[#D1E2E5] mt-auto">
               <div className="flex items-center gap-2">
                 <input
                   type="text"
                   value={newMessageText}
                   onChange={(e) => setNewMessageText(e.target.value)}
                   placeholder="Ask abstractor a question about this property..."
-                  className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                  className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
                 />
                 <button
                   type="submit"

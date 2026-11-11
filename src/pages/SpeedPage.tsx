@@ -87,8 +87,8 @@ export const SpeedPage: React.FC = () => {
 
           {/* After Hours Notice Banner if active */}
           {isAfterHours && (
-            <div className="mb-6 p-3.5 bg-[#DBFCC5]/70 rounded-xl border border-[#00BC82]/40 flex items-start gap-2.5">
-              <Moon className="w-4 h-4 text-[#00BC82] mt-0.5 shrink-0" />
+            <div className="mb-6 p-3.5 bg-[#E2EFF1]/80 rounded-xl border border-[#1E535E]/30 flex items-start gap-2.5">
+              <Moon className="w-4 h-4 text-[#1E535E] mt-0.5 shrink-0" />
               <div className="text-xs text-[#1C2733]">
                 <strong className="font-bold">After-hours notice: </strong>
                 County land records offices open at 9:00 AM ET tomorrow. Due times are calculated from the 9:00 AM opening.
@@ -98,7 +98,7 @@ export const SpeedPage: React.FC = () => {
 
           {loading ? (
             <div className="py-16 text-center">
-              <div className="w-8 h-8 border-3 border-[#E3E8F0] border-t-[#00BC82] rounded-full animate-spin mx-auto mb-3" />
+              <div className="w-8 h-8 border-3 border-[#D1E2E5] border-t-[#1E535E] rounded-full animate-spin mx-auto mb-3" />
               <p className="text-xs font-medium text-[#5A6B7F]">
                 Checking availability in {prevData.property.county}...
               </p>
@@ -110,8 +110,8 @@ export const SpeedPage: React.FC = () => {
                 onClick={() => setSelectedTier('24h')}
                 className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all ${
                   selectedTier === '24h'
-                    ? 'border-[#00BC82] bg-[#DBFCC5]/15 shadow-sm'
-                    : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
+                    ? 'border-[#1E535E] bg-[#E2EFF1]/35 shadow-sm'
+                    : 'border-[#D1E2E5] hover:border-[#1E535E]/60 bg-white'
                 }`}
               >
                 <div className="flex items-start justify-between gap-4">
@@ -121,14 +121,14 @@ export const SpeedPage: React.FC = () => {
                       name="tier"
                       checked={selectedTier === '24h'}
                       onChange={() => setSelectedTier('24h')}
-                      className="accent-[#00BC82] w-4 h-4 mt-1 cursor-pointer"
+                      className="accent-[#1E535E] w-4 h-4 mt-1 cursor-pointer"
                     />
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="text-base font-bold text-[#1C2733]">
                           Standard 24 Hours
                         </span>
-                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white border border-[#E3E8F0] text-[#5A6B7F] px-2 py-0.5 rounded-pill">
+                        <span className="text-[10px] font-bold uppercase tracking-wider bg-white border border-[#D1E2E5] text-[#5A6B7F] px-2 py-0.5 rounded-pill">
                           Included
                         </span>
                       </div>
@@ -143,9 +143,9 @@ export const SpeedPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="mt-3.5 pt-3 border-t border-[#E3E8F0]/70 flex items-center justify-between text-xs">
+                <div className="mt-3.5 pt-3 border-t border-[#D1E2E5]/70 flex items-center justify-between text-xs">
                   <span className="text-[#5A6B7F] flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-[#00BC82]" /> Guaranteed delivery:
+                    <Clock className="w-3.5 h-3.5 text-[#1E535E]" /> Guaranteed delivery:
                   </span>
                   <span className="font-mono font-bold text-[#1C2733]">
                     {due24.formattedLong}
@@ -159,8 +159,8 @@ export const SpeedPage: React.FC = () => {
                   onClick={() => setSelectedTier('12h')}
                   className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all animate-in fade-in-50 duration-200 ${
                     selectedTier === '12h'
-                      ? 'border-[#00BC82] bg-[#DBFCC5]/15 shadow-sm'
-                      : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
+                      ? 'border-[#1E535E] bg-[#E2EFF1]/35 shadow-sm'
+                      : 'border-[#D1E2E5] hover:border-[#1E535E]/60 bg-white'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4">
@@ -170,14 +170,14 @@ export const SpeedPage: React.FC = () => {
                         name="tier"
                         checked={selectedTier === '12h'}
                         onChange={() => setSelectedTier('12h')}
-                        className="accent-[#00BC82] w-4 h-4 mt-1 cursor-pointer"
+                        className="accent-[#1E535E] w-4 h-4 mt-1 cursor-pointer"
                       />
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="text-base font-bold text-[#1C2733]">
                             Express 12 Hours
                           </span>
-                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#DBFCC5] text-[#00BC82] px-2 py-0.5 rounded-pill font-mono">
+                          <span className="text-[10px] font-bold uppercase tracking-wider bg-[#E2EFF1] text-[#1E535E] px-2 py-0.5 rounded-pill font-mono">
                             Priority
                           </span>
                         </div>
@@ -192,9 +192,9 @@ export const SpeedPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <div className="mt-3.5 pt-3 border-t border-[#E3E8F0]/70 flex items-center justify-between text-xs">
+                  <div className="mt-3.5 pt-3 border-t border-[#D1E2E5]/70 flex items-center justify-between text-xs">
                     <span className="text-[#5A6B7F] flex items-center gap-1.5">
-                      <Zap className="w-3.5 h-3.5 text-[#00BC82]" /> Guaranteed delivery:
+                      <Zap className="w-3.5 h-3.5 text-[#1E535E]" /> Guaranteed delivery:
                     </span>
                     <span className="font-mono font-bold text-[#1C2733]">
                       {due12.formattedLong}
@@ -210,7 +210,7 @@ export const SpeedPage: React.FC = () => {
                   className={`block p-4 sm:p-5 rounded-card border-2 cursor-pointer transition-all animate-in fade-in-50 duration-200 ${
                     selectedTier === '6h'
                       ? 'border-[#F97316] bg-orange-50/40 shadow-sm'
-                      : 'border-[#E3E8F0] hover:border-[#CBD5E1] bg-white'
+                      : 'border-[#D1E2E5] hover:border-[#F97316]/60 bg-white'
                   }`}
                 >
                   <div className="flex items-start justify-between gap-4">

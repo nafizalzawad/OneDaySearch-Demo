@@ -5,8 +5,8 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 export const NotTitleInsurancePage: React.FC = () => {
   return (
     <div className="flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6 py-12 text-left">
-      <div className="mb-8 pb-6 border-b border-[#E3E8F0]">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-pill bg-[#DBFCC5] text-[#00BC82] text-xs font-semibold mb-3">
+      <div className="mb-8 pb-6 border-b border-[#D1E2E5]">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-pill bg-[#E2EFF1] text-[#1E535E] text-xs font-semibold mb-3">
           Statutory Notice
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-[#1C2733]">
@@ -19,7 +19,7 @@ export const NotTitleInsurancePage: React.FC = () => {
 
       <div className="space-y-8 text-xs sm:text-sm text-[#1C2733] leading-relaxed">
         {/* Callout Box */}
-        <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft">
           <h2 className="text-base font-extrabold text-[#1C2733] mb-2">
             The Statutory Difference in Maryland, Virginia and the District of Columbia
           </h2>
@@ -30,9 +30,9 @@ export const NotTitleInsurancePage: React.FC = () => {
 
         {/* Comparison Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft">
+          <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft">
             <h3 className="text-base font-bold text-[#1C2733] mb-3 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-[#00BC82]" />
+              <CheckCircle2 className="w-5 h-5 text-[#1E535E]" />
               What OneDaySearch Delivers:
             </h3>
             <ul className="space-y-2 text-[#5A6B7F]">

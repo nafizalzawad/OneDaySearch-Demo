@@ -35,7 +35,7 @@ export const ProviderLayout: React.FC = () => {
           <div className="flex items-center gap-3">
             <Link to="/provider" className="flex items-center gap-2">
               <Logo direction={logoDirection} variant="dark" size="sm" />
-              <span className="px-2 py-0.5 rounded bg-[#00BC82] text-white text-[10px] font-extrabold uppercase tracking-wider">
+              <span className="px-2 py-0.5 rounded bg-[#1E535E] text-white text-[10px] font-extrabold uppercase tracking-wider">
                 PROVIDER
               </span>
             </Link>
@@ -48,13 +48,13 @@ export const ProviderLayout: React.FC = () => {
               onClick={() => setIsOnline(!isOnline)}
               className={`px-3 py-1.5 rounded-pill text-xs font-bold flex items-center gap-2 border transition-all ${
                 isOnline
-                  ? 'bg-[#00BC82]/20 border-[#00BC82] text-[#6AE878]'
+                  ? 'bg-[#1E535E]/40 border-[#1E535E] text-[#68AAB7]'
                   : 'bg-white/5 border-white/20 text-gray-400'
               }`}
             >
               <span
                 className={`w-2 h-2 rounded-full ${
-                  isOnline ? 'bg-[#6AE878] animate-pulse' : 'bg-gray-400'
+                  isOnline ? 'bg-[#68AAB7] animate-pulse' : 'bg-gray-400'
                 }`}
               />
               <span>{isOnline ? 'Online (Accepting)' : 'Offline (Paused)'}</span>
@@ -62,7 +62,7 @@ export const ProviderLayout: React.FC = () => {
 
             {/* Abstractor Avatar */}
             <div className="hidden sm:flex items-center gap-2 pl-3 border-l border-white/15 text-left text-xs">
-              <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center font-bold text-[#6AE878] text-xs">
+              <div className="w-8 h-8 rounded-full bg-white/15 flex items-center justify-center font-bold text-[#68AAB7] text-xs">
                 MV
               </div>
               <div>
@@ -102,7 +102,7 @@ export const ProviderLayout: React.FC = () => {
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
-                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#6AE878]' : 'text-gray-400'}`} />
+                  <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-[#68AAB7]' : 'text-gray-400'}`} />
                   <span>{item.label}</span>
                 </Link>
               );

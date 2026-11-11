@@ -321,18 +321,17 @@ onedaysearch.example/
 
 ```css
 :root {
-  /* Brand Core */
-  --color-navy: #0B1B33;       /* High-contrast primary headers, dark accents */
-  --color-amber: #F2A33A;      /* STRICT SINGLE PRIMARY ACTION & highlights */
-  --color-amber-pale: #FDEBD0; /* Soft callouts & subtle emphasis */
-  --color-page: #F4F6FA;       /* Soothing neutral page background */
-  --color-muted: #4F5F78;      /* Body copy, subtitles, secondary metadata */
-  --color-success: #17824F;    /* Verified status, on-time SLA */
-  --color-white: #FFFFFF;      /* Clean card and surface canvas */
-  --color-border: #E3E8F0;     /* Crisp, subtle 1px dividers */
-  --color-card-bg: #FFFFFF;
-  --color-card-border: #E3E8F0;
-  
+  /* Architectural Blueish-Green Palette (Mediterranean Colonnade reference) */
+  --color-teal-bright: #4A8B99; /* Main signature blueish-green canvas & hero mark */
+  --color-teal-sunlit: #68AAB7; /* Luminous column highlight & dark-mode wordmark accent */
+  --color-teal-deep: #1E535E;   /* Workhorse deep teal for buttons, badges & high-contrast SLA */
+  --color-teal-pale: #E2EFF1;   /* Pale seafoam architectural tint for soft callouts */
+  --color-orange: #F97316;      /* Sunset Orange complementary POP (strictly Place Order & Rush) */
+  --color-charcoal: #1C2733;    /* Professional deep text & headers */
+  --color-muted: #5A6B7F;       /* Subheads, metadata & secondary labels */
+  --color-white: #FFFFFF;       /* Clean floating cards and surface canvas */
+  --color-border: #D1E2E5;      /* Subtle architectural divider line */
+
   /* Typography */
   --font-sans: 'Hanken Grotesk', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', monospace; /* STRICTLY for order #, countdowns & prices */
@@ -340,15 +339,17 @@ onedaysearch.example/
   /* Radii & Shadows */
   --radius-card: 12px;
   --radius-pill: 9999px;
-  --shadow-soft: 0 4px 20px -2px rgba(11, 27, 51, 0.05);
-  --shadow-hover: 0 8px 30px -4px rgba(11, 27, 51, 0.08);
+  --shadow-soft: 0 4px 20px -2px rgba(28, 39, 51, 0.05);
+  --shadow-elevated: 0 10px 30px -5px rgba(20, 52, 59, 0.15);
 }
 ```
 
 ### Contrast & Usability Guardrails
-- **Amber Text Rule**: `#F2A33A` text is **strictly prohibited on white or light backgrounds**. Primary amber buttons use `#0B1B33` (Navy) text for AAA contrast.
+- **Floating Content Cards**: Dense property records, forms, and legal text sit inside pure white cards (`#FFFFFF`) on the `#4A8B99` canvas, providing 15.1:1 AAA contrast.
+- **Deep Teal Workhorse**: `#1E535E` provides 8.5:1 AAA contrast on white cards and on white text.
+- **Orange CTA Rule**: Sunset Orange `#F97316` is green/teal's opposite on the color wheel; reserved exclusively for "Place Order" and rush badges.
 - **Grid**: Strict 8px layout rhythm (`p-2`, `p-4`, `p-6`, `p-8`).
-- **Focus Rings**: Amber 2px offset ring (`focus:ring-2 focus:ring-[#F2A33A] focus:ring-offset-2`).
+- **Focus Rings**: Deep teal offset ring (`focus:ring-2 focus:ring-[#1E535E]`).
 - **Motion**: Respects `prefers-reduced-motion` with 150ms transitions.
 
 ---

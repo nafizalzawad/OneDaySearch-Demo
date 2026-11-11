@@ -39,7 +39,7 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#E3E8F0]">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#D1E2E5]">
         <div>
           <Link
             to="/provider"
@@ -52,7 +52,7 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
             <span className="text-xs font-mono font-bold bg-[#1C2733] text-white px-2 py-0.5 rounded">
               {order.id}
             </span>
-            <span className="text-xs font-mono font-bold text-[#00BC82] bg-[#00BC82]/10 px-2 py-0.5 rounded">
+            <span className="text-xs font-mono font-bold text-[#1E535E] bg-[#1E535E]/10 px-2 py-0.5 rounded">
               Payout: ${order.providerPayout}.00
             </span>
           </div>
@@ -62,7 +62,7 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
         </div>
 
         {/* Internal SLA Timer */}
-        <div className="bg-[#F8FAFC] border border-[#E3E8F0] p-3 rounded-xl sm:text-right">
+        <div className="bg-[#F8FAFC] border border-[#D1E2E5] p-3 rounded-xl sm:text-right">
           <span className="text-[10px] font-bold uppercase text-[#5A6B7F] block">
             Internal Delivery Deadline
           </span>
@@ -74,7 +74,7 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
               timeZone: 'America/New_York',
             }).format(new Date(order.internalDueTime))} ET
           </div>
-          <span className="text-[10px] text-[#00BC82] font-semibold">
+          <span className="text-[10px] text-[#1E535E] font-semibold">
             2.5h safety buffer before customer SLA
           </span>
         </div>
@@ -83,8 +83,8 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Left: Property Scope & Courthouse Information */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft space-y-4">
-            <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-3 border-b border-[#E3E8F0]">
+          <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft space-y-4">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-3 border-b border-[#D1E2E5]">
               Search Scope &amp; Legal Parcel Details
             </h2>
 
@@ -103,15 +103,15 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
               </div>
               <div>
                 <span className="text-[#5A6B7F] block text-[11px]">Ordering Customer Role</span>
-                <span className="font-bold text-[#1C2733] capitalize bg-[#F4F6FA] px-2 py-0.5 rounded border border-[#E3E8F0] inline-block">
+                <span className="font-bold text-[#1C2733] capitalize bg-[#F4F6FA] px-2 py-0.5 rounded border border-[#D1E2E5] inline-block">
                   {order.customer.role.replace('_', ' ')}
                 </span>
               </div>
             </div>
 
             {/* HARD SEPARATION BANNER */}
-            <div className="p-3 bg-[#F4F6FA] rounded-lg border border-[#E3E8F0] text-xs text-[#5A6B7F] flex items-start gap-2">
-              <ShieldCheck className="w-4 h-4 text-[#00BC82] shrink-0 mt-0.5" />
+            <div className="p-3 bg-[#F4F6FA] rounded-lg border border-[#D1E2E5] text-xs text-[#5A6B7F] flex items-start gap-2">
+              <ShieldCheck className="w-4 h-4 text-[#1E535E] shrink-0 mt-0.5" />
               <span>
                 <strong>Marketplace Separation: </strong>
                 Customer name, phone number, and email are shielded. Questions and delivery are handled exclusively via the platform.
@@ -125,19 +125,19 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
               </span>
               <div className="space-y-2 text-xs text-[#1C2733]">
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" defaultChecked className="accent-[#00BC82] w-4 h-4 rounded" />
+                  <input type="checkbox" defaultChecked className="accent-[#1E535E] w-4 h-4 rounded" />
                   <span>40-Year chain of title deeds examination (Liber / Folio verified)</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" defaultChecked className="accent-[#00BC82] w-4 h-4 rounded" />
+                  <input type="checkbox" defaultChecked className="accent-[#1E535E] w-4 h-4 rounded" />
                   <span>Circuit Court open mortgage &amp; deed of trust releases checked</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" defaultChecked className="accent-[#00BC82] w-4 h-4 rounded" />
+                  <input type="checkbox" defaultChecked className="accent-[#1E535E] w-4 h-4 rounded" />
                   <span>County property tax &amp; municipal utility lien assessment dockets</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="checkbox" defaultChecked className="accent-[#00BC82] w-4 h-4 rounded" />
+                  <input type="checkbox" defaultChecked className="accent-[#1E535E] w-4 h-4 rounded" />
                   <span>Recorded covenants, subdivision easements &amp; right-of-ways</span>
                 </label>
               </div>
@@ -147,8 +147,8 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
 
         {/* Right: PDF Upload Dropzone & Delivery */}
         <div className="lg:col-span-5 space-y-6">
-          <div className="bg-white p-6 rounded-card border border-[#E3E8F0] shadow-soft space-y-4">
-            <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-3 border-b border-[#E3E8F0]">
+          <div className="bg-white p-6 rounded-card border border-[#D1E2E5] shadow-soft space-y-4">
+            <h2 className="text-sm font-extrabold uppercase tracking-wider text-[#1C2733] pb-3 border-b border-[#D1E2E5]">
               Deliver Certified Search Package
             </h2>
 
@@ -181,14 +181,14 @@ export const ProviderOrderWorkbenchPage: React.FC = () => {
                 rows={3}
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                className="w-full text-xs p-3 rounded-lg border border-[#E3E8F0] focus:outline-none focus:ring-2 focus:ring-[#00BC82]"
+                className="w-full text-xs p-3 rounded-lg border border-[#D1E2E5] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
               />
             </div>
 
             {/* Deliver Action */}
             <div className="pt-2">
               {isDelivered ? (
-                <div className="p-3 bg-[#00BC82]/10 border border-[#00BC82]/30 rounded-xl flex items-center gap-2 text-xs font-bold text-[#00BC82]">
+                <div className="p-3 bg-[#1E535E]/10 border border-[#1E535E]/30 rounded-xl flex items-center gap-2 text-xs font-bold text-[#1E535E]">
                   <CheckCircle2 className="w-5 h-5 shrink-0" />
                   <span>Delivered to Customer. Payout of ${order.providerPayout}.00 queued.</span>
                 </div>

@@ -26,7 +26,7 @@ export const PricingPage: React.FC = () => {
             <div
               key={tier.id}
               className={`bg-white rounded-card border ${
-                isStandard ? 'border-[#00BC82] ring-1 ring-[#00BC82]' : 'border-[#E3E8F0]'
+                isStandard ? 'border-[#1E535E] ring-1 ring-[#1E535E]' : 'border-[#D1E2E5]'
               } shadow-soft p-6 flex flex-col justify-between`}
             >
               <div>
@@ -35,7 +35,7 @@ export const PricingPage: React.FC = () => {
                     {tier.name}
                   </span>
                   {tier.badge && (
-                    <span className="text-[10px] font-bold bg-[#DBFCC5] text-[#00BC82] px-2 py-0.5 rounded-pill font-mono">
+                    <span className="text-[10px] font-bold bg-[#E2EFF1] text-[#1E535E] px-2 py-0.5 rounded-pill font-mono">
                       {tier.badge}
                     </span>
                   )}
@@ -50,31 +50,31 @@ export const PricingPage: React.FC = () => {
                   {tier.description}
                 </p>
 
-                <div className="space-y-2.5 text-xs text-[#1C2733] pt-4 border-t border-[#E3E8F0]">
+                <div className="space-y-2.5 text-xs text-[#1C2733] pt-4 border-t border-[#D1E2E5]">
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#00BC82]" />
+                    <Check className="w-4 h-4 text-[#1E535E]" />
                     <span>30 to 40-year chain of title</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#00BC82]" />
+                    <Check className="w-4 h-4 text-[#1E535E]" />
                     <span>Open mortgages &amp; deeds of trust</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#00BC82]" />
+                    <Check className="w-4 h-4 text-[#1E535E]" />
                     <span>Municipal liens &amp; tax judgements</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#00BC82]" />
+                    <Check className="w-4 h-4 text-[#1E535E]" />
                     <span>Utility easements &amp; covenants</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-[#00BC82]" />
+                    <Check className="w-4 h-4 text-[#1E535E]" />
                     <span>$1M+ Abstractor E&amp;O backing</span>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-[#E3E8F0]">
+              <div className="mt-8 pt-4 border-t border-[#D1E2E5]">
                 <div className="text-[11px] text-[#5A6B7F] mb-3">
                   Typical turnaround:{' '}
                   <span className="font-mono font-bold text-[#1C2733]">{due.formatted}</span>

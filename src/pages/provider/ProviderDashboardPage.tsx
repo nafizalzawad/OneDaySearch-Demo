@@ -56,14 +56,14 @@ export const ProviderDashboardPage: React.FC = () => {
       {/* Top Banner: Welcome & Quick Metrics */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
         {/* Capacity Meter */}
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <div className="flex items-center justify-between text-xs text-[#5A6B7F] mb-2">
             <span className="font-bold uppercase tracking-wider text-[#1C2733]">Daily Capacity</span>
             <span className="font-mono font-bold text-[#1C2733]">
               {capacityUsed} of {capacityMax} Orders
             </span>
           </div>
-          <div className="w-full bg-[#F4F6FA] h-2.5 rounded-pill overflow-hidden border border-[#E3E8F0] mb-3">
+          <div className="w-full bg-[#F4F6FA] h-2.5 rounded-pill overflow-hidden border border-[#D1E2E5] mb-3">
             <div
               className="bg-[#1C2733] h-full rounded-pill transition-all"
               style={{ width: `${(capacityUsed / capacityMax) * 100}%` }}
@@ -73,7 +73,7 @@ export const ProviderDashboardPage: React.FC = () => {
             <span>Active Slots: {capacityMax - capacityUsed} Open</span>
             <button
               onClick={() => setCapacityMax((m) => Math.min(12, m + 1))}
-              className="font-bold text-[#1C2733] hover:text-[#00BC82] underline"
+              className="font-bold text-[#1C2733] hover:text-[#1E535E] underline"
             >
               Adjust Limit
             </button>
@@ -81,10 +81,10 @@ export const ProviderDashboardPage: React.FC = () => {
         </div>
 
         {/* Rush Slot Steppers */}
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <div className="flex items-center justify-between text-xs text-[#5A6B7F] mb-2">
             <span className="font-bold uppercase tracking-wider text-[#1C2733]">Same-Day Rush Slots</span>
-            <span className="text-[10px] bg-[#DBFCC5] text-[#1C2733] px-2 py-0.5 rounded font-mono font-bold">
+            <span className="text-[10px] bg-[#E2EFF1] text-[#1C2733] px-2 py-0.5 rounded font-mono font-bold">
               +$50 Payout
             </span>
           </div>
@@ -95,14 +95,14 @@ export const ProviderDashboardPage: React.FC = () => {
             <div className="flex items-center gap-1.5">
               <button
                 onClick={() => setRushSlots((r) => Math.max(0, r - 1))}
-                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
+                className="w-7 h-7 rounded-lg border border-[#D1E2E5] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
                 title="Decrease rush slots"
               >
                 <Minus className="w-3.5 h-3.5" />
               </button>
               <button
                 onClick={() => setRushSlots((r) => r + 1)}
-                className="w-7 h-7 rounded-lg border border-[#E3E8F0] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
+                className="w-7 h-7 rounded-lg border border-[#D1E2E5] hover:bg-[#F4F6FA] flex items-center justify-center text-[#1C2733]"
                 title="Increase rush slots"
               >
                 <Plus className="w-3.5 h-3.5" />
@@ -115,21 +115,21 @@ export const ProviderDashboardPage: React.FC = () => {
         </div>
 
         {/* Today's Earnings */}
-        <div className="bg-white p-5 rounded-card border border-[#E3E8F0] shadow-soft">
+        <div className="bg-white p-5 rounded-card border border-[#D1E2E5] shadow-soft">
           <span className="text-xs font-bold uppercase tracking-wider text-[#5A6B7F] block mb-1">
             Today&apos;s Payouts
           </span>
           <div className="text-2xl font-extrabold font-mono text-[#1C2733] mb-1">
             $310.00
           </div>
-          <div className="text-[11px] text-[#00BC82] font-semibold flex items-center gap-1">
+          <div className="text-[11px] text-[#1E535E] font-semibold flex items-center gap-1">
             <CheckCircle2 className="w-3.5 h-3.5" />
             <span>2 completed, 1 in review</span>
           </div>
         </div>
 
         {/* Dispatch Trigger Test */}
-        <div className="bg-white p-5 rounded-card border border-[#00BC82]/60 shadow-soft flex flex-col justify-between">
+        <div className="bg-white p-5 rounded-card border border-[#1E535E]/60 shadow-soft flex flex-col justify-between">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-[#1C2733] block mb-1">
               Dispatch Simulator
@@ -151,8 +151,8 @@ export const ProviderDashboardPage: React.FC = () => {
       </div>
 
       {/* Active Abstractor Queue Table */}
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
-        <div className="p-5 border-b border-[#E3E8F0] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="bg-white rounded-card border border-[#D1E2E5] shadow-soft overflow-hidden">
+        <div className="p-5 border-b border-[#D1E2E5] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
             <h2 className="text-base font-extrabold text-[#1C2733]">
               Active Abstractor Work Queue
@@ -162,7 +162,7 @@ export const ProviderDashboardPage: React.FC = () => {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono text-[#5A6B7F] bg-[#F4F6FA] px-2.5 py-1 rounded border border-[#E3E8F0]">
+            <span className="text-xs font-mono text-[#5A6B7F] bg-[#F4F6FA] px-2.5 py-1 rounded border border-[#D1E2E5]">
               {activeOrders.length} In-Progress Searches
             </span>
           </div>
@@ -170,7 +170,7 @@ export const ProviderDashboardPage: React.FC = () => {
 
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-[#F8FAFC] border-b border-[#E3E8F0] text-[#5A6B7F] uppercase font-bold text-[10px] tracking-wider">
+            <thead className="bg-[#F8FAFC] border-b border-[#D1E2E5] text-[#5A6B7F] uppercase font-bold text-[10px] tracking-wider">
               <tr>
                 <th className="py-3 px-4">Order ID</th>
                 <th className="py-3 px-4">Property &amp; County</th>
@@ -181,7 +181,7 @@ export const ProviderDashboardPage: React.FC = () => {
                 <th className="py-3 px-4 text-right">Action</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#E3E8F0]">
+            <tbody className="divide-y divide-[#D1E2E5]">
               {activeOrders.map((ord) => (
                 <tr key={ord.id} className="hover:bg-[#F4F6FA]/70 transition-colors">
                   <td className="py-3.5 px-4 font-mono font-bold text-[#1C2733]">
@@ -206,7 +206,7 @@ export const ProviderDashboardPage: React.FC = () => {
                         timeZone: 'America/New_York',
                       }).format(new Date(ord.internalDueTime))} ET
                     </div>
-                    <span className="text-[10px] text-[#00BC82] font-semibold">
+                    <span className="text-[10px] text-[#1E535E] font-semibold">
                       Buffer protected
                     </span>
                   </td>
@@ -217,9 +217,9 @@ export const ProviderDashboardPage: React.FC = () => {
                     <span
                       className={`px-2.5 py-1 rounded-pill text-[10px] font-bold ${
                         ord.status === 'IN_PROGRESS'
-                          ? 'bg-[#DBFCC5] text-[#1C2733]'
+                          ? 'bg-[#E2EFF1] text-[#1C2733]'
                           : ord.status === 'READY'
-                          ? 'bg-[#00BC82]/10 text-[#00BC82]'
+                          ? 'bg-[#1E535E]/10 text-[#1E535E]'
                           : 'bg-[#1C2733] text-white'
                       }`}
                     >
@@ -245,18 +245,18 @@ export const ProviderDashboardPage: React.FC = () => {
       {/* DISPATCH OFFER MODAL OVERLAY */}
       {showOfferModal && (
         <div className="fixed inset-0 z-50 bg-[#1C2733]/70 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="bg-white rounded-card border-2 border-[#00BC82] shadow-elevated max-w-lg w-full p-6 text-left animate-in zoom-in-95 duration-150">
+          <div className="bg-white rounded-card border-2 border-[#1E535E] shadow-elevated max-w-lg w-full p-6 text-left animate-in zoom-in-95 duration-150">
             {/* Modal Header */}
-            <div className="flex items-center justify-between pb-4 border-b border-[#E3E8F0] mb-4">
+            <div className="flex items-center justify-between pb-4 border-b border-[#D1E2E5] mb-4">
               <div className="flex items-center gap-2">
-                <span className="w-3 h-3 rounded-full bg-[#00BC82] animate-ping" />
+                <span className="w-3 h-3 rounded-full bg-[#1E535E] animate-ping" />
                 <h3 className="text-base font-extrabold text-[#1C2733]">
                   New Order Offer Dispatched
                 </h3>
               </div>
               <div className="flex items-center gap-2">
                 {/* Countdown Ring Badge */}
-                <div className="px-2.5 py-1 rounded-pill bg-[#1C2733] text-[#00BC82] font-mono text-xs font-bold flex items-center gap-1.5">
+                <div className="px-2.5 py-1 rounded-pill bg-[#1C2733] text-[#1E535E] font-mono text-xs font-bold flex items-center gap-1.5">
                   <Clock className="w-3.5 h-3.5" />
                   <span>00:{offerCountdown.toString().padStart(2, '0')}</span>
                 </div>
@@ -272,7 +272,7 @@ export const ProviderDashboardPage: React.FC = () => {
 
             {/* Offer Metadata (HARD SEPARATION: NO CUSTOMER IDENTITY) */}
             <div className="space-y-3 text-xs mb-6">
-              <div className="p-3 bg-[#F4F6FA] rounded-lg border border-[#E3E8F0]">
+              <div className="p-3 bg-[#F4F6FA] rounded-lg border border-[#D1E2E5]">
                 <span className="text-[10px] text-[#5A6B7F] font-bold uppercase tracking-wider block">
                   Property Location
                 </span>
@@ -285,7 +285,7 @@ export const ProviderDashboardPage: React.FC = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <div className="p-3 bg-white rounded-lg border border-[#E3E8F0]">
+                <div className="p-3 bg-white rounded-lg border border-[#D1E2E5]">
                   <span className="text-[10px] text-[#5A6B7F] font-bold uppercase tracking-wider block">
                     Turnaround Tier
                   </span>
@@ -297,7 +297,7 @@ export const ProviderDashboardPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="p-3 bg-[#DBFCC5]/60 rounded-lg border border-[#00BC82]/40">
+                <div className="p-3 bg-[#E2EFF1]/60 rounded-lg border border-[#1E535E]/40">
                   <span className="text-[10px] text-[#1C2733] font-bold uppercase tracking-wider block">
                     Abstractor Payout
                   </span>
