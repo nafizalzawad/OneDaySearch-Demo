@@ -15,11 +15,7 @@ export const CustomerLayout: React.FC = () => {
 
   return (
     <div
-      className={`transition-colors duration-200 ${
-        isHomePage
-          ? 'h-screen max-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto lg:overflow-hidden'
-          : 'min-h-screen flex flex-col'
-      } ${
+      className={`min-h-screen flex flex-col justify-between transition-colors duration-200 ${
         isGreenTheme
           ? 'bg-[#6BAEB9] text-[#1C2733]'
           : isDarkTheme
@@ -79,9 +75,7 @@ export const CustomerLayout: React.FC = () => {
 
       {/* Customer Footer */}
       <footer
-        className={`w-full text-xs transition-colors z-10 relative shrink-0 ${
-          isHomePage ? 'py-3 sm:py-4' : 'py-8'
-        } ${
+        className={`w-full text-xs transition-colors z-10 relative shrink-0 py-4 sm:py-5 ${
           isGreenTheme
             ? 'bg-[#1C2733] text-gray-300 border-t border-[#1C2733]'
             : isDarkTheme

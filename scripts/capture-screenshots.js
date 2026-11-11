@@ -53,7 +53,17 @@ async function capture() {
 
       const filename = `${screen.name}-${vp.name}.png`;
       const filePath = path.join(outDir, filename);
-      await page.screenshot({ path: filePath, fullPage: false });
+      let attempts = 0;
+      while (attempts < 3) {
+        try {
+          await page.screenshot({ path: filePath, fullPage: false });
+          break;
+        } catch (err) {
+          attempts++;
+          await new Promise((r) => setTimeout(r, 200));
+          if (attempts >= 3) throw err;
+        }
+      }
       console.log(`Captured: ${filename}`);
     }
   }

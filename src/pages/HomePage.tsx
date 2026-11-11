@@ -83,18 +83,18 @@ export const HomePage: React.FC = () => {
 
   return (
     <div
-      className={`relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-2 sm:py-4 overflow-hidden ${
+      className={`relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-3 sm:py-5 overflow-hidden ${
         isGreen ? 'bg-vibrant-teal-canvas' : ''
       }`}
     >
       <div className="w-full max-w-2xl flex flex-col items-center text-center my-auto">
         {/* Brand Logo */}
-        <div className="mb-2 sm:mb-3">
+        <div className="mb-3 sm:mb-4">
           <Logo
             direction={logoDirection}
             variant="light"
             layout="stacked"
-            size="md"
+            size="lg"
             onClick={() => {
               setAddressInput('');
               setCoverageState('IDLE');
@@ -103,23 +103,23 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* High-Contrast Pill Badge */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 text-[#1C2733] text-[11px] sm:text-xs font-bold mb-2.5 shadow-sm border border-white/80 backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 text-[#1C2733] text-xs font-bold mb-3 shadow-sm border border-white/80 backdrop-blur-sm">
           <span className="w-2 h-2 rounded-full bg-[#1E535E]" />
           <span>Title Search Marketplace · Maryland, Virginia &amp; DC</span>
         </div>
 
         {/* Client-Requested Tagline: Google Senior UI/UX Treatment */}
-        <div className="mb-3.5 sm:mb-4 max-w-xl px-2">
-          <h1 className="text-xl sm:text-2xl lg:text-[28px] font-extrabold text-[#1C2733] tracking-tight leading-tight">
+        <div className="mb-4 sm:mb-5 max-w-xl px-2">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1C2733] tracking-tight leading-tight sm:leading-snug">
             Accuracy no human can match, in one-tenth the time.
           </h1>
-          <p className="text-xs sm:text-sm text-[#1C2733]/90 font-medium mt-1 leading-relaxed">
+          <p className="text-sm sm:text-base text-[#1C2733]/85 font-medium mt-1.5 leading-relaxed">
             An assistant searches. A real person approves every report.
           </p>
         </div>
 
         {/* Address Search Form: Floating White Pill */}
-        <div ref={containerRef} className="w-full max-w-xl relative mb-2">
+        <div ref={containerRef} className="w-full max-w-2xl relative mb-2.5">
           <form
             onSubmit={handleSearchSubmit}
             className="w-full flex items-center bg-white rounded-pill border border-white/80 shadow-[0_12px_35px_rgba(20,52,59,0.15)] hover:shadow-[0_16px_40px_rgba(20,52,59,0.2)] focus-within:ring-4 focus-within:ring-[#1E535E]/30 transition-all p-1.5"
@@ -138,14 +138,14 @@ export const HomePage: React.FC = () => {
               }}
               onFocus={() => setIsOpenDropdown(true)}
               placeholder="Enter property address in MD, VA, or DC..."
-              className="w-full py-2 px-1 text-sm sm:text-base text-[#1C2733] bg-transparent focus:outline-none placeholder:text-[#5A6B7F]"
+              className="w-full py-2.5 px-1 text-sm sm:text-base text-[#1C2733] bg-transparent focus:outline-none placeholder:text-[#5A6B7F]"
               autoComplete="off"
             />
 
             {/* High-Pop Orange CTA Button (Complementary contrast against blueish-green background) */}
             <button
               type="submit"
-              className="btn-cta px-6 sm:px-8 py-2 text-sm sm:text-base shrink-0"
+              className="btn-cta px-6 sm:px-8 py-2.5 text-sm sm:text-base shrink-0"
             >
               Search
             </button>
@@ -196,7 +196,7 @@ export const HomePage: React.FC = () => {
         </div>
 
         {/* Reassurance Subline */}
-        <div className="flex items-center justify-center gap-2 text-xs text-[#1C2733] mb-3.5 sm:mb-4 font-bold tracking-tight">
+        <div className="flex items-center justify-center gap-2 text-xs text-[#1C2733] mb-4 sm:mb-5 font-bold tracking-tight">
           <span>From <strong className="font-mono text-[#1C2733] font-extrabold underline">$229</strong></span>
           <span>·</span>
           <span>Guaranteed 24-hour turnaround</span>
@@ -206,14 +206,14 @@ export const HomePage: React.FC = () => {
 
         {/* S2 Address Check Transition / Results Box */}
         {coverageState === 'CHECKING' && (
-          <div className="w-full max-w-lg p-3 bg-white rounded-card border border-white/80 text-xs text-[#1C2733] font-semibold flex items-center justify-center gap-2.5 shadow-elevated mb-3">
+          <div className="w-full max-w-lg p-3 bg-white rounded-card border border-white/80 text-xs text-[#1C2733] font-semibold flex items-center justify-center gap-2.5 shadow-elevated mb-4">
             <span className="w-2.5 h-2.5 rounded-full bg-[#1E535E]" />
             <span>Checking county land records coverage...</span>
           </div>
         )}
 
         {coverageState === 'COVERED' && (
-          <div className="w-full max-w-lg p-4 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150 mb-3">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150 mb-4">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#1E535E] shrink-0 mt-0.5" />
               <div className="flex-1">
@@ -238,7 +238,7 @@ export const HomePage: React.FC = () => {
         )}
 
         {coverageState === 'OUT_OF_COVERAGE' && (
-          <div className="w-full max-w-lg p-4 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150 mb-3">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(20,52,59,0.18)] text-left animate-in slide-in-from-bottom-2 duration-150 mb-4">
             <div className="flex items-start gap-3">
               <AlertCircle className="w-5 h-5 text-[#F97316] shrink-0 mt-0.5" />
               <div className="flex-1">
@@ -255,7 +255,7 @@ export const HomePage: React.FC = () => {
                       e.preventDefault();
                       if (waitlistEmail) setWaitlistSubmitted(true);
                     }}
-                    className="mt-3 flex items-center gap-2"
+                    className="mt-3.5 flex items-center gap-2"
                   >
                     <input
                       type="email"
@@ -283,27 +283,36 @@ export const HomePage: React.FC = () => {
           </div>
         )}
 
-        {/* 3 Real Product Pillars: Floating Pill Cluster (Fits in 100vh without vertical scroll) */}
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 w-full max-w-xl text-left">
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-white/80 shadow-sm backdrop-blur-sm">
-            <Clock className="w-3.5 h-3.5 text-[#1E535E] shrink-0" />
-            <div className="text-[11px] font-bold text-[#1C2733]">
-              24h SLA Delivery <span className="font-normal text-[#5A6B7F]">· Strict ET Clock</span>
+        {/* 3 Real Product Pillars: Floating White Cards on Architectural Teal Canvas */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 w-full max-w-2xl mt-4 sm:mt-5 pt-3.5 sm:pt-4 border-t border-[#1C2733]/15 text-left">
+          <div className="p-3.5 sm:p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2">
+              <Clock className="w-4 h-4 text-[#1E535E]" />
             </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">24-Hour SLA Delivery</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Guaranteed turnaround in Eastern Time. Search starts promptly upon dispatch.
+            </p>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-white/80 shadow-sm backdrop-blur-sm">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#1E535E] shrink-0" />
-            <div className="text-[11px] font-bold text-[#1C2733]">
-              Human Verified <span className="font-normal text-[#5A6B7F]">· $1M+ Insured Abstract</span>
+          <div className="p-3.5 sm:p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2">
+              <ShieldCheck className="w-4 h-4 text-[#1E535E]" />
             </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">Human Verified Abstract</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Assisted research examined and certified by licensed, $1M+ E&amp;O insured abstractors.
+            </p>
           </div>
 
-          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-white/80 shadow-sm backdrop-blur-sm">
-            <MapPin className="w-3.5 h-3.5 text-[#1E535E] shrink-0" />
-            <div className="text-[11px] font-bold text-[#1C2733]">
-              Courthouse Access <span className="font-normal text-[#5A6B7F]">· MD · VA · DC</span>
+          <div className="p-3.5 sm:p-4 rounded-xl bg-white shadow-[0_10px_25px_rgba(20,52,59,0.12)] border border-white/80 hover:shadow-xl transition-all">
+            <div className="w-8 h-8 rounded-lg bg-[#E2EFF1] flex items-center justify-center mb-2">
+              <MapPin className="w-4 h-4 text-[#1E535E]" />
             </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">Regional Courthouse Access</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Direct coverage across all 24 Maryland counties, DC, and Northern/Central Virginia.
+            </p>
           </div>
         </div>
       </div>
