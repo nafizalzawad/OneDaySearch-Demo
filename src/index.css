@@ -4,15 +4,15 @@
 
 :root {
   --color-charcoal: #1C2733;
-  --color-green: #00BC82;
-  --color-green-hover: #009B6B;
-  --color-green-bright: #6AE878;
+  --color-green-bright: #6AE878; /* Signature main brand color */
+  --color-green-bright-hover: #58D866;
+  --color-green-workhorse: #00BC82;
+  --color-green-workhorse-hover: #009B6B;
   --color-green-pale: #DBFCC5;
   --color-orange: #F97316;
   --color-orange-hover: #E86A0A;
   --color-page: #F4F6FA;
   --color-muted: #5A6B7F;
-  --color-success: #00BC82;
   --color-white: #FFFFFF;
   --color-border: #E3E8F0;
 
@@ -51,7 +51,30 @@ body {
   min-height: 100vh;
 }
 
-/* Primary Workhorse Button: Deep green background, White text (WCAG AA pass: 4.6:1 contrast) */
+/* Signature Main Brand Button: Bright Green #6AE878 with Charcoal #1C2733 text (10:1 AAA contrast) */
+.btn-brand {
+  background-color: #6AE878;
+  color: #1C2733;
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: all 150ms ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px 0 rgba(106, 232, 120, 0.4);
+}
+
+.btn-brand:hover {
+  background-color: #58D866;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px 0 rgba(106, 232, 120, 0.5);
+}
+
+.btn-brand:active {
+  transform: translateY(0);
+}
+
+/* Workhorse Primary Button: Deep green background, White text (4.6:1 contrast) */
 .btn-primary {
   background-color: #00BC82;
   color: #FFFFFF;
@@ -72,7 +95,7 @@ body {
   transform: translateY(0);
 }
 
-/* Orange CTA Button: Reserved for "Place an Order", Search CTA, and Final Pay */
+/* Orange CTA Button: Reserved for "Place an Order" and Rush elements */
 .btn-cta {
   background-color: #F97316;
   color: #FFFFFF;
@@ -122,7 +145,7 @@ body {
 
 /* Accessibility focus ring */
 *:focus-visible {
-  outline: 2px solid #00BC82;
+  outline: 2px solid #6AE878;
   outline-offset: 2px;
 }
 

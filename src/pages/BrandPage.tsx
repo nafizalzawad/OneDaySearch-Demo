@@ -282,6 +282,25 @@ export const BrandPage: React.FC = () => {
             </p>
           </div>
 
+          {/* The Client's Signature Swatch Strip (Directly mirrors client reference) */}
+          <div className="mb-6 p-4 rounded-xl bg-[#F4F6FA] border border-[#E3E8F0]">
+            <div className="text-xs font-bold text-[#1C2733] mb-2 flex items-center justify-between">
+              <span>Signature Brand Spectrum Swatch</span>
+              <span className="text-[10px] font-mono text-[#00BC82] font-semibold">Primary: #6AE878</span>
+            </div>
+            <div className="h-16 rounded-lg overflow-hidden flex border border-[#E3E8F0] shadow-sm text-center">
+              <div className="w-[12%] bg-[#DBFCC5] flex items-center justify-center font-mono text-[10px] text-[#1C2733] font-bold border-r border-[#E3E8F0]">
+                #DBFCC5
+              </div>
+              <div className="w-[76%] bg-[#6AE878] flex items-center justify-center font-mono text-sm sm:text-base text-[#1C2733] font-extrabold tracking-wide">
+                #6AE878 — Main Brand Color
+              </div>
+              <div className="w-[12%] bg-[#00BC82] flex items-center justify-center font-mono text-[10px] text-white font-bold border-l border-[#009B6B]">
+                #00BC82
+              </div>
+            </div>
+          </div>
+
           {/* Color Palettes Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
             <div className="p-3 rounded-lg border border-[#E3E8F0] bg-white">

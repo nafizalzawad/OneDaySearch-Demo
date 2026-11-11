@@ -4,7 +4,7 @@ import { Logo } from '../components/brand/Logo';
 import { useDemo } from '../context/DemoContext';
 import { SAMPLE_ADDRESSES } from '../mock/data';
 import { mockMarketplace } from '../mock/service';
-import { Search, MapPin, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck } from 'lucide-react';
+import { Search, MapPin, CheckCircle2, AlertCircle, ArrowRight, ShieldCheck, Clock } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const { logoDirection } = useDemo();
@@ -81,9 +81,9 @@ export const HomePage: React.FC = () => {
 
   return (
     <div className="relative flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-10 sm:py-16 min-h-[calc(100vh-140px)] overflow-hidden">
-      {/* Subtle brand glow in background — Vibrant Freedom signature */}
+      {/* Signature Radiant Halo: Electric Bright Green #6AE878 ambient aura */}
       <div 
-        className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[580px] h-[340px] bg-gradient-to-b from-[#6AE878]/15 via-[#DBFCC5]/20 to-transparent rounded-full blur-3xl -z-10"
+        className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[850px] h-[480px] bg-[radial-gradient(ellipse_75%_55%_at_50%_0%,rgba(106,232,120,0.30),rgba(219,252,197,0.18),transparent)] -z-10"
         aria-hidden="true"
       />
 
@@ -102,6 +102,12 @@ export const HomePage: React.FC = () => {
           />
         </div>
 
+        {/* Brand Badge */}
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#6AE878]/20 border border-[#6AE878]/50 text-[#1C2733] text-xs font-bold mb-4 shadow-sm backdrop-blur-sm">
+          <span className="w-2 h-2 rounded-full bg-[#6AE878] shadow-[0_0_8px_#6AE878]" />
+          <span>Title Search Marketplace · Maryland, Virginia &amp; DC</span>
+        </div>
+
         {/* Client-Requested Tagline: Google Senior UI/UX Treatment */}
         <div className="mb-7 max-w-xl px-2">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1C2733] tracking-tight leading-tight sm:leading-snug">
@@ -116,7 +122,7 @@ export const HomePage: React.FC = () => {
         <div ref={containerRef} className="w-full relative mb-4">
           <form
             onSubmit={handleSearchSubmit}
-            className="w-full flex items-center bg-white rounded-pill border border-[#E3E8F0] shadow-card hover:shadow-elevated transition-all p-1.5 focus-within:ring-2 focus-within:ring-[#00BC82] focus-within:border-transparent"
+            className="w-full flex items-center bg-white rounded-pill border border-[#E3E8F0] shadow-card hover:border-[#6AE878] focus-within:border-[#6AE878] focus-within:ring-4 focus-within:ring-[#6AE878]/30 transition-all p-1.5"
           >
             <div className="pl-3.5 pr-2 text-[#5A6B7F]">
               <Search className="w-5 h-5 text-[#5A6B7F]" />
@@ -136,10 +142,10 @@ export const HomePage: React.FC = () => {
               autoComplete="off"
             />
 
-            {/* Primary Search Button in Orange #F97316 (The client rule: one job only) */}
+            {/* Signature Main Brand Button in Bright Green #6AE878 */}
             <button
               type="submit"
-              className="btn-cta px-6 sm:px-8 py-2.5 text-sm sm:text-base shrink-0"
+              className="btn-brand px-6 sm:px-8 py-2.5 text-sm sm:text-base shrink-0"
             >
               Search
             </button>
@@ -161,7 +167,7 @@ export const HomePage: React.FC = () => {
                     className="w-full px-4 py-3 text-left hover:bg-[#F4F6FA] flex items-center justify-between transition-colors group"
                   >
                     <div className="flex items-start gap-2.5">
-                      <MapPin className="w-4 h-4 text-[#5A6B7F] group-hover:text-[#00BC82] mt-0.5 shrink-0 transition-colors" />
+                      <MapPin className="w-4 h-4 text-[#5A6B7F] group-hover:text-[#6AE878] mt-0.5 shrink-0 transition-colors" />
                       <div>
                         <div className="text-sm font-semibold text-[#1C2733]">
                           {sample.address}
@@ -173,7 +179,7 @@ export const HomePage: React.FC = () => {
                     </div>
                     <div>
                       {sample.inCoverage ? (
-                        <span className="text-[11px] font-semibold text-[#00BC82] bg-[#DBFCC5] px-2.5 py-0.5 rounded-pill shrink-0">
+                        <span className="text-[11px] font-bold text-[#1C2733] bg-[#6AE878] px-2.5 py-0.5 rounded-pill shrink-0 shadow-sm">
                           Covered
                         </span>
                       ) : (
@@ -189,7 +195,7 @@ export const HomePage: React.FC = () => {
           )}
         </div>
 
-        {/* Clean, calm subline — no fake marketing badges */}
+        {/* Reassurance Subline */}
         <div className="flex items-center justify-center gap-2 text-xs text-[#5A6B7F] mb-6 font-medium">
           <span>From <strong className="font-mono text-[#1C2733] font-semibold">$229</strong></span>
           <span>·</span>
@@ -201,13 +207,13 @@ export const HomePage: React.FC = () => {
         {/* S2 Address Check Transition / Results Box */}
         {coverageState === 'CHECKING' && (
           <div className="w-full max-w-lg p-4 bg-white rounded-card border border-[#E3E8F0] text-xs text-[#5A6B7F] flex items-center justify-center gap-2.5 shadow-soft">
-            <span className="w-2 h-2 rounded-full bg-[#00BC82]" />
-            <span>Checking county records coverage...</span>
+            <span className="w-2.5 h-2.5 rounded-full bg-[#6AE878] shadow-[0_0_8px_#6AE878]" />
+            <span>Checking county land records coverage...</span>
           </div>
         )}
 
         {coverageState === 'COVERED' && (
-          <div className="w-full max-w-lg p-5 bg-white rounded-card border border-[#00BC82]/40 shadow-soft text-left animate-in slide-in-from-bottom-2 duration-150">
+          <div className="w-full max-w-lg p-5 bg-white rounded-card border-2 border-[#6AE878] shadow-elevated text-left animate-in slide-in-from-bottom-2 duration-150">
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-[#00BC82] shrink-0 mt-0.5" />
               <div className="flex-1">
@@ -220,7 +226,7 @@ export const HomePage: React.FC = () => {
                 <div className="mt-4 flex items-center justify-end">
                   <button
                     onClick={proceedToDetails}
-                    className="btn-cta px-5 py-2 text-xs font-bold inline-flex items-center gap-1.5"
+                    className="btn-brand px-5 py-2 text-xs font-bold inline-flex items-center gap-1.5 shadow-md"
                   >
                     <span>Continue to property details</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -257,7 +263,7 @@ export const HomePage: React.FC = () => {
                       onChange={(e) => setWaitlistEmail(e.target.value)}
                       placeholder="Enter email for Richmond launch"
                       required
-                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-1 focus:ring-[#00BC82]"
+                      className="flex-1 text-xs px-3 py-2 rounded-lg border border-[#E3E8F0] text-[#1C2733] focus:outline-none focus:ring-1 focus:ring-[#6AE878]"
                     />
                     <button
                       type="submit"
@@ -276,6 +282,39 @@ export const HomePage: React.FC = () => {
             </div>
           </div>
         )}
+
+        {/* 3 Real Product Pillars (Eliminates AI empty-screen look) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl mt-12 pt-8 border-t border-[#E3E8F0]/80 text-left">
+          <div className="p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-[#E3E8F0] shadow-soft hover:border-[#6AE878] transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-[#6AE878]/20 flex items-center justify-center mb-2.5">
+              <Clock className="w-4 h-4 text-[#00BC82]" />
+            </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">24-Hour SLA Delivery</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Guaranteed turnaround in Eastern Time. Search starts promptly upon dispatch.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-[#E3E8F0] shadow-soft hover:border-[#6AE878] transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-[#6AE878]/20 flex items-center justify-center mb-2.5">
+              <ShieldCheck className="w-4 h-4 text-[#00BC82]" />
+            </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">Human Verified Abstract</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Assisted research examined and certified by licensed, $1M+ E&amp;O insured abstractors.
+            </p>
+          </div>
+
+          <div className="p-4 rounded-xl bg-white/80 backdrop-blur-sm border border-[#E3E8F0] shadow-soft hover:border-[#6AE878] transition-colors">
+            <div className="w-8 h-8 rounded-lg bg-[#6AE878]/20 flex items-center justify-center mb-2.5">
+              <MapPin className="w-4 h-4 text-[#00BC82]" />
+            </div>
+            <h3 className="text-xs font-bold text-[#1C2733]">Regional Courthouse Access</h3>
+            <p className="text-[11px] text-[#5A6B7F] mt-1 leading-relaxed">
+              Direct coverage across all 24 Maryland counties, DC, and Northern/Central Virginia.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

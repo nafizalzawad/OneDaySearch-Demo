@@ -11,6 +11,9 @@ export const CustomerLayout: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-[var(--theme-page-bg)] text-[#1C2733] selection:bg-[#DBFCC5] selection:text-[#1C2733]">
+      {/* Signature Brand Spectrum Ribbon (from client screenshot: pale edge, main bright green, deep green) */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#DBFCC5] via-[#6AE878] to-[#00BC82] shrink-0" />
+
       {/* SMS Simulator Notification */}
       <SmsBubble />
 
