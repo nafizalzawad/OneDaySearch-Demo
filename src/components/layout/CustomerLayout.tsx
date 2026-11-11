@@ -11,19 +11,24 @@ export const CustomerLayout: React.FC = () => {
 
   const isGreenTheme = theme === 'vibrant-green';
   const isDarkTheme = theme === 'dark-brand';
+  const isHomePage = location.pathname === '/';
 
   return (
     <div
-      className={`min-h-screen flex flex-col transition-colors duration-200 ${
+      className={`transition-colors duration-200 ${
+        isHomePage
+          ? 'h-screen max-h-screen flex flex-col justify-between overflow-x-hidden overflow-y-auto lg:overflow-hidden'
+          : 'min-h-screen flex flex-col'
+      } ${
         isGreenTheme
-          ? 'bg-[#4A8B99] text-[#1C2733]'
+          ? 'bg-[#6BAEB9] text-[#1C2733]'
           : isDarkTheme
           ? 'bg-[#0D2429] text-white'
           : 'bg-[#F4F8F9] text-[#1C2733]'
       }`}
     >
       {/* Signature Architectural Colonnade Ribbon */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#E2EFF1] via-[#68AAB7] to-[#1E535E] shrink-0" />
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#E8F3F5] via-[#84C2CC] to-[#1E535E] shrink-0" />
 
       {/* SMS Simulator Notification */}
       <SmsBubble />
@@ -33,15 +38,15 @@ export const CustomerLayout: React.FC = () => {
 
       {/* Header */}
       <header
-        className={`w-full transition-colors duration-150 sticky top-0 z-40 backdrop-blur-md ${
+        className={`w-full transition-colors duration-150 sticky top-0 z-40 backdrop-blur-md shrink-0 ${
           isGreenTheme
-            ? 'bg-[#4A8B99]/95 text-[#1C2733] border-b border-[#1E535E]/20 shadow-sm'
+            ? 'bg-[#6BAEB9]/95 text-[#1C2733] border-b border-[#1E535E]/15 shadow-sm'
             : isDarkTheme
             ? 'bg-[#14343B]/95 text-white border-b border-white/10'
             : 'bg-white/95 text-[#1C2733] border-b border-[#D1E2E5]'
         }`}
       >
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link to="/" className="focus:outline-none">
             <Logo
               direction={logoDirection}
@@ -57,7 +62,7 @@ export const CustomerLayout: React.FC = () => {
                 isGreenTheme
                   ? 'text-[#1C2733] hover:text-black hover:underline'
                   : isDarkTheme
-                  ? 'text-gray-200 hover:text-[#68AAB7]'
+                  ? 'text-gray-200 hover:text-[#84C2CC]'
                   : 'text-[#5A6B7F] hover:text-[#1C2733]'
               }`}
             >
@@ -68,23 +73,25 @@ export const CustomerLayout: React.FC = () => {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 flex flex-col min-h-0">
         <Outlet />
       </main>
 
       {/* Customer Footer */}
       <footer
-        className={`w-full py-8 text-xs transition-colors z-10 relative ${
+        className={`w-full text-xs transition-colors z-10 relative shrink-0 ${
+          isHomePage ? 'py-3 sm:py-4' : 'py-8'
+        } ${
           isGreenTheme
             ? 'bg-[#1C2733] text-gray-300 border-t border-[#1C2733]'
             : isDarkTheme
             ? 'bg-[#0B151F] text-gray-400 border-t border-white/10'
-            : 'bg-white text-[#5A6B7F] border-t border-[#E3E8F0]'
+            : 'bg-white text-[#5A6B7F] border-t border-[#D1E2E5]'
         }`}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pl-0 sm:pl-28">
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-6 gap-y-2">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-4 pl-0 sm:pl-28">
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-x-5 gap-y-1.5 text-[11px] sm:text-xs">
               <Link to="/how-it-works" className="hover:text-white transition-colors">
                 How it works
               </Link>
@@ -103,11 +110,11 @@ export const CustomerLayout: React.FC = () => {
               <Link to="/support" className="hover:text-white transition-colors">
                 Support
               </Link>
-              <Link to="/brand" className="text-[#68AAB7] hover:underline font-bold transition-colors">
+              <Link to="/brand" className="text-[#84C2CC] hover:underline font-bold transition-colors">
                 Brand specs
               </Link>
             </div>
-            <div className="text-[11px] text-gray-400 text-center sm:text-right">
+            <div className="text-[10px] sm:text-[11px] text-gray-400 text-center sm:text-right">
               © {new Date().getFullYear()} OneDaySearch LLC. Title search marketplace.
             </div>
           </div>

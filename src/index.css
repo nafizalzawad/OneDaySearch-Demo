@@ -4,26 +4,26 @@
 
 :root {
   --color-charcoal: #1C2733;
-  --color-teal-bright: #4A8B99; /* Main architectural blueish-green from client reference */
-  --color-teal-sunlit: #68AAB7;
+  --color-teal-bright: #6BAEB9; /* Lighter architectural blueish-green */
+  --color-teal-sunlit: #84C2CC;
   --color-teal-deep: #1E535E; /* Workhorse deep teal for buttons, badges & high contrast */
   --color-teal-deep-hover: #163E47;
-  --color-teal-pale: #E2EFF1; /* Pale seafoam architectural tint */
+  --color-teal-pale: #E8F3F5; /* Pale seafoam architectural tint */
   --color-orange: #F97316; /* Warm sunset orange CTA pop */
   --color-orange-hover: #EA580C;
-  --color-page: #4A8B99;
+  --color-page: #6BAEB9;
   --color-muted: #5A6B7F;
   --color-white: #FFFFFF;
   --color-border: #D1E2E5;
 
-  /* Theme tokens: Architectural Blueish-Green (Default) */
-  --theme-header-bg: #4A8B99;
+  /* Theme tokens: Lighter Architectural Blueish-Green (Default) */
+  --theme-header-bg: #6BAEB9;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: rgba(255, 255, 255, 0.2);
+  --theme-header-border: rgba(255, 255, 255, 0.25);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
   --theme-card-border: #D1E2E5;
-  --theme-page-bg: #4A8B99;
+  --theme-page-bg: #6BAEB9;
   --theme-input-bg: #FFFFFF;
   --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
@@ -31,13 +31,13 @@
 
 [data-theme="architectural-teal"],
 [data-theme="vibrant-green"] {
-  --theme-header-bg: #4A8B99;
+  --theme-header-bg: #6BAEB9;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: rgba(255, 255, 255, 0.2);
+  --theme-header-border: rgba(255, 255, 255, 0.25);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
   --theme-card-border: #D1E2E5;
-  --theme-page-bg: #4A8B99;
+  --theme-page-bg: #6BAEB9;
   --theme-input-bg: #FFFFFF;
   --theme-input-border: #D1E2E5;
   --theme-input-text: #1C2733;
@@ -46,10 +46,10 @@
 [data-theme="clean-light"] {
   --theme-header-bg: #FFFFFF;
   --theme-header-text: #1C2733;
-  --theme-header-border: #E2EFF1;
+  --theme-header-border: #E8F3F5;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E2EFF1;
+  --theme-card-border: #E8F3F5;
   --theme-page-bg: #F4F8F9;
   --theme-input-bg: #FFFFFF;
   --theme-input-border: #D1E2E5;
@@ -77,10 +77,10 @@ body {
   min-height: 100vh;
 }
 
-/* Architectural Blueish-Green Colonnade Canvas */
+/* Lighter Architectural Blueish-Green Colonnade Canvas */
 .bg-vibrant-green-canvas,
 .bg-vibrant-teal-canvas {
-  background: radial-gradient(circle at 50% 10%, #68AAB7 0%, #4A8B99 45%, #387B88 100%);
+  background: radial-gradient(circle at 50% 12%, #84C2CC 0%, #6BAEB9 45%, #5698A4 100%);
 }
 
 /* Primary Action Buttons */

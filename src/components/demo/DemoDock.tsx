@@ -50,7 +50,7 @@ export const DemoDock: React.FC = () => {
         className="fixed bottom-3 left-3 z-50 px-2.5 py-1 text-xs font-mono font-medium bg-[#1C2733]/80 hover:bg-[#1C2733] text-white rounded-pill shadow-lg backdrop-blur border border-white/20 transition-all opacity-40 hover:opacity-100 flex items-center gap-1.5"
         title="Demo dock hidden (Press 'D' or click to restore)"
       >
-        <Sliders className="w-3 h-3 text-[#68AAB7]" />
+        <Sliders className="w-3 h-3 text-[#84C2CC]" />
         <span>Demo</span>
       </button>
     );
@@ -91,13 +91,13 @@ export const DemoDock: React.FC = () => {
       {!isDemoDockOpen ? (
         <div className="flex items-center gap-1 bg-[#1C2733] text-white px-3 py-2 rounded-pill shadow-elevated border border-white/15">
           <div className="flex items-center gap-2 cursor-pointer" onClick={() => setIsDemoDockOpen(true)}>
-            <span className="w-2 h-2 rounded-full bg-[#68AAB7] animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-[#84C2CC] animate-pulse" />
             <span className="font-semibold text-white">Demo Controls</span>
             <span className="text-[10px] text-gray-400 bg-white/10 px-1.5 py-0.5 rounded">Press D</span>
           </div>
           <button
             onClick={() => setIsDemoDockOpen(true)}
-            className="p-1 hover:text-[#68AAB7] transition-colors ml-1"
+            className="p-1 hover:text-[#84C2CC] transition-colors ml-1"
             title="Expand Controls"
           >
             <ChevronUp className="w-4 h-4" />
@@ -115,7 +115,7 @@ export const DemoDock: React.FC = () => {
           {/* Header */}
           <div className="flex items-center justify-between pb-3 border-b border-white/10 mb-3">
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-[#68AAB7]" />
+              <span className="w-2 h-2 rounded-full bg-[#84C2CC]" />
               <span className="font-bold text-sm tracking-tight text-white">Demo Control Panel</span>
             </div>
             <div className="flex items-center gap-1">
@@ -140,7 +140,7 @@ export const DemoDock: React.FC = () => {
             {/* 1. Surface Switcher */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Compass className="w-3 h-3 text-[#68AAB7]" /> Surface Mode
+                <Compass className="w-3 h-3 text-[#84C2CC]" /> Surface Mode
               </div>
               <div className="grid grid-cols-3 gap-1 bg-white/5 p-1 rounded-lg border border-white/10">
                 <button
@@ -174,11 +174,11 @@ export const DemoDock: React.FC = () => {
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center justify-between">
                 <span className="flex items-center gap-1.5">
-                  <Layers className="w-3 h-3 text-[#68AAB7]" /> Logo Direction
+                  <Layers className="w-3 h-3 text-[#84C2CC]" /> Logo Direction
                 </span>
                 <button
                   onClick={() => navigate('/brand')}
-                  className="text-[10px] text-[#68AAB7] hover:underline flex items-center gap-0.5"
+                  className="text-[10px] text-[#84C2CC] hover:underline flex items-center gap-0.5"
                 >
                   Brand Specs <ExternalLink className="w-2.5 h-2.5" />
                 </button>
@@ -194,7 +194,7 @@ export const DemoDock: React.FC = () => {
                     onClick={() => setLogoDirection(item.id)}
                     className={`p-2 rounded-lg border text-center transition-all ${
                       logoDirection === item.id
-                        ? 'border-[#68AAB7] bg-[#4A8B99]/30 text-white font-bold'
+                        ? 'border-[#84C2CC] bg-[#6BAEB9]/30 text-white font-bold'
                         : 'border-white/10 hover:border-white/20 text-gray-300 bg-white/5'
                     }`}
                   >
@@ -207,14 +207,14 @@ export const DemoDock: React.FC = () => {
             {/* 3. Theme Switcher */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Palette className="w-3 h-3 text-[#68AAB7]" /> Theme Preset
+                <Palette className="w-3 h-3 text-[#84C2CC]" /> Theme Preset
               </div>
               <div className="grid grid-cols-3 gap-1.5">
                 <button
                   onClick={() => setTheme('vibrant-green')}
                   className={`p-2 rounded-lg border text-center transition-all ${
                     theme === 'vibrant-green'
-                      ? 'border-[#68AAB7] bg-[#4A8B99]/35 text-white font-bold'
+                      ? 'border-[#84C2CC] bg-[#6BAEB9]/35 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
@@ -224,7 +224,7 @@ export const DemoDock: React.FC = () => {
                   onClick={() => setTheme('clean-light')}
                   className={`p-2 rounded-lg border text-center transition-all ${
                     theme === 'clean-light'
-                      ? 'border-[#68AAB7] bg-[#4A8B99]/35 text-white font-bold'
+                      ? 'border-[#84C2CC] bg-[#6BAEB9]/35 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
@@ -234,7 +234,7 @@ export const DemoDock: React.FC = () => {
                   onClick={() => setTheme('dark-brand')}
                   className={`p-2 rounded-lg border text-center transition-all ${
                     theme === 'dark-brand'
-                      ? 'border-[#68AAB7] bg-[#4A8B99]/35 text-white font-bold'
+                      ? 'border-[#84C2CC] bg-[#6BAEB9]/35 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
@@ -246,7 +246,7 @@ export const DemoDock: React.FC = () => {
             {/* 4. Speed Availability Toggles */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Zap className="w-3 h-3 text-[#68AAB7]" /> Speed Availability
+                <Zap className="w-3 h-3 text-[#84C2CC]" /> Speed Availability
               </div>
               <div className="space-y-1.5 bg-white/5 p-2 rounded-lg border border-white/10">
                 <label className="flex items-center justify-between cursor-pointer py-0.5">
@@ -269,7 +269,7 @@ export const DemoDock: React.FC = () => {
                 </label>
                 <label className="flex items-center justify-between cursor-pointer py-0.5 border-t border-white/10 pt-1.5">
                   <span className="text-gray-200 flex items-center gap-1">
-                    <Moon className="w-3 h-3 text-[#68AAB7]" /> After-Hours (Starts 9am ET)
+                    <Moon className="w-3 h-3 text-[#84C2CC]" /> After-Hours (Starts 9am ET)
                   </span>
                   <input
                     type="checkbox"
@@ -284,7 +284,7 @@ export const DemoDock: React.FC = () => {
             {/* 5. Order Stage Quick-Jumper */}
             <div>
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-                <Clock className="w-3 h-3 text-[#68AAB7]" /> Order Stage Jumper (S6-S8)
+                <Clock className="w-3 h-3 text-[#84C2CC]" /> Order Stage Jumper (S6-S8)
               </div>
               <div className="grid grid-cols-3 gap-1">
                 {stages.map((st) => (
@@ -307,7 +307,7 @@ export const DemoDock: React.FC = () => {
             <div>
               <label className="flex items-center justify-between cursor-pointer bg-white/5 p-2 rounded-lg border border-white/10">
                 <span className="flex items-center gap-1.5 text-gray-200 font-medium">
-                  <MessageSquare className="w-3.5 h-3.5 text-[#68AAB7]" />
+                  <MessageSquare className="w-3.5 h-3.5 text-[#84C2CC]" />
                   Simulate SMS Notification
                 </span>
                 <input

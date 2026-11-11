@@ -322,10 +322,10 @@ onedaysearch.example/
 ```css
 :root {
   /* Architectural Blueish-Green Palette (Mediterranean Colonnade reference) */
-  --color-teal-bright: #4A8B99; /* Main signature blueish-green canvas & hero mark */
-  --color-teal-sunlit: #68AAB7; /* Luminous column highlight & dark-mode wordmark accent */
+  --color-teal-bright: #6BAEB9; /* Main signature blueish-green canvas & hero mark */
+  --color-teal-sunlit: #84C2CC; /* Luminous column highlight & dark-mode wordmark accent */
   --color-teal-deep: #1E535E;   /* Workhorse deep teal for buttons, badges & high-contrast SLA */
-  --color-teal-pale: #E2EFF1;   /* Pale seafoam architectural tint for soft callouts */
+  --color-teal-pale: #E8F3F5;   /* Pale seafoam architectural tint for soft callouts */
   --color-orange: #F97316;      /* Sunset Orange complementary POP (strictly Place Order & Rush) */
   --color-charcoal: #1C2733;    /* Professional deep text & headers */
   --color-muted: #5A6B7F;       /* Subheads, metadata & secondary labels */

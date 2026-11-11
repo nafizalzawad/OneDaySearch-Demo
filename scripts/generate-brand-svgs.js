@@ -11,7 +11,7 @@ if (!fs.existsSync(outDir)) {
 function getIconA(colorMode = 'color') {
   // colorMode: 'color' | 'charcoal' | 'navy' | 'white'
   const roofColor = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
-  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
   const handColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#FFFFFF');
 
   return `
@@ -29,7 +29,7 @@ function getIconA(colorMode = 'color') {
 
 // Icon B: Magnifier with house inside
 function getIconB(colorMode = 'color') {
-  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
   const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1E535E');
 
   return `
@@ -48,7 +48,7 @@ function getIconB(colorMode = 'color') {
 
 // Icon C: Bold "1" in architectural blue-green rounded square with roof slope flag
 function getIconC(colorMode = 'color') {
-  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
   const fg = colorMode === 'white' ? '#1C2733' : '#FFFFFF';
 
   return `

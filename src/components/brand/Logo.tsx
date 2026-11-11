@@ -17,7 +17,7 @@ export const LogoIcon: React.FC<{
   className?: string;
 }> = ({ direction, colorMode = 'color', size = 32, className = '' }) => {
   const roofCharcoal = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
-  const brandTeal = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#4A8B99');
+  const brandTeal = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
   const clockHands = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#FFFFFF');
   const houseColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1E535E');
 
@@ -170,7 +170,7 @@ export const Logo: React.FC<LogoProps> = ({
       {variant === 'dark' ? (
         <>
           <span className="text-white">OneDay</span>
-          <span className="text-[#68AAB7]">Search</span>
+          <span className="text-[#84C2CC]">Search</span>
         </>
       ) : variant === 'monochrome-white' ? (
         <span className="text-white">OneDaySearch</span>

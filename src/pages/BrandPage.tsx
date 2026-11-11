@@ -161,7 +161,7 @@ export const BrandPage: React.FC = () => {
                             Light Background (Primary)
                           </span>
                           <span className="text-[11px] font-mono text-[#5A6B7F] bg-white px-2 py-0.5 rounded border border-[#D1E2E5]">
-                            Charcoal #1C2733 + Blueish Green #4A8B99
+                            Charcoal #1C2733 + Blueish Green #6BAEB9
                           </span>
                         </div>
                         <div className="py-8 flex items-center justify-center bg-white rounded-lg border border-[#D1E2E5]">
@@ -169,7 +169,7 @@ export const BrandPage: React.FC = () => {
                         </div>
                       </div>
                       <p className="text-[11px] text-[#5A6B7F] mt-3">
-                        Rule: On light surfaces, wordmark is Charcoal #1C2733; icon carries signature Blueish Green #4A8B99.
+                        Rule: On light surfaces, wordmark is Charcoal #1C2733; icon carries signature Blueish Green #6BAEB9.
                       </p>
                     </div>
 
@@ -189,7 +189,7 @@ export const BrandPage: React.FC = () => {
                         </div>
                       </div>
                       <p className="text-[11px] text-gray-400 mt-3">
-                        Rule: &ldquo;OneDay&rdquo; in pure white, &ldquo;Search&rdquo; in sunlit teal #68AAB7.
+                        Rule: &ldquo;OneDay&rdquo; in pure white, &ldquo;Search&rdquo; in sunlit teal #84C2CC.
                       </p>
                     </div>
                   </div>
@@ -286,17 +286,17 @@ export const BrandPage: React.FC = () => {
           <div className="mb-6 p-4 rounded-xl bg-[#F4F8F9] border border-[#D1E2E5]">
             <div className="text-xs font-bold text-[#1C2733] mb-2 flex items-center justify-between">
               <span>Signature Architectural Colonnade Spectrum Swatch</span>
-              <span className="text-[10px] font-mono text-[#1E535E] font-semibold">Primary: #4A8B99</span>
+              <span className="text-[10px] font-mono text-[#1E535E] font-semibold">Primary: #6BAEB9</span>
             </div>
             <div className="h-16 rounded-lg overflow-hidden flex border border-[#D1E2E5] shadow-sm text-center">
-              <div className="w-[14%] bg-[#E2EFF1] flex items-center justify-center font-mono text-[10px] text-[#1C2733] font-bold border-r border-[#D1E2E5]">
-                #E2EFF1
+              <div className="w-[14%] bg-[#E8F3F5] flex items-center justify-center font-mono text-[10px] text-[#1C2733] font-bold border-r border-[#D1E2E5]">
+                #E8F3F5
               </div>
-              <div className="w-[18%] bg-[#68AAB7] flex items-center justify-center font-mono text-[11px] text-white font-bold border-r border-white/20">
-                #68AAB7
+              <div className="w-[18%] bg-[#84C2CC] flex items-center justify-center font-mono text-[11px] text-white font-bold border-r border-white/20">
+                #84C2CC
               </div>
-              <div className="w-[50%] bg-[#4A8B99] flex items-center justify-center font-mono text-sm sm:text-base text-white font-extrabold tracking-wide">
-                #4A8B99 — Main Architectural Brand Color
+              <div className="w-[50%] bg-[#6BAEB9] flex items-center justify-center font-mono text-sm sm:text-base text-white font-extrabold tracking-wide">
+                #6BAEB9 — Main Architectural Brand Color
               </div>
               <div className="w-[18%] bg-[#1E535E] flex items-center justify-center font-mono text-[10px] text-white font-bold border-l border-[#163E47]">
                 #1E535E
@@ -307,9 +307,9 @@ export const BrandPage: React.FC = () => {
           {/* Color Palettes Grid */}
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3 mb-8">
             <div className="p-3 rounded-lg border border-[#D1E2E5] bg-white">
-              <div className="h-14 rounded bg-[#4A8B99] mb-2 shadow-inner" />
+              <div className="h-14 rounded bg-[#6BAEB9] mb-2 shadow-inner" />
               <div className="text-xs font-bold text-[#1C2733]">Blueish Green</div>
-              <div className="font-mono text-[11px] text-[#5A6B7F]">#4A8B99</div>
+              <div className="font-mono text-[11px] text-[#5A6B7F]">#6BAEB9</div>
               <div className="text-[10px] text-[#5A6B7F] mt-1">Signature canvas &amp; mark</div>
             </div>
 
@@ -321,9 +321,9 @@ export const BrandPage: React.FC = () => {
             </div>
 
             <div className="p-3 rounded-lg border border-[#D1E2E5] bg-white">
-              <div className="h-14 rounded bg-[#E2EFF1] mb-2 shadow-inner border border-[#D1E2E5]" />
+              <div className="h-14 rounded bg-[#E8F3F5] mb-2 shadow-inner border border-[#D1E2E5]" />
               <div className="text-xs font-bold text-[#1C2733]">Pale Seafoam</div>
-              <div className="font-mono text-[11px] text-[#5A6B7F]">#E2EFF1</div>
+              <div className="font-mono text-[11px] text-[#5A6B7F]">#E8F3F5</div>
               <div className="text-[10px] text-[#5A6B7F] mt-1">Soft callouts &amp; badges</div>
             </div>
 
@@ -358,7 +358,7 @@ export const BrandPage: React.FC = () => {
 
           {/* Strict Blueish-Green Background & Color Combination Rules */}
           <div className="space-y-4 pt-2">
-            <div className="bg-[#4A8B99] rounded-xl p-5 border border-black/10 shadow-sm text-left">
+            <div className="bg-[#6BAEB9] rounded-xl p-5 border border-black/10 shadow-sm text-left">
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-white" />
                 <h4 className="text-sm font-extrabold text-white uppercase tracking-wider">
@@ -366,7 +366,7 @@ export const BrandPage: React.FC = () => {
                 </h4>
               </div>
               <p className="text-xs text-white/90 font-medium leading-relaxed max-w-3xl mb-4">
-                When <strong>#4A8B99</strong> serves as the primary canvas background, strict mathematical contrast rules govern all overlapping elements:
+                When <strong>#6BAEB9</strong> serves as the primary canvas background, strict mathematical contrast rules govern all overlapping elements:
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
