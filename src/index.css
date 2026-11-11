@@ -4,19 +4,45 @@
 
 :root {
   --color-charcoal: #1C2733;
-  --color-green-bright: #6AE878; /* Signature main brand color */
+  --color-green-bright: #6AE878; /* Main brand background color */
   --color-green-bright-hover: #58D866;
   --color-green-workhorse: #00BC82;
   --color-green-workhorse-hover: #009B6B;
   --color-green-pale: #DBFCC5;
   --color-orange: #F97316;
   --color-orange-hover: #E86A0A;
-  --color-page: #F4F6FA;
+  --color-page: #6AE878;
   --color-muted: #5A6B7F;
   --color-white: #FFFFFF;
   --color-border: #E3E8F0;
 
-  /* Theme tokens: Clean Light (Default) */
+  /* Theme tokens: Vibrant Green (Default: Green is the main background) */
+  --theme-header-bg: #6AE878;
+  --theme-header-text: #1C2733;
+  --theme-header-border: rgba(28, 39, 51, 0.14);
+  --theme-card-bg: #FFFFFF;
+  --theme-card-text: #1C2733;
+  --theme-card-border: #E3E8F0;
+  --theme-page-bg: #6AE878;
+  --theme-input-bg: #FFFFFF;
+  --theme-input-border: #E3E8F0;
+  --theme-input-text: #1C2733;
+}
+
+[data-theme="vibrant-green"] {
+  --theme-header-bg: #6AE878;
+  --theme-header-text: #1C2733;
+  --theme-header-border: rgba(28, 39, 51, 0.14);
+  --theme-card-bg: #FFFFFF;
+  --theme-card-text: #1C2733;
+  --theme-card-border: #E3E8F0;
+  --theme-page-bg: #6AE878;
+  --theme-input-bg: #FFFFFF;
+  --theme-input-border: #E3E8F0;
+  --theme-input-text: #1C2733;
+}
+
+[data-theme="clean-light"] {
   --theme-header-bg: #FFFFFF;
   --theme-header-text: #1C2733;
   --theme-header-border: #E3E8F0;
@@ -29,15 +55,14 @@
   --theme-input-text: #1C2733;
 }
 
-[data-theme="green-brand"] {
-  /* Theme tokens: Brand Shell */
+[data-theme="dark-brand"] {
   --theme-header-bg: #1C2733;
   --theme-header-text: #FFFFFF;
   --theme-header-border: #2A3B4D;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
   --theme-card-border: #E3E8F0;
-  --theme-page-bg: #F0F4F2;
+  --theme-page-bg: #111D27;
   --theme-input-bg: #FFFFFF;
   --theme-input-border: #D1D9E6;
   --theme-input-text: #1C2733;
@@ -51,23 +76,28 @@ body {
   min-height: 100vh;
 }
 
-/* Signature Main Brand Button: Bright Green #6AE878 with Charcoal #1C2733 text (10:1 AAA contrast) */
+/* On green background, ensure lush radial gradient transitions for depth */
+.bg-vibrant-green-canvas {
+  background: radial-gradient(circle at 50% 10%, #7FF08C 0%, #6AE878 45%, #59DE68 100%);
+}
+
+/* Primary Action Buttons */
 .btn-brand {
-  background-color: #6AE878;
-  color: #1C2733;
+  background-color: #1C2733;
+  color: #FFFFFF;
   font-weight: 700;
   border-radius: 9999px;
   transition: all 150ms ease-in-out;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px 0 rgba(106, 232, 120, 0.4);
+  box-shadow: 0 4px 14px 0 rgba(28, 39, 51, 0.25);
 }
 
 .btn-brand:hover {
-  background-color: #58D866;
+  background-color: #0E1620;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px 0 rgba(106, 232, 120, 0.5);
+  box-shadow: 0 6px 20px 0 rgba(28, 39, 51, 0.35);
 }
 
 .btn-brand:active {
@@ -95,7 +125,7 @@ body {
   transform: translateY(0);
 }
 
-/* Orange CTA Button: Reserved for "Place an Order" and Rush elements */
+/* Orange CTA Button: High-pop complementary accent for "Place an Order" and Rush elements */
 .btn-cta {
   background-color: #F97316;
   color: #FFFFFF;
@@ -105,13 +135,13 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.3);
+  box-shadow: 0 4px 14px 0 rgba(249, 115, 22, 0.35);
 }
 
 .btn-cta:hover {
   background-color: #E86A0A;
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.4);
+  box-shadow: 0 6px 20px 0 rgba(249, 115, 22, 0.5);
 }
 
 .btn-cta:active {
@@ -135,17 +165,17 @@ body {
   border-color: #CBD5E1;
 }
 
-/* Card standard */
+/* Floating White Card on Green Canvas */
 .ods-card {
-  background: var(--theme-card-bg);
-  border: 1px solid var(--theme-card-border);
-  border-radius: 12px;
-  box-shadow: 0 4px 20px -2px rgba(28, 39, 51, 0.05);
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px -5px rgba(28, 39, 51, 0.12), 0 4px 12px -2px rgba(28, 39, 51, 0.08);
 }
 
 /* Accessibility focus ring */
 *:focus-visible {
-  outline: 2px solid #6AE878;
+  outline: 2px solid #1C2733;
   outline-offset: 2px;
 }
 

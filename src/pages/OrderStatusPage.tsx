@@ -181,7 +181,7 @@ export const OrderStatusPage: React.FC = () => {
       </div>
 
       {/* STAGE PROGRESS CARD */}
-      <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6 mb-8">
+      <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-6 mb-8">
         {/* Dynamic Countdown / Due Time Header */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#E3E8F0] mb-6">
           <div>
@@ -257,7 +257,7 @@ export const OrderStatusPage: React.FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: S7 Mock Report Card & Preview */}
         <div className="lg:col-span-7 space-y-6">
-          <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6">
+          <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-6">
             <div className="flex items-center justify-between pb-4 border-b border-[#E3E8F0] mb-4">
               <div>
                 <h3 className="text-base font-extrabold text-[#1C2733] flex items-center gap-2">
@@ -428,7 +428,7 @@ export const OrderStatusPage: React.FC = () => {
           </div>
 
           {/* Receipt & Order Metadata Accordion */}
-          <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft overflow-hidden">
+          <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] overflow-hidden">
             <button
               onClick={() => setShowReceipt(!showReceipt)}
               className="w-full px-6 py-4 flex items-center justify-between text-left hover:bg-[#F4F6FA] transition-colors"
@@ -471,7 +471,7 @@ export const OrderStatusPage: React.FC = () => {
 
         {/* Right Column: S8 Questions Thread (48 Hours) */}
         <div className="lg:col-span-5">
-          <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-5 sm:p-6 flex flex-col h-full min-h-[500px]">
+          <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-5 sm:p-6 flex flex-col h-full min-h-[500px]">
             <div className="pb-4 border-b border-[#E3E8F0] mb-4">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-extrabold text-[#1C2733]">

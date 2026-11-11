@@ -69,7 +69,7 @@ export const DetailsPage: React.FC = () => {
         <StepIndicator currentStep={2} />
 
         {/* Card */}
-        <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6 sm:p-8 text-left">
+        <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-6 sm:p-8 text-left">
           {/* Card Header */}
           <div className="mb-6">
             <Link

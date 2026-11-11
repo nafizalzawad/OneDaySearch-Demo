@@ -84,7 +84,7 @@ export const PaymentPage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-left">
           {/* Left Column: Order Summary */}
           <div className="md:col-span-5 order-2 md:order-1">
-            <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-5 sm:p-6 sticky top-20">
+            <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-5 sm:p-6 sticky top-20">
               <h2 className="text-sm font-bold uppercase tracking-wider text-[#1C2733] mb-4 pb-3 border-b border-[#E3E8F0] flex items-center justify-between">
                 <span>Order Summary</span>
                 <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2 py-0.5 rounded border border-[#E3E8F0]">
@@ -164,7 +164,7 @@ export const PaymentPage: React.FC = () => {
 
           {/* Right Column: Checkout Form */}
           <div className="md:col-span-7 order-1 md:order-2">
-            <div className="bg-white rounded-card border border-[#E3E8F0] shadow-soft p-6 sm:p-8">
+            <div className="bg-white rounded-card border border-white/80 shadow-[0_16px_40px_rgba(28,39,51,0.18)] p-6 sm:p-8">
               <Link
                 to="/speed"
                 state={prevData}

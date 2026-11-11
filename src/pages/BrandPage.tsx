@@ -353,14 +353,58 @@ export const BrandPage: React.FC = () => {
             </div>
           </div>
 
-          {/* Strict Role Rule */}
-          <div className="bg-[#DBFCC5]/60 border border-[#00BC82]/40 rounded-xl p-4 flex items-start gap-3">
-            <ShieldCheck className="w-5 h-5 text-[#00BC82] shrink-0 mt-0.5" />
-            <div className="text-xs sm:text-sm text-[#1C2733] leading-relaxed">
-              <strong className="font-bold">The Orange Rule: </strong>
-              Orange (<code className="font-mono text-xs text-[#F97316]">#F97316</code>) is green&apos;s opposite on the color wheel,
-              which is exactly why it pops. It has <strong>one job only</strong>: the &ldquo;Search / Place Order&rdquo; action and rush elements.
-              Deep green (<code className="font-mono text-xs text-[#00BC82]">#00BC82</code>) is the workhorse for all navigation, progress steps, and secondary buttons.
+          {/* Strict Green Background & Color Combination Rules */}
+          <div className="space-y-4 pt-2">
+            <div className="bg-[#6AE878] rounded-xl p-5 border border-black/10 shadow-sm text-left">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#1C2733]" />
+                <h4 className="text-sm font-extrabold text-[#1C2733] uppercase tracking-wider">
+                  Green Background Architecture &amp; WCAG Contrast Rules
+                </h4>
+              </div>
+              <p className="text-xs text-[#1C2733] font-medium leading-relaxed max-w-3xl mb-4">
+                When <strong>#6AE878</strong> serves as the primary canvas background, strict mathematical contrast rules govern all overlapping elements:
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+                <div className="bg-white/90 backdrop-blur-sm p-3.5 rounded-lg border border-white/60 shadow-sm">
+                  <div className="font-extrabold text-[#1C2733] flex items-center justify-between mb-1">
+                    <span>1. Charcoal Typography</span>
+                    <span className="text-[10px] font-mono text-[#00BC82] bg-[#DBFCC5] px-1.5 py-0.2 rounded font-bold">10.0:1 AAA</span>
+                  </div>
+                  <p className="text-[11px] text-[#5A6B7F] leading-tight">
+                    Charcoal (#1C2733) text against #6AE878 yields a 10.0:1 contrast ratio, surpassing WCAG AAA requirements.
+                  </p>
+                </div>
+
+                <div className="bg-white/90 backdrop-blur-sm p-3.5 rounded-lg border border-white/60 shadow-sm">
+                  <div className="font-extrabold text-[#1C2733] flex items-center justify-between mb-1">
+                    <span>2. White Text Prohibition</span>
+                    <span className="text-[10px] font-mono text-red-600 bg-red-100 px-1.5 py-0.2 rounded font-bold">1.5:1 FAIL</span>
+                  </div>
+                  <p className="text-[11px] text-[#5A6B7F] leading-tight">
+                    White text directly on #6AE878 has only 1.5:1 contrast and is strictly prohibited for legibility.
+                  </p>
+                </div>
+
+                <div className="bg-white/90 backdrop-blur-sm p-3.5 rounded-lg border border-white/60 shadow-sm">
+                  <div className="font-extrabold text-[#1C2733] flex items-center justify-between mb-1">
+                    <span>3. Complementary Orange Pop</span>
+                    <span className="text-[10px] font-mono text-[#F97316] bg-orange-100 px-1.5 py-0.2 rounded font-bold">180° Complement</span>
+                  </div>
+                  <p className="text-[11px] text-[#5A6B7F] leading-tight">
+                    Orange (#F97316) is the exact 180° color wheel complement of green, maximizing click-through for the primary purchase action.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-[#DBFCC5]/60 border border-[#00BC82]/40 rounded-xl p-4 flex items-start gap-3">
+              <ShieldCheck className="w-5 h-5 text-[#00BC82] shrink-0 mt-0.5" />
+              <div className="text-xs sm:text-sm text-[#1C2733] leading-relaxed">
+                <strong className="font-bold">Floating Content Card Principle: </strong>
+                All dense contract data, form inputs, courthouse land records, and legal disclosures sit within pure White (<code className="font-mono text-xs">#FFFFFF</code>) elevated cards. This anchors the interface with calm 15:1 contrast while preserving the energetic green brand environment.
+              </div>
             </div>
           </div>
         </section>

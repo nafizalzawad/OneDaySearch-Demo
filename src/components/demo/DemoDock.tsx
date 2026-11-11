@@ -209,26 +209,36 @@ export const DemoDock: React.FC = () => {
               <div className="text-[11px] font-semibold text-gray-300 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
                 <Palette className="w-3 h-3 text-[#6AE878]" /> Theme Preset
               </div>
-              <div className="grid grid-cols-2 gap-1.5">
+              <div className="grid grid-cols-3 gap-1.5">
+                <button
+                  onClick={() => setTheme('vibrant-green')}
+                  className={`p-2 rounded-lg border text-center transition-all ${
+                    theme === 'vibrant-green'
+                      ? 'border-[#6AE878] bg-[#6AE878]/25 text-white font-bold'
+                      : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
+                  }`}
+                >
+                  Green (Main)
+                </button>
                 <button
                   onClick={() => setTheme('clean-light')}
                   className={`p-2 rounded-lg border text-center transition-all ${
                     theme === 'clean-light'
-                      ? 'border-[#00BC82] bg-[#00BC82]/20 text-white font-bold'
+                      ? 'border-[#6AE878] bg-[#6AE878]/25 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
-                  Light (Default)
+                  Light
                 </button>
                 <button
-                  onClick={() => setTheme('green-brand')}
+                  onClick={() => setTheme('dark-brand')}
                   className={`p-2 rounded-lg border text-center transition-all ${
-                    theme === 'green-brand'
-                      ? 'border-[#00BC82] bg-[#00BC82]/20 text-white font-bold'
+                    theme === 'dark-brand'
+                      ? 'border-[#6AE878] bg-[#6AE878]/25 text-white font-bold'
                       : 'border-white/10 text-gray-300 bg-white/5 hover:border-white/20'
                   }`}
                 >
-                  Brand Shell
+                  Dark
                 </button>
               </div>
             </div>

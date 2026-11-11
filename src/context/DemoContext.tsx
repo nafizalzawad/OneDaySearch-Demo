@@ -3,7 +3,7 @@ import { OrderStatus } from '../mock/types';
 import { mockMarketplace } from '../mock/service';
 
 export type LogoDirection = 'a' | 'b' | 'c';
-export type ThemeMode = 'clean-light' | 'green-brand';
+export type ThemeMode = 'vibrant-green' | 'clean-light' | 'dark-brand';
 export type SurfaceMode = 'customer' | 'provider' | 'admin';
 
 interface DemoContextType {
@@ -36,7 +36,7 @@ const DemoContext = createContext<DemoContextType | undefined>(undefined);
 
 export const DemoProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [logoDirection, setLogoDirection] = useState<LogoDirection>('a');
-  const [theme, setTheme] = useState<ThemeMode>('clean-light');
+  const [theme, setTheme] = useState<ThemeMode>('vibrant-green');
   const [allow12h, setAllow12h] = useState<boolean>(true);
   const [allow6h, setAllow6h] = useState<boolean>(true);
   const [isAfterHours, setIsAfterHours] = useState<boolean>(false);
