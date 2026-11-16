@@ -35,6 +35,8 @@ export default {
       fontFamily: {
         sans: ['"Hanken Grotesk"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
         mono: ['"JetBrains Mono"', 'monospace'],
+        cursive: ['"Pinyon Script"', 'cursive'],
+        editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
       },
       borderRadius: {
         'card': '12px',

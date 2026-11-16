@@ -88,13 +88,13 @@ export const HomePage: React.FC = () => {
       }`}
     >
       <div className="w-full max-w-2xl flex flex-col items-center text-center my-auto">
-        {/* Brand Logo */}
+        {/* Brand Logo (Icon-only: OneDaySearch text removed per client request) */}
         <div className="mb-3 sm:mb-4">
           <Logo
             direction={logoDirection}
             variant={isGreen ? 'dark' : 'light'}
-            layout="stacked"
-            size="lg"
+            layout="icon-only"
+            size={44}
             onClick={() => {
               setAddressInput('');
               setCoverageState('IDLE');
@@ -102,21 +102,15 @@ export const HomePage: React.FC = () => {
           />
         </div>
 
-        {/* High-Contrast Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/95 text-[#00381F] text-xs font-bold mb-3 shadow-md border border-white/80 backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-[#187E5F]" />
-          <span>Title Search Marketplace · Maryland, Virginia &amp; DC</span>
-        </div>
-
-        {/* Client-Requested Tagline: Google Senior UI/UX Treatment */}
-        <div className="mb-4 sm:mb-5 max-w-xl px-2">
-          <h1 className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-tight sm:leading-snug ${
-            isGreen ? 'text-white drop-shadow-sm' : 'text-[#1C2733]'
+        {/* Client-Requested Elegant Cursive Tagline */}
+        <div className="mb-4 sm:mb-6 max-w-2xl px-2">
+          <h1 className={`font-cursive text-3xl sm:text-4xl lg:text-[44px] leading-tight sm:leading-snug tracking-wide ${
+            isGreen ? 'text-white drop-shadow-md' : 'text-[#1C2733]'
           }`}>
             Accuracy no human can match, in one-tenth the time.
           </h1>
-          <p className={`text-sm sm:text-base font-medium mt-1.5 leading-relaxed ${
-            isGreen ? 'text-white/90' : 'text-[#1C2733]/85'
+          <p className={`text-xs sm:text-sm font-medium mt-1 leading-relaxed ${
+            isGreen ? 'text-white/85' : 'text-[#1C2733]/85'
           }`}>
             An assistant searches. A real person approves every report.
           </p>
@@ -199,14 +193,10 @@ export const HomePage: React.FC = () => {
           )}
         </div>
 
-        {/* Reassurance Subline */}
-        <div className={`flex items-center justify-center gap-2 text-xs mb-4 sm:mb-5 font-bold tracking-tight ${
-          isGreen ? 'text-white' : 'text-[#1C2733]'
+        {/* Reassurance Subline (From $229 removed per client request) */}
+        <div className={`flex items-center justify-center gap-2 text-xs mb-4 sm:mb-5 font-semibold tracking-tight ${
+          isGreen ? 'text-white/90' : 'text-[#5A6B7F]'
         }`}>
-          <span>From <strong className={`font-mono font-extrabold underline ${
-            isGreen ? 'text-white decoration-white/60' : 'text-[#1C2733]'
-          }`}>$229</strong></span>
-          <span>·</span>
           <span>Guaranteed 24-hour turnaround</span>
           <span>·</span>
           <span>MD, VA &amp; DC</span>
