@@ -58,7 +58,7 @@ export const AdminConfigPage: React.FC = () => {
                     type="number"
                     value={standardPayout}
                     onChange={(e) => setStandardPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#D1E2E5] font-mono text-[#1E535E] font-bold"
+                    className="w-full p-2 rounded border border-[#D1E5DE] font-mono text-[#0B5844] font-bold"
                   />
                 </div>
               </div>
@@ -83,7 +83,7 @@ export const AdminConfigPage: React.FC = () => {
                     type="number"
                     value={expressPayout}
                     onChange={(e) => setExpressPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#D1E2E5] font-mono text-[#1E535E] font-bold"
+                    className="w-full p-2 rounded border border-[#D1E5DE] font-mono text-[#0B5844] font-bold"
                   />
                 </div>
               </div>
@@ -108,7 +108,7 @@ export const AdminConfigPage: React.FC = () => {
                     type="number"
                     value={rushPayout}
                     onChange={(e) => setRushPayout(Number(e.target.value))}
-                    className="w-full p-2 rounded border border-[#D1E2E5] font-mono text-[#1E535E] font-bold"
+                    className="w-full p-2 rounded border border-[#D1E5DE] font-mono text-[#0B5844] font-bold"
                   />
                 </div>
               </div>
@@ -177,7 +177,7 @@ export const AdminConfigPage: React.FC = () => {
 
         <div className="flex items-center justify-between pt-2">
           {saved ? (
-            <span className="text-xs font-bold text-[#1E535E] flex items-center gap-1.5">
+            <span className="text-xs font-bold text-[#0B5844] flex items-center gap-1.5">
               <CheckCircle2 className="w-4 h-4" /> Parameters saved successfully!
             </span>
           ) : <div />}

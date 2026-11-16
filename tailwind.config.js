@@ -10,21 +10,26 @@ export default {
       colors: {
         brand: {
           charcoal: '#1C2733',
-          green: '#1E535E', // Deep Architectural Teal workhorse
-          'green-hover': '#163E47',
-          'green-bright': '#6BAEB9', // Lighter architectural blueish-green signature
-          'green-pale': '#E8F3F5', // Pale seafoam architectural tint
-          teal: '#6BAEB9',
-          'teal-bright': '#6BAEB9',
-          'teal-deep': '#1E535E',
-          'teal-sunlit': '#84C2CC',
-          'teal-pale': '#E8F3F5',
+          green: '#0B5844', // Deep Emerald workhorse (#0B5844 from client palette)
+          'green-hover': '#00381F',
+          'green-bright': '#187E5F', // Rich Signature Emerald (#187E5F from client palette)
+          'green-pale': '#E6F7F2', // Pale mint/seafoam tint
+          emerald: '#187E5F',
+          'emerald-deep': '#0B5844',
+          'emerald-dark': '#00381F',
+          'emerald-shimmer': '#2DD4A0',
+          'emerald-pale': '#E6F7F2',
+          teal: '#187E5F',
+          'teal-bright': '#187E5F',
+          'teal-deep': '#0B5844',
+          'teal-sunlit': '#2DD4A0',
+          'teal-pale': '#E6F7F2',
           orange: '#F97316', // Sunset Orange CTA pop
           'orange-hover': '#EA580C',
-          page: '#6BAEB9',
+          page: '#187E5F',
           muted: '#5A6B7F',
-          success: '#1E535E',
-          border: '#D1E2E5',
+          success: '#0B5844',
+          border: '#D1E5DE',
         }
       },
       fontFamily: {

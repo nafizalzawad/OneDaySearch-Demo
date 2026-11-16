@@ -7,11 +7,11 @@ if (!fs.existsSync(outDir)) {
 }
 
 // Icon A: Clock under roofline
-// Architectural blueish-green circle with clock hands, gable roof shape above.
+// Emerald green circle with clock hands, gable roof shape above.
 function getIconA(colorMode = 'color') {
   // colorMode: 'color' | 'charcoal' | 'navy' | 'white'
   const roofColor = colorMode === 'white' ? '#FFFFFF' : '#1C2733';
-  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
+  const clockFill = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#187E5F');
   const handColor = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#FFFFFF');
 
   return `
@@ -29,8 +29,8 @@ function getIconA(colorMode = 'color') {
 
 // Icon B: Magnifier with house inside
 function getIconB(colorMode = 'color') {
-  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
-  const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#1E535E');
+  const primary = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#187E5F');
+  const secondary = colorMode === 'white' ? '#1C2733' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#FFFFFF' : '#0B5844');
 
   return `
     <g id="icon-b">
@@ -46,9 +46,9 @@ function getIconB(colorMode = 'color') {
   `.trim();
 }
 
-// Icon C: Bold "1" in architectural blue-green rounded square with roof slope flag
+// Icon C: Bold "1" in emerald green rounded square with roof slope flag
 function getIconC(colorMode = 'color') {
-  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#6BAEB9');
+  const bg = colorMode === 'white' ? '#FFFFFF' : (colorMode === 'navy' || colorMode === 'charcoal' ? '#1C2733' : '#187E5F');
   const fg = colorMode === 'white' ? '#1C2733' : '#FFFFFF';
 
   return `

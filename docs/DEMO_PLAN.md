@@ -322,9 +322,11 @@ onedaysearch.example/
 ```css
 :root {
   /* Architectural Blueish-Green Palette (Mediterranean Colonnade reference) */
-  --color-teal-bright: #6BAEB9; /* Main signature blueish-green canvas & hero mark */
-  --color-teal-sunlit: #84C2CC; /* Luminous column highlight & dark-mode wordmark accent */
-  --color-teal-deep: #1E535E;   /* Workhorse deep teal for buttons, badges & high-contrast SLA */
+  --color-emerald-medium: #187E5F; /* Primary Signature Emerald canvas & hero mark */
+  --color-emerald-shimmer: #2DD4A0; /* Luminous water caustic & dark-mode wordmark accent */
+  --color-emerald-deep: #0B5844;   /* Workhorse deep emerald for buttons, badges & high-contrast SLA */
+  --color-emerald-dark: #00381F;   /* Midnight emerald footer & high-contrast surfaces */
+  --color-emerald-pale: #E6F7F2;   /* Soft mint seafoam tint */
   --color-teal-pale: #E8F3F5;   /* Pale seafoam architectural tint for soft callouts */
   --color-orange: #F97316;      /* Sunset Orange complementary POP (strictly Place Order & Rush) */
   --color-charcoal: #1C2733;    /* Professional deep text & headers */
@@ -345,11 +347,11 @@ onedaysearch.example/
 ```
 
 ### Contrast & Usability Guardrails
-- **Floating Content Cards**: Dense property records, forms, and legal text sit inside pure white cards (`#FFFFFF`) on the `#4A8B99` canvas, providing 15.1:1 AAA contrast.
-- **Deep Teal Workhorse**: `#1E535E` provides 8.5:1 AAA contrast on white cards and on white text.
-- **Orange CTA Rule**: Sunset Orange `#F97316` is green/teal's opposite on the color wheel; reserved exclusively for "Place Order" and rush badges.
+- **Floating Content Cards**: Dense property records, forms, and legal text sit inside pure white cards (`#FFFFFF`) on the `#187E5F` emerald canvas, providing 15.1:1 AAA contrast.
+- **Deep Emerald Workhorse**: `#0B5844` provides 8.4:1 AAA contrast on white cards and on white text.
+- **Orange CTA Rule**: Sunset Orange `#F97316` is emerald's opposite on the color wheel; reserved exclusively for "Place Order" and rush badges.
 - **Grid**: Strict 8px layout rhythm (`p-2`, `p-4`, `p-6`, `p-8`).
-- **Focus Rings**: Deep teal offset ring (`focus:ring-2 focus:ring-[#1E535E]`).
+- **Focus Rings**: Deep emerald offset ring (`focus:ring-2 focus:ring-[#0B5844]`).
 - **Motion**: Respects `prefers-reduced-motion` with 150ms transitions.
 
 ---

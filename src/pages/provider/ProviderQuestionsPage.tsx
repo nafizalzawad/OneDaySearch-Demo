@@ -19,7 +19,7 @@ export const ProviderQuestionsPage: React.FC = () => {
 
   return (
     <div className="space-y-6">
-      <div className="pb-4 border-b border-[#D1E2E5]">
+      <div className="pb-4 border-b border-[#D1E5DE]">
         <h1 className="text-xl sm:text-2xl font-extrabold text-[#1C2733]">
           Customer Clarification Inbox
         </h1>
@@ -41,7 +41,7 @@ export const ProviderQuestionsPage: React.FC = () => {
               className={`w-full p-4 rounded-xl border text-left transition-all ${
                 activeOrderId === ord.id
                   ? 'border-[#1C2733] bg-white shadow-soft ring-1 ring-[#1C2733]'
-                  : 'border-[#D1E2E5] bg-white hover:bg-[#F8FAFC]'
+                  : 'border-[#D1E5DE] bg-white hover:bg-[#F8FAFC]'
               }`}
             >
               <div className="flex items-center justify-between text-xs mb-1">
@@ -59,13 +59,13 @@ export const ProviderQuestionsPage: React.FC = () => {
         </div>
 
         {/* Active Thread */}
-        <div className="md:col-span-8 bg-white rounded-card border border-[#D1E2E5] shadow-soft p-6 flex flex-col h-[520px]">
-          <div className="flex items-center justify-between pb-3 border-b border-[#D1E2E5] mb-4">
+        <div className="md:col-span-8 bg-white rounded-card border border-[#D1E5DE] shadow-soft p-6 flex flex-col h-[520px]">
+          <div className="flex items-center justify-between pb-3 border-b border-[#D1E5DE] mb-4">
             <div>
               <div className="text-xs font-mono font-bold text-[#1C2733]">Order {activeOrderId}</div>
               <div className="text-[11px] text-[#5A6B7F]">Anonymous Customer Communication Thread</div>
             </div>
-            <span className="text-[10px] font-mono text-[#1E535E] bg-[#1E535E]/10 px-2 py-0.5 rounded font-bold">
+            <span className="text-[10px] font-mono text-[#0B5844] bg-[#0B5844]/10 px-2 py-0.5 rounded font-bold">
               48h Window
             </span>
           </div>
@@ -78,7 +78,7 @@ export const ProviderQuestionsPage: React.FC = () => {
               if (isSys) {
                 return (
                   <div key={m.id} className="text-center my-2">
-                    <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2 py-0.5 rounded border border-[#D1E2E5]">
+                    <span className="text-[10px] font-mono bg-[#F4F6FA] text-[#5A6B7F] px-2 py-0.5 rounded border border-[#D1E5DE]">
                       {m.content}
                     </span>
                   </div>
@@ -94,7 +94,7 @@ export const ProviderQuestionsPage: React.FC = () => {
                     className={`p-3 rounded-2xl max-w-[80%] text-xs leading-relaxed ${
                       isMe
                         ? 'bg-[#1C2733] text-white rounded-br-none'
-                        : 'bg-[#F4F6FA] text-[#1C2733] border border-[#D1E2E5] rounded-bl-none'
+                        : 'bg-[#F4F6FA] text-[#1C2733] border border-[#D1E5DE] rounded-bl-none'
                     }`}
                   >
                     {m.content}
@@ -104,13 +104,13 @@ export const ProviderQuestionsPage: React.FC = () => {
             })}
           </div>
 
-          <form onSubmit={handleSendReply} className="pt-3 border-t border-[#D1E2E5] mt-auto flex gap-2">
+          <form onSubmit={handleSendReply} className="pt-3 border-t border-[#D1E5DE] mt-auto flex gap-2">
             <input
               type="text"
               value={replyText}
               onChange={(e) => setReplyText(e.target.value)}
               placeholder="Type your response to the customer..."
-              className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#D1E2E5] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
+              className="flex-1 text-xs px-3.5 py-2.5 rounded-pill border border-[#D1E5DE] focus:outline-none focus:ring-2 focus:ring-[#0B5844]"
             />
             <button type="submit" className="btn-primary w-9 h-9 rounded-full flex items-center justify-center shrink-0">
               <Send className="w-4 h-4" />

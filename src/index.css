@@ -4,68 +4,74 @@
 
 :root {
   --color-charcoal: #1C2733;
-  --color-teal-bright: #6BAEB9; /* Lighter architectural blueish-green */
-  --color-teal-sunlit: #84C2CC;
-  --color-teal-deep: #1E535E; /* Workhorse deep teal for buttons, badges & high contrast */
-  --color-teal-deep-hover: #163E47;
-  --color-teal-pale: #E8F3F5; /* Pale seafoam architectural tint */
-  --color-orange: #F97316; /* Warm sunset orange CTA pop */
+  --color-emerald-medium: #187E5F; /* Primary Signature Emerald (#187E5F) */
+  --color-emerald-deep: #0B5844; /* Deep Emerald Workhorse (#0B5844) */
+  --color-emerald-dark: #00381F; /* Midnight Emerald (#00381F) */
+  --color-emerald-shimmer: #2DD4A0; /* Luminous Water Caustic (#2DD4A0) */
+  --color-emerald-pale: #E6F7F2; /* Soft Mint Seafoam Tint (#E6F7F2) */
+  --color-teal-bright: #187E5F;
+  --color-teal-sunlit: #2DD4A0;
+  --color-teal-deep: #0B5844;
+  --color-teal-deep-hover: #00381F;
+  --color-teal-pale: #E6F7F2;
+  --color-orange: #F97316; /* High-pop sunset orange CTA */
   --color-orange-hover: #EA580C;
-  --color-page: #6BAEB9;
+  --color-page: #187E5F;
   --color-muted: #5A6B7F;
   --color-white: #FFFFFF;
-  --color-border: #D1E2E5;
+  --color-border: #D1E5DE;
 
-  /* Theme tokens: Lighter Architectural Blueish-Green (Default) */
-  --theme-header-bg: #6BAEB9;
+  /* Theme tokens: Emerald Green Luxury Palette (Default) */
+  --theme-header-bg: #0B5844;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: rgba(255, 255, 255, 0.25);
+  --theme-header-border: rgba(255, 255, 255, 0.18);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #D1E2E5;
-  --theme-page-bg: #6BAEB9;
+  --theme-card-border: #D1E5DE;
+  --theme-page-bg: #187E5F;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #D1E2E5;
+  --theme-input-border: #D1E5DE;
   --theme-input-text: #1C2733;
 }
 
+[data-theme="emerald-brand"],
 [data-theme="architectural-teal"],
 [data-theme="vibrant-green"] {
-  --theme-header-bg: #6BAEB9;
+  --theme-header-bg: #0B5844;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: rgba(255, 255, 255, 0.25);
+  --theme-header-border: rgba(255, 255, 255, 0.18);
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #D1E2E5;
-  --theme-page-bg: #6BAEB9;
+  --theme-card-border: #D1E5DE;
+  --theme-page-bg: #187E5F;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #D1E2E5;
+  --theme-input-border: #D1E5DE;
   --theme-input-text: #1C2733;
 }
 
 [data-theme="clean-light"] {
   --theme-header-bg: #FFFFFF;
   --theme-header-text: #1C2733;
-  --theme-header-border: #E8F3F5;
+  --theme-header-border: #E6F7F2;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #E8F3F5;
-  --theme-page-bg: #F4F8F9;
+  --theme-card-border: #E6F7F2;
+  --theme-page-bg: #F4FBF8;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #D1E2E5;
+  --theme-input-border: #D1E5DE;
   --theme-input-text: #1C2733;
 }
 
 [data-theme="dark-brand"] {
-  --theme-header-bg: #14343B;
+  --theme-header-bg: #0B5844;
   --theme-header-text: #FFFFFF;
-  --theme-header-border: #1E4D57;
+  --theme-header-border: #187E5F;
   --theme-card-bg: #FFFFFF;
   --theme-card-text: #1C2733;
-  --theme-card-border: #D1E2E5;
-  --theme-page-bg: #0D2429;
+  --theme-card-border: #D1E5DE;
+  --theme-page-bg: #00381F;
   --theme-input-bg: #FFFFFF;
-  --theme-input-border: #D1E2E5;
+  --theme-input-border: #D1E5DE;
   --theme-input-text: #1C2733;
 }
 
@@ -77,10 +83,11 @@ body {
   min-height: 100vh;
 }
 
-/* Lighter Architectural Blueish-Green Colonnade Canvas */
+/* Shimmering Emerald Green Water Caustics Canvas */
 .bg-vibrant-green-canvas,
-.bg-vibrant-teal-canvas {
-  background: radial-gradient(circle at 50% 12%, #84C2CC 0%, #6BAEB9 45%, #5698A4 100%);
+.bg-vibrant-teal-canvas,
+.bg-emerald-canvas {
+  background: radial-gradient(circle at 50% 12%, #229973 0%, #187E5F 45%, #0B5844 100%);
 }
 
 /* Primary Action Buttons */
@@ -106,9 +113,9 @@ body {
   transform: translateY(0);
 }
 
-/* Workhorse Primary Button: Deep Architectural Teal background, White text (8.5:1 contrast - WCAG AAA) */
+/* Workhorse Primary Button: Deep Emerald background, White text (8.4:1 contrast - WCAG AAA) */
 .btn-primary {
-  background-color: #1E535E;
+  background-color: #0B5844;
   color: #FFFFFF;
   font-weight: 600;
   border-radius: 9999px;
@@ -119,7 +126,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #163E47;
+  background-color: #00381F;
   transform: translateY(-1px);
 }
 

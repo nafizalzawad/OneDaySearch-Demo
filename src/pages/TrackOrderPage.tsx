@@ -32,7 +32,7 @@ export const TrackOrderPage: React.FC = () => {
 
   return (
     <div className="flex-1 flex flex-col items-center justify-center px-4 sm:px-6 py-12">
-      <div className="w-full max-w-md bg-white rounded-card border border-[#D1E2E5] shadow-soft p-6 sm:p-8 text-left">
+      <div className="w-full max-w-md bg-white rounded-card border border-[#D1E5DE] shadow-soft p-6 sm:p-8 text-left">
         <h1 className="text-2xl font-extrabold tracking-tight text-[#1C2733] mb-1">
           Track Your Order
         </h1>
@@ -41,8 +41,8 @@ export const TrackOrderPage: React.FC = () => {
         </p>
 
         {isSent ? (
-          <div className="p-4 bg-[#E2EFF1]/80 border border-[#1E535E]/30 rounded-xl space-y-3 animate-in fade-in-50">
-            <div className="flex items-center gap-2 text-sm font-bold text-[#1E535E]">
+          <div className="p-4 bg-[#E6F7F2]/80 border border-[#0B5844]/30 rounded-xl space-y-3 animate-in fade-in-50">
+            <div className="flex items-center gap-2 text-sm font-bold text-[#0B5844]">
               <CheckCircle2 className="w-5 h-5 shrink-0" />
               <span>Access link sent</span>
             </div>
@@ -71,7 +71,7 @@ export const TrackOrderPage: React.FC = () => {
                 value={orderNumber}
                 onChange={(e) => setOrderNumber(e.target.value)}
                 placeholder="OD-48213"
-                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E] font-mono"
+                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E5DE] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#0B5844] font-mono"
               />
             </div>
 
@@ -85,7 +85,7 @@ export const TrackOrderPage: React.FC = () => {
                 value={contactInfo}
                 onChange={(e) => setContactInfo(e.target.value)}
                 placeholder="jane@example.com or (301) 555-0192"
-                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E2E5] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#1E535E]"
+                className="w-full text-xs sm:text-sm px-3.5 py-2.5 rounded-lg border border-[#D1E5DE] text-[#1C2733] focus:outline-none focus:ring-2 focus:ring-[#0B5844]"
               />
             </div>
 

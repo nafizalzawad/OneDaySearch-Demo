@@ -17,14 +17,14 @@ export const CustomerLayout: React.FC = () => {
     <div
       className={`min-h-screen flex flex-col justify-between transition-colors duration-200 ${
         isGreenTheme
-          ? 'bg-[#6BAEB9] text-[#1C2733]'
+          ? 'bg-[#187E5F] text-white'
           : isDarkTheme
-          ? 'bg-[#0D2429] text-white'
-          : 'bg-[#F4F8F9] text-[#1C2733]'
+          ? 'bg-[#00381F] text-white'
+          : 'bg-[#F4FBF8] text-[#1C2733]'
       }`}
     >
-      {/* Signature Architectural Colonnade Ribbon */}
-      <div className="h-1.5 w-full bg-gradient-to-r from-[#E8F3F5] via-[#84C2CC] to-[#1E535E] shrink-0" />
+      {/* Signature Emerald Water Ribbon */}
+      <div className="h-1.5 w-full bg-gradient-to-r from-[#E6F7F2] via-[#2DD4A0] to-[#00381F] shrink-0" />
 
       {/* SMS Simulator Notification */}
       <SmsBubble />
@@ -36,17 +36,17 @@ export const CustomerLayout: React.FC = () => {
       <header
         className={`w-full transition-colors duration-150 sticky top-0 z-40 backdrop-blur-md shrink-0 ${
           isGreenTheme
-            ? 'bg-[#6BAEB9]/95 text-[#1C2733] border-b border-[#1E535E]/15 shadow-sm'
+            ? 'bg-[#0B5844]/95 text-white border-b border-white/15 shadow-sm'
             : isDarkTheme
-            ? 'bg-[#14343B]/95 text-white border-b border-white/10'
-            : 'bg-white/95 text-[#1C2733] border-b border-[#D1E2E5]'
+            ? 'bg-[#00381F]/95 text-white border-b border-white/10'
+            : 'bg-white/95 text-[#1C2733] border-b border-[#D1E5DE]'
         }`}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link to="/" className="focus:outline-none">
             <Logo
               direction={logoDirection}
-              variant={isDarkTheme ? 'dark' : 'light'}
+              variant={isGreenTheme || isDarkTheme ? 'dark' : 'light'}
               size="md"
             />
           </Link>
@@ -56,9 +56,9 @@ export const CustomerLayout: React.FC = () => {
               to="/track"
               className={`text-sm font-bold transition-colors ${
                 isGreenTheme
-                  ? 'text-[#1C2733] hover:text-black hover:underline'
+                  ? 'text-white hover:text-[#2DD4A0]'
                   : isDarkTheme
-                  ? 'text-gray-200 hover:text-[#84C2CC]'
+                  ? 'text-gray-200 hover:text-[#2DD4A0]'
                   : 'text-[#5A6B7F] hover:text-[#1C2733]'
               }`}
             >
@@ -77,10 +77,10 @@ export const CustomerLayout: React.FC = () => {
       <footer
         className={`w-full text-xs transition-colors z-10 relative shrink-0 py-4 sm:py-5 ${
           isGreenTheme
-            ? 'bg-[#1C2733] text-gray-300 border-t border-[#1C2733]'
+            ? 'bg-[#00381F] text-gray-300 border-t border-[#00381F]'
             : isDarkTheme
-            ? 'bg-[#0B151F] text-gray-400 border-t border-white/10'
-            : 'bg-white text-[#5A6B7F] border-t border-[#D1E2E5]'
+            ? 'bg-[#002715] text-gray-400 border-t border-white/10'
+            : 'bg-white text-[#5A6B7F] border-t border-[#D1E5DE]'
         }`}
       >
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
@@ -104,7 +104,7 @@ export const CustomerLayout: React.FC = () => {
               <Link to="/support" className="hover:text-white transition-colors">
                 Support
               </Link>
-              <Link to="/brand" className="text-[#84C2CC] hover:underline font-bold transition-colors">
+              <Link to="/brand" className="text-[#2DD4A0] hover:underline font-bold transition-colors">
                 Brand specs
               </Link>
             </div>
